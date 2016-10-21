@@ -1,10 +1,12 @@
 var path = require('path');
 var Metalsmith  = require('metalsmith');
+var filter      = require('metalsmith-filter');
 var markdown    = require('metalsmith-markdown');
 var layouts     = require('metalsmith-layouts');
 var permalinks  = require('metalsmith-permalinks');
-var collections  = require('metalsmith-collections');
+var collections = require('metalsmith-collections');
 var rollup      = require('metalsmith-rollup');
+var sass        = require('metalsmith-sass');
 
 Metalsmith(__dirname)
   .metadata({
@@ -28,8 +30,20 @@ Metalsmith(__dirname)
     directory: './src/layouts/'
   }))
   .use(rollup({
-    entry: path.resolve(__dirname, 'src/main.js'),
+    entry: path.resolve('src/main.js'),
     dest: 'bundle.js',
+  }))
+  .build(function(err, files) {
+    if (err) { throw err; }
+  });
+
+// TODO: Research if this hacky system can be improved
+Metalsmith(__dirname)
+  .source('./src/')
+  .destination('./build')
+  .use(filter('*.scss'))
+  .use(sass({
+    outputDir: 'css/'
   }))
   .build(function(err, files) {
     if (err) { throw err; }
