@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>{{ title }}</title>
+  <meta name="description" content="{{ description }}">
+</head>
+<body>
+  <header>
+    <p>
+      <a href="/">Home</a>
+    </p>
+  </header>
+  <h1>{{ title }}</h1>
+  <p>{{ description }}</p>
+
+  {{{ contents }}}
+
+  {{#each collections.blocks}}
+    {{{ contents }}}
+  {{/each}}
+
+  <script src="bundle.js"></script>
+</body>
+</html>
