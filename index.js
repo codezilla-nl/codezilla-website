@@ -16,6 +16,7 @@ Metalsmith(__dirname)
   })
   .source('./content')
   .destination('./build')
+  .use(filter('*.md'))
   .clean(true)
   .use(markdown())
   .use(permalinks())
@@ -42,9 +43,7 @@ Metalsmith(__dirname)
   .source('./src/')
   .destination('./build')
   .use(filter('*.scss'))
-  .use(sass({
-    outputDir: 'css/'
-  }))
+  .use(sass({}))
   .build(function(err, files) {
     if (err) { throw err; }
   });
