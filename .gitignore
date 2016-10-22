@@ -1,2 +1,12 @@
+# Node stuff
 node_modules/
 npm-debug.log
+
+# Binaries
+bin/
+
+# Selenium
+selenium-debug.log
+
+# Test reports
+reports/
