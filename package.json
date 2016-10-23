@@ -2,6 +2,7 @@
   "name": "static-site-example",
   "private": true,
   "scripts": {
+    "build": "node index",
     "serve": "browser-sync start --server 'build'",
     "test-e2e": "browser-sync start --config 'test/bs-config.e2e.js' & node_modules/.bin/nightwatch --config test/nightwatch.conf.js",
     "lint-js": "eslint 'src/**/*.js'",
@@ -11,8 +12,10 @@
   "dependencies": {
     "handlebars": "^4.0.5",
     "metalsmith": "^2.1.0",
+    "metalsmith-beautify": "^0.1.0",
     "metalsmith-collections": "^0.7.0",
     "metalsmith-filter": "^1.0.2",
+    "metalsmith-html-minifier": "^2.2.0",
     "metalsmith-layouts": "^1.4.1",
     "metalsmith-markdown": "^0.2.1",
     "metalsmith-permalinks": "^0.5.0",

@@ -1,7 +1,6 @@
 class Foo {
-	constructor() {
-		console.log('ohai');
-	}
+    constructor() {
+    }
 }
 
 class Main {

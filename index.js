@@ -1,12 +1,14 @@
 var path = require('path');
-var Metalsmith  = require('metalsmith');
-var filter      = require('metalsmith-filter');
-var markdown    = require('metalsmith-markdown');
-var layouts     = require('metalsmith-layouts');
-var permalinks  = require('metalsmith-permalinks');
+var Metalsmith = require('metalsmith');
+var filter = require('metalsmith-filter');
+var htmlMinifier = require('metalsmith-html-minifier');
+var beautify = require('metalsmith-beautify');
+var markdown = require('metalsmith-markdown');
+var layouts = require('metalsmith-layouts');
+var permalinks = require('metalsmith-permalinks');
 var collections = require('metalsmith-collections');
-var rollup      = require('metalsmith-rollup');
-var sass        = require('metalsmith-sass');
+var rollup = require('metalsmith-rollup');
+var sass = require('metalsmith-sass');
 
 Metalsmith(__dirname)
   .metadata({
@@ -29,6 +31,15 @@ Metalsmith(__dirname)
   .use(layouts({
     engine: 'handlebars',
     directory: './src/layouts/'
+  }))
+  .use(htmlMinifier("*.html", {
+    collapseWhitespace: false,
+    removeComments: true,
+    removeAttributeQuotes: false
+  }))
+  .use(beautify({
+    "js": false,
+    "html": true
   }))
   .use(rollup({
     entry: path.resolve('src/main.js'),
