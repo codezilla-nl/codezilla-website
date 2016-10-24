@@ -1,4 +1,4 @@
-import Foo from './classes/test.js'
+import Foo from './classes/Foo.js'
 
 class Main {
     constructor() {
