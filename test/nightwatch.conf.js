@@ -31,10 +31,18 @@ module.exports = (function() {
                     "browserName": "chrome"
                 }
             },
-
-            "chrome" : {
-                "desiredCapabilities": {
-                    "browserName": "chrome"
+            "ci" : {
+                "launch_url" : "http://localhost:4000",
+                "screenshots": {
+                    "enabled": false
+                },
+                "globals": {
+                    "waitForConditionTimeout": 5000 // sometimes internet is slow so wait.
+                },
+                "desiredCapabilities": { // use Chrome as the default browser for tests
+                    "browserName": "phantomjs",
+                    "phantomjs.binary.path": "./node_modules/.bin/phantomjs",
+                    "phantomjs.cli.args": [],
                 }
             }
         }
