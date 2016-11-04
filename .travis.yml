@@ -4,9 +4,9 @@ language: node_js
 node_js:
     - "6.3.1"
 env:
-    global:
+  global:
     - ENCRYPTION_LABEL: "1b5469661a88"
-    - COMMIT_AUTHOR_EMAIL: "travis@codezilla.nl
+    - COMMIT_AUTHOR_EMAIL: "travis@codezilla.nl"
 addons:
   packages:
     - unzip
