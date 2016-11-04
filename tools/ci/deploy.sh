@@ -8,12 +8,7 @@ function doCompile {
   ./tools/ci/compile.sh
 }
 
-# Pull requests and commits to other branches shouldn't try to deploy, just build to verify
-if [ "$TRAVIS_PULL_REQUEST" != "false" -o "$TRAVIS_BRANCH" != "$SOURCE_BRANCH" ]; then
-    echo "Skipping deploy; just doing a build."
-    doCompile
-    exit 0
-fi
+
 
 # Save some useful information
 REPO=`git config remote.origin.url`
@@ -42,7 +37,7 @@ git config user.name "Travis CI"
 git config user.email "$COMMIT_AUTHOR_EMAIL"
 
 # If there are no changes to the compiled build (e.g. this is a README update) then just bail.
-if [ -z `git diff --exit-code` ]; then
+if git diff --quiet ; then
     echo "No changes to the output on this push; exiting."
     exit 0
 fi
