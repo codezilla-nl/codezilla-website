@@ -15,5 +15,6 @@ script:
     - npm run test-e2e -- --env ci
 before_script:
     - npm install
+    - npm run build
 after_success:
     - ./tools/ci/deploy.sh
