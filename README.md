@@ -15,6 +15,9 @@
 * Run unit tests: `npm test`
 * Run E2E tests: `npm run test-e2e`
 
+## CI / Hosting
+All the PR's and merges to master are run through [Travis}(https://travis-ci.org/codezilla-nl/codezilla-website).
+
 ## Folder structure
 ```text
     |-- content > Markdown content that is used to generate the HTML files
