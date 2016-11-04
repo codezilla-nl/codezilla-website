@@ -1,4 +1,4 @@
-# CODEZILLA Website
+# CODEZILLA Website [![Build Status](https://travis-ci.org/codezilla-nl/codezilla-website.svg?branch=master)](https://travis-ci.org/codezilla-nl/codezilla-website) [![License GPLv3](https://img.shields.io/badge/license-GPLv3-blue.svg)](https://github.com/codezilla-nl/codezilla-website/blob/master/LICENSE)
 
 ## Tools / Libs
 * [Metalsmith](http://www.metalsmith.io/) > Static site generator
