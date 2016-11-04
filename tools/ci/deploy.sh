@@ -20,8 +20,11 @@ REPO=`git config remote.origin.url`
 SSH_REPO=${REPO/https:\/\/github.com\//git@github.com:}
 SHA=`git rev-parse --verify HEAD`
 
+# Clean out existing contents
+rm -rf build/**/* || exit 0
+
 # Clone the existing gh-pages for this repo into build/
-# Create a new empty branch if gh-pages doesn't exist yet (should only happen on first deply)
+# Create a new empty branch if gh-pages doesn't exist yet (should only happen on first deploy)
 git clone $REPO build
 cd build
 git checkout $TARGET_BRANCH || git checkout --orphan $TARGET_BRANCH
