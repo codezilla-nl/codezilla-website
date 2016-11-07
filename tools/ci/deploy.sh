@@ -21,6 +21,8 @@ fi
 SSH_REPO=${REPO/https:\/\/github.com\//git@github.com:}
 SHA=`git rev-parse --verify HEAD`
 
+echo "Deploying to ${REPO}/${TARGET_BRANCH}"
+
 
 # Clean out existing contents
 rm -rf build/ || exit 0
