@@ -2,18 +2,23 @@
 set -e # Exit with nonzero exit code if anything fails
 
 SOURCE_BRANCH="master"
-TARGET_BRANCH="gh-pages"
 
 function doCompile {
   ./tools/ci/compile.sh
 }
 
-
-
 # Save some useful information
-REPO=`git config remote.origin.url`
+if [ ${TRAVIS_BRANCH} == develop ]; then
+    TARGET_BRANCH="master"
+    REPO="git@github.com:codezilla-nl/codezilla-nl.git"
+else
+    TARGET_BRANCH="gh-pages"
+    REPO=`git config remote.origin.url`
+fi
+
 SSH_REPO=${REPO/https:\/\/github.com\//git@github.com:}
 SHA=`git rev-parse --verify HEAD`
+
 
 # Clean out existing contents
 rm -rf build/ || exit 0
