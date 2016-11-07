@@ -18,6 +18,8 @@
 ## CI / Hosting
 All the PR's and merges to master are run through [Travis](https://travis-ci.org/codezilla-nl/codezilla-website).
 
+DEV: https://codezilla-nl.github.io/codezilla-website/
+
 ## Folder structure
 ```text
     |-- content > Markdown content that is used to generate the HTML files
