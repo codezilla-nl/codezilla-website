@@ -21,6 +21,8 @@ fi
 SSH_REPO=${REPO/https:\/\/github.com\//git@github.com:}
 SHA=`git rev-parse --verify HEAD`
 
+echo "Deploying to ${REPO}/${TARGET_BRANCH}"
+
 
 # Clean out existing contents
 rm -rf build/ || exit 0
@@ -52,7 +54,7 @@ fi
 # Commit the "changes", i.e. the new version.
 # The delta will show diffs between new and old versions.
 git add .
-git commit -m "Deploy to GitHub Pages: ${SHA} - ${REPO}/${TARGET_BRANCH}"
+git commit -m "Deploy to GitHub Pages: ${SHA}"
 
 # Get the deploy key by using Travis's stored variables to decrypt deploy_key.enc
 ENCRYPTED_KEY_VAR="encrypted_${ENCRYPTION_LABEL}_key"
