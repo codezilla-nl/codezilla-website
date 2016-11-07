@@ -9,11 +9,11 @@ function doCompile {
 
 # Save some useful information
 if [ ${TRAVIS_BRANCH} == develop ]; then
-    TARGET_BRANCH="master"
-    REPO="git@github.com:codezilla-nl/codezilla-nl.git"
-else
     TARGET_BRANCH="gh-pages"
     REPO=`git config remote.origin.url`
+else
+    TARGET_BRANCH="master"
+    REPO="git@github.com:codezilla-nl/codezilla-nl.git"
 fi
 
 SSH_REPO=${REPO/https:\/\/github.com\//git@github.com:}
