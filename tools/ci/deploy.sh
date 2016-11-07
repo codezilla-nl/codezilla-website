@@ -2,18 +2,25 @@
 set -e # Exit with nonzero exit code if anything fails
 
 SOURCE_BRANCH="master"
-TARGET_BRANCH="gh-pages"
 
 function doCompile {
   ./tools/ci/compile.sh
 }
 
-
-
 # Save some useful information
-REPO=`git config remote.origin.url`
+if [ ${TRAVIS_BRANCH} == develop ]; then
+    DEPLOY_KEY="deploy_key.dev"
+    TARGET_BRANCH="gh-pages"
+    REPO=`git config remote.origin.url`
+else
+    DEPLOY_KEY="deploy_key.prd"
+    TARGET_BRANCH="master"
+    REPO="git@github.com:codezilla-nl/codezilla-nl.git"
+fi
+
 SSH_REPO=${REPO/https:\/\/github.com\//git@github.com:}
 SHA=`git rev-parse --verify HEAD`
+
 
 # Clean out existing contents
 rm -rf build/ || exit 0
@@ -45,14 +52,14 @@ fi
 # Commit the "changes", i.e. the new version.
 # The delta will show diffs between new and old versions.
 git add .
-git commit -m "Deploy to GitHub Pages: ${SHA}"
+git commit -m "Deploy to GitHub Pages: ${SHA} - ${REPO}/${TARGET_BRANCH}"
 
 # Get the deploy key by using Travis's stored variables to decrypt deploy_key.enc
 ENCRYPTED_KEY_VAR="encrypted_${ENCRYPTION_LABEL}_key"
 ENCRYPTED_IV_VAR="encrypted_${ENCRYPTION_LABEL}_iv"
 ENCRYPTED_KEY=${!ENCRYPTED_KEY_VAR}
 ENCRYPTED_IV=${!ENCRYPTED_IV_VAR}
-openssl aes-256-cbc -K $ENCRYPTED_KEY -iv $ENCRYPTED_IV -in ../deploy_key.enc -out deploy_key -d
+openssl aes-256-cbc -K $ENCRYPTED_KEY -iv $ENCRYPTED_IV -in ../$DEPLOY_KEY.enc -out deploy_key -d
 chmod 600 deploy_key
 eval `ssh-agent -s`
 ssh-add deploy_key
