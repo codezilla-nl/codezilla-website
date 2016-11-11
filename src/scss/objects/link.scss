@@ -1,0 +1,29 @@
+/* [OBJECT] link */
+@import 'scss/settings/variables';
+
+a,
+.cz-link {
+    @include cz-font-family('Regular');
+    @include cz-font-base;
+    
+    color: $cz-color-primary;
+    
+    text-decoration: none;
+    transition: color 100ms ease-out;
+
+    &:hover {
+
+    }
+
+    &:active {
+
+    }
+
+    &:visited {
+
+    }
+    
+    &:focus {
+
+    }
+}

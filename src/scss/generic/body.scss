@@ -1,0 +1,7 @@
+@import 'scss/tools/mixins';
+
+body {
+    font-family: 'Helvetica Neue', Arial, Sans-serif;
+    @include cz-font-family('Regular', 'Radikal');
+    -webkit-font-smoothing: antialiased;
+}

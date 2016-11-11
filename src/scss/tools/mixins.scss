@@ -1,0 +1,73 @@
+/* [TOOL] mixins */
+
+@mixin cz-font-family($style, $font: "Roboto") {
+    font-family: $font;
+
+    @if $style == 'Light' {
+        font-style: normal;
+        font-weight: 300;
+    }
+
+    @else if $style == 'Light Italic' {
+        font-style: italic;
+        font-weight: 300;
+    }
+
+    @else if $style == 'Regular' {
+        font-style: normal;
+        font-weight: 400;
+    }
+
+    @else if $style == 'Regular Italic' {
+        font-style: italic;
+        font-weight: 400;
+    }
+
+    @else if $style == 'Bold' {
+        font-style: normal;
+        font-weight: 700;
+    }
+
+    @else if $style == 'Bold Italic' {
+        font-style: normal;
+        font-weight: 700;
+    }
+
+    @else {
+        font-style: normal;
+        font-weight: 400;
+    }
+}
+
+@mixin cz-font-base {
+    font-size: $cz-font-size;
+    line-height: $cz-font-height;
+}
+
+@mixin cz-ellipsis {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+@mixin cz-clearfix {
+    &::after {
+        clear: left;
+        content: '.';
+        display: block;
+        height: 0;
+        visibility: hidden;
+    }
+}
+
+// Use when you want the text to be hidden on the screen but accessible to screen readers
+@mixin cz-sr-only {
+    border: 0;
+    clip: rect(0, 0, 0, 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+}
