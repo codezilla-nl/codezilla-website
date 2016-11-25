@@ -23,7 +23,7 @@ if [ ${TRAVIS_BRANCH} == develop ]; then
 else
     DEPLOY_KEY="deploy_key.prd"
     TARGET_BRANCH="master"
-    REPO="https://github.com/codezilla-nl/codezilla-nl.git"
+    REPO="https://github.com/codezilla-nl/codezilla-nl.github.io.git"
 fi
 
 SSH_REPO=${REPO/https:\/\/github.com\//git@github.com:}
