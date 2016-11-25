@@ -1,4 +1,5 @@
 /* [TOOL] mixins */
+@import 'scss/settings/variables';
 
 @mixin cz-font-family($style, $font: "Roboto") {
     font-family: $font;

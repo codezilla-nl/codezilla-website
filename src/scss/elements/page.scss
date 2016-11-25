@@ -2,6 +2,12 @@
 
 body {
     font-family: 'Helvetica Neue', Arial, Sans-serif;
-    @include cz-font-family('Regular', 'Radikal');
     -webkit-font-smoothing: antialiased;
+
+    @include cz-font-family('Light', 'Radikal');
+    @include cz-font-base;
+}
+
+p {
+    margin: $cz-inner-spacing 0;
 }

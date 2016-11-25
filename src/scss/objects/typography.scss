@@ -1,0 +1,77 @@
+/* [OBJECT] typography */
+@import 'scss/settings/variables';
+
+// Heading
+@mixin cz-heading {
+    @include cz-font-family('Bold');
+    color: $cz-text-heading;
+}
+
+@mixin heading-divider {
+    position: relative;
+
+    &::after {
+        background-color: $cz-color-primary;
+        content: '';
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        height: 3px;
+        width: 40px;
+    }
+}
+
+h1,
+.cz-heading-1 {
+    @include cz-heading;
+    font-size: 70px;
+    line-height: 1;
+    text-transform: uppercase;
+}
+
+h1 small,
+.cz-heading-1-sub {
+    @include cz-heading;
+    font-size: 26px;
+    line-height: 1;
+}
+
+h2,
+.cz-heading-2 {
+    @include cz-heading;
+    @include heading-divider;
+
+    font-size: 29px;
+    line-height: 1;
+    padding-bottom: $cz-inner-spacing;
+    margin: $cz-inner-spacing 0 $cz-inner-spacing;
+}
+
+h3,
+.cz-heading-3 {
+    @include cz-heading;
+    font-size: 19px;
+    line-height: 1;
+    margin: $cz-inner-spacing 0 $cz-inner-spacing;
+}
+
+h4,
+.cz-heading-4 {
+    @include cz-heading;
+}
+
+// Link
+a,
+.cz-link {
+    @include cz-font-base;
+    
+    color: $cz-color-secondary-dark;
+    text-decoration: none;
+    transition: color 100ms ease-out;
+
+    &:active,
+    &:hover {
+        color: $cz-color-secondary;
+    }
+}
+
