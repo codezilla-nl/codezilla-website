@@ -11,6 +11,7 @@ var rollup = require('metalsmith-rollup');
 var babel = require('rollup-plugin-babel');
 var sass = require('metalsmith-sass');
 var inPlace = require('metalsmith-in-place');
+var asset = require('metalsmith-static');
 
 var run = module.exports = function(cb) {
   Metalsmith(__dirname)
@@ -47,6 +48,10 @@ var run = module.exports = function(cb) {
     .use(beautify({
       "js": false,
       "html": true
+    }))
+    .use(asset({
+      src: './public',
+      dest: '.'
     }))
     .use(rollup({
       entry: path.resolve('src/main.js'),
