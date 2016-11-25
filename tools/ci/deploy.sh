@@ -9,7 +9,7 @@ function doCompile {
 }
 
 # Pull requests and commits to other branches shouldn't try to deploy, just build to verify
-if [ "$TRAVIS_PULL_REQUEST" != "false" -o ( "$TRAVIS_BRANCH" != "$PROD_BRANCH" -a "$TRAVIS_BRANCH" != "$DEV_BRANCH" ) ]; then
+if [ "$TRAVIS_PULL_REQUEST" != "false" ] || [ "$TRAVIS_BRANCH" != "$PROD_BRANCH" && "$TRAVIS_BRANCH" != "$DEV_BRANCH" ]; then
     echo "Skipping deploy; just doing a build."
     doCompile
     exit 0
