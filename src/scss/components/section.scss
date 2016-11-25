@@ -1,0 +1,6 @@
+.cz-section-cta {
+    @include cz-font-family('Light', 'Radikal');
+    font-size: 39px;
+    line-height: 1;
+    color: $cz-text-heading;
+}

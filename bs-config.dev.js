@@ -20,7 +20,7 @@ module.exports = {
     }],
     "watchOptions": {},
     "server": {
-        baseDir: "build"
+        baseDir: ["build", "public"]
     },
     "open": true,
     "notify": false,

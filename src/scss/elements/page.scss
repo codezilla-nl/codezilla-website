@@ -1,0 +1,13 @@
+@import 'scss/tools/mixins';
+
+body {
+    font-family: 'Helvetica Neue', Arial, Sans-serif;
+    -webkit-font-smoothing: antialiased;
+
+    @include cz-font-family('Light', 'Radikal');
+    @include cz-font-base;
+}
+
+p {
+    margin: $cz-inner-spacing 0;
+}
