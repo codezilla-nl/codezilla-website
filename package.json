@@ -8,7 +8,7 @@
     "test": "./node_modules/karma/bin/karma start test/karma.conf.js",
     "test-e2e": "./node_modules/browser-sync/bin/browser-sync.js start --config 'test/bs-config.e2e.js' & node_modules/.bin/nightwatch --config test/nightwatch.conf.js",
     "lint-js": "eslint 'src/**/*.js'",
-    "lint-css": "stylelint 'src/**/*.scss' --syntax scss",
+    "lint-css": "stylelint 'src/scss/**/*.scss' --syntax scss",
     "postinstall": "node test/nightwatch.conf.js",
     "prepublish": "npm run build"
   },
@@ -41,6 +41,6 @@
     "phantomjs": "^2.1.7",
     "rollup-plugin-babel": "^2.6.1",
     "selenium-download": "^2.0.6",
-    "stylelint": "^7.5.0"
+    "stylelint": "^7.6.0"
   }
 }

@@ -64,7 +64,6 @@ h4,
 a,
 .cz-link {
     @include cz-font-base;
-    
     color: $cz-color-secondary-dark;
     text-decoration: none;
     transition: color 100ms ease-out;
