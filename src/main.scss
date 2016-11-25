@@ -2,10 +2,26 @@
 ** ITCSS Architecture. For more info: http://technotif.com/manage-large-css-projects-with-itcss/
 */
 
+@charset 'UTF-8';
+
+/* Settings*/
+
 /* Tools */
-@import 'scss/mixins';
+// @import 'scss/mixins';
+
+/* Generic */
+@import 'node_modules/normalize-css/normalize';
+@import 'scss/generic/font';
+
+/* Elements */
+@import 'scss/elements/page';
 
 /* Objects */
+@import 'scss/objects/typography';
+// @import 'scss/objects/button';
 
 /* Components */
+@import 'scss/components/divider';
+@import 'scss/components/section';
 
+/* Utilities */
