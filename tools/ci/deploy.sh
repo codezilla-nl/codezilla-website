@@ -1,14 +1,15 @@
 #!/bin/bash
 set -e # Exit with nonzero exit code if anything fails
 
-SOURCE_BRANCH="master"
+PROD_BRANCH="master"
+DEV_BRANCH="develop"
 
 function doCompile {
   ./tools/ci/compile.sh
 }
 
 # Pull requests and commits to other branches shouldn't try to deploy, just build to verify
-if [ "$TRAVIS_PULL_REQUEST" != "false" -o "$TRAVIS_BRANCH" != "$SOURCE_BRANCH" ]; then
+if [ "$TRAVIS_PULL_REQUEST" != "false" -o "$TRAVIS_BRANCH" != "$PROD_BRANCH" -o "$TRAVIS_BRANCH" != "$DEV_BRANCH" ]; then
     echo "Skipping deploy; just doing a build."
     doCompile
     exit 0
