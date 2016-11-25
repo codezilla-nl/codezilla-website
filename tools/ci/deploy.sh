@@ -69,10 +69,11 @@ ENCRYPTED_KEY_VAR="encrypted_${ENCRYPTION_LABEL}_key"
 ENCRYPTED_IV_VAR="encrypted_${ENCRYPTION_LABEL}_iv"
 ENCRYPTED_KEY=${!ENCRYPTED_KEY_VAR}
 ENCRYPTED_IV=${!ENCRYPTED_IV_VAR}
-openssl aes-256-cbc -K $ENCRYPTED_KEY -iv $ENCRYPTED_IV -in ../$DEPLOY_KEY.enc -out deploy_key -d
-chmod 600 deploy_key
+openssl aes-256-cbc -K $ENCRYPTED_KEY -iv $ENCRYPTED_IV -in ../deploy_keys.tar.enc -out deploy_keys.tar -d
+tar xvf deploy_keys.tar
+chmod 600 $DEPLOY_KEY
 eval `ssh-agent -s`
-ssh-add deploy_key
+ssh-add $DEPLOY_KEY
 
 # Now that we're all set up, we can push.
 git push $SSH_REPO $TARGET_BRANCH
