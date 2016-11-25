@@ -15,14 +15,14 @@ if [ ${TRAVIS_BRANCH} == develop ]; then
 else
     DEPLOY_KEY="deploy_key.prd"
     TARGET_BRANCH="master"
-    REPO="https://github.com/codezilla-nl/codezilla-nl.git"
+    REPO="https://github.com/codezilla-nl/codezilla-nl.github.io.git"
 fi
 
 SSH_REPO=${REPO/https:\/\/github.com\//git@github.com:}
 SHA=`git rev-parse --verify HEAD`
 
 echo "Deploying to ${REPO}/${TARGET_BRANCH}"
-
+echo "Using deploy key: ${DEPLOY_KEY}"
 
 # Clean out existing contents
 rm -rf build/ || exit 0
