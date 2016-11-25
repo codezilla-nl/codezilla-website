@@ -10,7 +10,7 @@ var collections = require('metalsmith-collections');
 var rollup = require('metalsmith-rollup');
 var babel = require('rollup-plugin-babel');
 var sass = require('metalsmith-sass');
-
+var inPlace = require('metalsmith-in-place');
 
 var run = module.exports = function(cb) {
   Metalsmith(__dirname)
@@ -21,19 +21,23 @@ var run = module.exports = function(cb) {
     })
     .source('./content')
     .destination('./build')
-    .use(filter('*.md'))
+    .use(filter('*.html'))
     .clean(true)
-    .use(markdown())
     .use(permalinks())
     .use(collections({
       blocks: {
-        pattern: '*.md',
+        pattern: '*.html',
         sortBy: 'index'
       }
     }))
+    .use(inPlace({
+      engine: 'handlebars',
+      partials: './src/partials/'
+    }))
     .use(layouts({
       engine: 'handlebars',
-      directory: './src/layouts/'
+      directory: './src/layouts/',
+      partials: './src/partials/'
     }))
     .use(htmlMinifier("*.html", {
       collapseWhitespace: false,
