@@ -1,0 +1,7 @@
+@import '../settings/variables';
+
+.container {
+    max-width: $cz-max-width-desktop;
+    margin-left: auto;
+    margin-right: auto;
+}

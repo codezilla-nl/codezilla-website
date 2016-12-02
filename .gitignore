@@ -13,3 +13,4 @@ selenium-debug.log
 
 # Test reports
 reports/
+.idea
