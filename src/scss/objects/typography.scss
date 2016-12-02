@@ -55,6 +55,10 @@
     @include cz-heading;
 }
 
+.heading-inverse {
+    color: $cz-text-heading-inverse;
+}
+
 // Link
 .cz-link {
     @include cz-font-base;
