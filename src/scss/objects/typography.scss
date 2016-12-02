@@ -1,24 +1,11 @@
 /* [OBJECT] typography */
 @import 'scss/settings/variables';
+@import 'scss/tools/divider';
 
 // Heading
 @mixin cz-heading {
     @include cz-font-family('Bold');
     color: $cz-text-heading;
-}
-
-@mixin heading-divider {
-    position: relative;
-
-    &::after {
-        background-color: $cz-color-primary;
-        content: '';
-        position: absolute;
-        left: 0;
-        bottom: 0;
-        height: 3px;
-        width: 40px;
-    }
 }
 
 h1,
@@ -39,7 +26,7 @@ h1 small,
 h2,
 .cz-heading-2 {
     @include cz-heading;
-    @include heading-divider;
+    @include cz-divider;
 
     font-size: 29px;
     line-height: 1;

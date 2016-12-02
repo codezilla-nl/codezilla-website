@@ -1,0 +1,70 @@
+.cz-header {
+    width: 100vw;
+    height: 100vh;
+    color: $cz-text-inverse;
+
+    @media screen and (max-width: $cz-breakpoint-desktop) {
+        padding: $cz-inner-spacing;
+    }
+}
+
+.cz-carousel {
+    > li {
+        position: absolute;
+        z-index: 1;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: $cz-background;
+    }
+
+    .cz-carousel__image {
+        opacity: 0;
+        position: absolute;
+        z-index: 0;
+        left: 50%;
+        top: 0;
+        bottom: 0;
+        right: 0;
+        background-size: cover;
+        background-position: 50% 50%;
+        transition: opacity 300ms ease-out;
+    }
+
+    @media screen and (min-width: $cz-breakpoint-desktop) {
+        .cz-carousel__image {
+            opacity: 1;
+        }
+    }
+}
+
+.cz-carousel__title {
+    position: relative;
+    z-index: 1;
+    text-align: center;
+    color: $cz-text-inverse;
+    padding-bottom: $cz-inner-spacing * 2;
+
+    @media screen and (max-width: $cz-breakpoint-desktop) {
+        text-align: left;
+    }
+}
+
+.cz-carousel__slogan {
+    position: relative;
+    z-index: 1;
+    text-align: left;
+
+    @media screen and (min-width: $cz-breakpoint-desktop) {
+            text-align: right;
+            max-width: calc(50% - #{$cz-inner-spacing});
+    }
+}
+
+// .cz-section-cta {
+//     @include cz-font-family('Light', 'Radikal');
+//     font-size: 39px;
+//     line-height: 1;
+//     color: $cz-text-heading;
+// }
