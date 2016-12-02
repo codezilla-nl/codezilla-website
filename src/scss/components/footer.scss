@@ -4,7 +4,18 @@
     height: 630px;
 }
 
+.cz-footer__block {
+    float: left;
+    width: 50%;
+    height: 430px;
+}
+
+.cz-footer__block-container {
+    padding: 64px 128px;
+}
+
 .cz-footer__cta {
+    clear: both;
     display: flex;
     justify-content: center;
     flex-direction: column;
