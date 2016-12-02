@@ -5,13 +5,20 @@
 }
 
 .cz-footer__block {
-    float: left;
-    width: 50%;
-    height: 465px;
+
+    @media screen and (min-width: $cz-breakpoint-desktop) {
+        width: 50%;
+        height: 465px;
+        float: left;
+    }
 }
 
 .cz-footer__block-container {
-    padding: 64px 128px;
+    padding: 30px;
+
+    @media screen and (min-width: $cz-breakpoint-desktop) {
+        padding: 64px 128px;
+    }
 }
 
 .cz-footer__cta {
@@ -21,15 +28,21 @@
     flex-direction: column;
     text-align: center;
 
-    height: 165px;
-    background: $cz-color-primary url("images/footer-logo.svg") center no-repeat;
-
     color: #fff;
     font-size: 80px;
     text-transform: uppercase;
+    line-height: 44px;
+
+    background-color: $cz-color-primary;
+
+    @media screen and (min-width: $cz-breakpoint-desktop) {
+        height: 165px;
+        background: $cz-color-primary url("images/footer-logo.svg") center no-repeat;
+    }
 }
 
 .cz-footer__cta-link {
+    display: block;
     position: relative;
     font-size: 39px;
     font-weight: bold;
@@ -37,13 +50,30 @@
     color: #FFFFFF;
     text-decoration: none;
 
+    margin: 50px 0 100px 0;
+
+    @media screen and (min-width: $cz-breakpoint-desktop) {
+        display: inline;
+        margin-bottom: 0;
+    }
+
     &:after {
+        background-image: url("images/arrow-c2a.svg");
         content: ' ';
         position: absolute;
-        right: -90px;
-        top: 0;
+        bottom: -50px;
+        right: 50%;
+        margin-right: -34px;
         width: 68px;
         height: 35px;
-        background-image: url("images/arrow-c2a.svg");
+
+        @media screen and (min-width: $cz-breakpoint-desktop) {
+            right: -90px;
+            margin-right: 0;
+            top: 0;
+            width: 68px;
+            height: 35px;
+
+        }
     }
 }
