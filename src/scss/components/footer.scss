@@ -7,7 +7,7 @@
 .cz-footer__block {
     float: left;
     width: 50%;
-    height: 430px;
+    height: 465px;
 }
 
 .cz-footer__block-container {
@@ -21,8 +21,8 @@
     flex-direction: column;
     text-align: center;
 
-    height: 200px;
-    background-color: $cz-color-primary;
+    height: 165px;
+    background: $cz-color-primary url("images/footer-logo.svg") center no-repeat;
 
     color: #fff;
     font-size: 80px;
