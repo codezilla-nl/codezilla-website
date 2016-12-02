@@ -1,6 +1,15 @@
-.cz-section-cta {
-    @include cz-font-family('Light', 'Radikal');
-    font-size: 39px;
-    line-height: 1;
-    color: $cz-text-heading;
+@import '../settings/variables';
+
+.cz-section,
+.cz-section-inverse {
+    padding-top: $cz-inner-spacing;
+    padding-bottom: $cz-inner-spacing;
+}
+
+.cz-section {
+    background: $cz-fill-light;
+}
+
+.cz-section-inverse {
+    background: $cz-fill-grey-dark;
 }
