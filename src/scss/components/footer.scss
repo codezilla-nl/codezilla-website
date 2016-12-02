@@ -1,0 +1,24 @@
+@import "../settings/variables";
+
+.cz-footer {
+    height: 630px;
+}
+
+.cz-footer__cta {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+
+    height: 200px;
+    background-color: $cz-color-primary;
+
+    color: #fff;
+    font-size: 80px;
+    text-transform: uppercase;
+}
+
+.cz-footer__cta-link {
+    color: #fff;
+    text-decoration: none;
+}

@@ -21,7 +21,6 @@
     }
 }
 
-h1,
 .cz-heading-1 {
     @include cz-heading;
     font-size: 70px;
@@ -29,14 +28,12 @@ h1,
     text-transform: uppercase;
 }
 
-h1 small,
 .cz-heading-1-sub {
     @include cz-heading;
     font-size: 26px;
     line-height: 1;
 }
 
-h2,
 .cz-heading-2 {
     @include cz-heading;
     @include heading-divider;
@@ -47,7 +44,6 @@ h2,
     margin: $cz-inner-spacing 0 $cz-inner-spacing;
 }
 
-h3,
 .cz-heading-3 {
     @include cz-heading;
     font-size: 19px;
@@ -55,13 +51,11 @@ h3,
     margin: $cz-inner-spacing 0 $cz-inner-spacing;
 }
 
-h4,
 .cz-heading-4 {
     @include cz-heading;
 }
 
 // Link
-a,
 .cz-link {
     @include cz-font-base;
     color: $cz-color-secondary-dark;
