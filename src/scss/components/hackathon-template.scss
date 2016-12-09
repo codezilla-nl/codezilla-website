@@ -1,0 +1,15 @@
+/* Place your hackathon styling here */
+
+.cz-rainbow-puking-panda {
+    background:url('http://i3.kym-cdn.com/photos/images/facebook/000/018/715/pandapuke.png') center center no-repeat; 
+    background-size: cover; 
+    width: 100vw; 
+    height:80vh;
+    position: relative;
+}
+
+.cz-rainbow-puking-panda__says {
+    position: absolute;
+    bottom: 0;
+    right: 10%;
+}

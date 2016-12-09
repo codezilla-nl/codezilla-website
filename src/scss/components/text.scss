@@ -5,7 +5,7 @@
     color: $cz-text;
 }
 
-.cz-text-inverse{
+.cz-text-inverse {
     @include cz-font-family('Regular', 'Radikal');
     color: $cz-text-inverse;
 }

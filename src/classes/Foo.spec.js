@@ -1,3 +1,5 @@
+// Place your hackathon tests here
+
 import Foo from './Foo.js';
 
 const foo = new Foo();

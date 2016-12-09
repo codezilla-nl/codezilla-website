@@ -6,8 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>{{ title }}</title>
     <!-- Allows control over where resources are loaded from -->
-    <meta http-equiv="Content-Security-Policy" content="default-src 'self' ws://localhost:* 'sha256-i7PshISEwg2EgnmQ50VZDYsuW/NpRTiflxGsrxist8k='">
-    <!-- Short description of the page (limit to 150 characters) -->
+<!--     <meta http-equiv="Content-Security-Policy" content="default-src 'self' ws://localhost:* 'sha256-i7PshISEwg2EgnmQ50VZDYsuW/NpRTiflxGsrxist8k='">
+ -->    <!-- Short description of the page (limit to 150 characters) -->
     <!-- In *some* situations this description is used as a part of the snippet shown in the search results. -->
     <meta name="description" content="{{ description }}">
     <!-- Control the behavior of search engine crawling and indexing -->
@@ -21,9 +21,6 @@
     <link rel="stylesheet" href="main.css">
 </head>
 <body>
-    <h1>{{ title }}</h1>
-    <p>{{ description }}</p>
-
     {{{ contents }}}
 
     <script src="bundle.js"></script>
