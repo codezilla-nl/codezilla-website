@@ -11,6 +11,8 @@
 
 -----
 
+## Aan de slag
+
 Voer de volgende stappen uit om snel aan de slag te kunnen:
 
 ### 1. Clone repo
@@ -48,3 +50,9 @@ npm start
 ## Overig
 * Handmatig een build draaien: `npm run build`
 * Test: `npm test`
+
+
+## Spelregels
+* Door Rollup en Babel kun je lekker met ES6 aan de slag, doe dit dus ook :)
+* Gebruik zo min mogelijk libraries, alleen als het echt nodig is
+    * Liever geen jQuery
