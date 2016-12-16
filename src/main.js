@@ -1,8 +1,9 @@
-import Foo from './classes/Foo.js'
+import Eastereggs from './classes/Easter-eggs';
 
 class Main {
     constructor() {
-        new Foo();
+        new Eastereggs();
+
     }
 }
 
