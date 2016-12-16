@@ -15,6 +15,7 @@ Een leuke gimmick op de nieuwe website van CODEZILLA
 - 10 keer op het logo klikken triggert een audio met een grommende 'codezilla'
 - Iets grappigs in de source code: ASCII art, een encrypted message, ...
 - Going nuts: bij invoeren van konami code komt er een textfield waarin je commando's kan intikken die weer wat doet op de site
+- Up up down down left right left right b a
 
 
 

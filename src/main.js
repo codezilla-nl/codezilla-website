@@ -1,8 +1,10 @@
 import Foo from './classes/Foo.js'
+import KonamiCode from './classes/KonamiCode.js'
 
 class Main {
     constructor() {
         new Foo();
+        new KonamiCode();
     }
 }
 
