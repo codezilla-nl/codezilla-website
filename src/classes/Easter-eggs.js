@@ -20,9 +20,18 @@ export default class Eastereggs {
         this.audio.pause();
         this.audio.currentTime = 0;
         this.audio.play();
+        this.shaker('logo');
+
+        this.audio.addEventListener('ended', this.stopShaking.bind(this));
     }
 
-    shaker() {
-        
+    shaker(element) {
+        document.getElementById(element).classList.add('shaker');
+    }
+
+    stopShaking() {
+        document.querySelectorAll('.shaker').forEach(function(el) {
+            el.classList.remove('shaker');
+        });
     }
 }
