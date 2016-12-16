@@ -1,25 +1,28 @@
 export default class Eastereggs {
     constructor() {
         this.clicks = 0;
+        this.executeAfterxTimes = 5;
+        this.audiosrc = 'audio/growl.mp3';
+        this.audio = document.createElement('audio');
         document.getElementById('logo').addEventListener('click', this.counter.bind(this), false);
     }
 
     counter() {
         this.clicks++;
 
-        if (this.clicks % 3 === 0) {
+        if (this.clicks % this.executeAfterxTimes === 0) {
             this.growl();
         }
     }
 
     growl() {
-        console.log('GROWL');
-        
-        // audio
+        this.audio.src = this.audiosrc;
+        this.audio.pause();
+        this.audio.currentTime = 0;
+        this.audio.play();
     }
 
     shaker() {
-        console.log('SHAKER');
-        // screen shaker
+        
     }
 }
