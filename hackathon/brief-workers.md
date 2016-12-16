@@ -22,5 +22,5 @@ Bedenk een slimme manier om service en/of web workers in te zetten voor de CODEZ
 
 ## Extra info
 * Aangezien service workers (nog) alleen worden ondersteund in Chrome en Firefox, is het uiteraard belangrijk dat de site blijft werken zonder webworkers :)
-* Aan de andere kant betekend dit dat je in de web worker files geen rekening hoeft te houden met legacy browsers, en kun je dus losgaan op ES6
+* Aan de andere kant betekent dit dat je in de web worker files geen rekening hoeft te houden met legacy browsers, en kun je dus losgaan op ES6
 * De support voor web workers is daarentegen een stuk breder
