@@ -17,7 +17,26 @@ Een leuke gimmick op de nieuwe website van CODEZILLA
 - Going nuts: bij invoeren van konami code komt er een textfield waarin je commando's kan intikken die weer wat doet op de site
 - Up up down down left right left right b a
 
+## Todo Konami Code
+Konami Code Input
 
+1. Konami Code
+    Recognize the code, initialize the game
+    AddEventListeners
+    Initialize Game
+
+2. PacZilla Components
+    Canvas? // CSS Animated
+    Player
+    Field
+    Monsters
+    Dots
+
+3. Player Controls
+    Up, down, left, right, space
+
+4. Monster AI
+    Movement
 
 
 
