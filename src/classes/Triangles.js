@@ -181,7 +181,7 @@ export default class Triangles {
         return rgb;
     }
 
-    // Will return the color difference at a certain percentage between start and end color
+    // Will return the color at a certain percentage between start and end color
     diffColorAtPercentage(startColor, endColor, perc) {
         return [
             Math.floor(startColor[0] - (startColor[0] - endColor[0]) * perc),
