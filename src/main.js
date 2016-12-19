@@ -2,7 +2,7 @@ import Triangles from './classes/Triangles.js'
 
 class Main {
     constructor() {
-        new Triangles();
+        new Triangles('#triangles');
     }
 }
 

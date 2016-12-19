@@ -1,43 +1,65 @@
+import UtilInViewport from "../utils/util.inViewport.js";
+import UtilRegisterScroll from "../utils/util.registerScroll.js";
+
 export default class Triangles {
-    constructor() {
+    constructor(el) {
         this.options = {
-            canvas: document.getElementById('triangles'),
+            canvas: document.querySelector(el),
             polygon: {
                 nodes: [],
                 width: 30,
                 height: 30,
                 colorCycle: 4000,
-                transitionCycle: 100 //should never be higher than colorcycle
+                transitionCycle: 100 //should never be higher than colorcycle. Maybe use requestAnimationFrame instead (although we might want a 'choppier' effect)? 
             }
          };
 
         this.init();
         this.addListeners();
-
-
-        var that = this;
-        
-        // Regenerate colors every color cycle
-        this.options.colorCycle = setInterval(() => {
-            that.cycleColors();
-        }, this.options.polygon.colorCycle);
-        
-        // Transition to endColor during the color cycle
-        this.options.transitionCycle = setInterval(() => {
-            that.transitionColors();
-        }, this.options.polygon.transitionCycle);
+        this.trianglesInView();
     }
 
     init() {
         this.generate();
         this.cycleColors();
     }
+
     addListeners() {
         let debounce;
         window.addEventListener("resize", () => {
             clearTimeout(debounce); //Poor man's debounce
             debounce = setTimeout(this.init.bind(this), 100);
         });
+
+        new UtilRegisterScroll(this.trianglesInView.bind(this), 'requestAnimationFrame');
+    }
+
+    trianglesInView() {
+        let state = UtilInViewport(this.options.canvas);
+        this.animate(state.inView);
+    }
+
+    animate(state) {
+        if (state) {
+            // Regenerate colors every color cycle
+            if (!this.options.colorCycle) {
+                this.options.colorCycle = setInterval(() => {
+                    this.cycleColors();
+                }, this.options.polygon.colorCycle);
+            }
+
+            // Transition to endColor during the color cycle
+            if (!this.options.transitionCycle) {
+                this.options.transitionCycle = setInterval(() => {
+                    this.transitionColors();
+                }, this.options.polygon.transitionCycle);
+            }
+        } else {
+            clearInterval(this.options.colorCycle);
+            this.options.colorCycle = undefined;
+            clearInterval(this.options.transitionCycle);
+            this.options.transitionCycle = undefined;
+        }
     }
 
     cycleColors() {
@@ -103,7 +125,7 @@ export default class Triangles {
         this.drawPolygons(nodes);
     }
 
-    drawPolygons(nodes){
+    drawPolygons(nodes) {
         const c = this.options.canvas,
             parent = c.parentElement,
             width = this.options.polygon.width,
@@ -116,7 +138,7 @@ export default class Triangles {
 
         ctx.clearRect(0, 0, c.width, c.height);
         ctx.save();
-        // ctx.scale(scaleFactor,scaleFactor);
+
         for(var i = 0; i < nodes.length; i++){
             var n=nodes[i];
             ctx.strokeStyle = `rgb(${n.color[0]},${n.color[1]},${n.color[2]})`;
@@ -142,17 +164,11 @@ export default class Triangles {
     }
 
     brighten(rgb, percent) {
-        // rgb = this.hexToRgb(hex);
-
         rgb[0] = Math.floor(rgb[0] + (256 - rgb[0]) * percent / 100);
         rgb[1] = Math.floor(rgb[1] + (256 - rgb[1]) * percent / 100);
         rgb[2] = Math.floor(rgb[2] + (256 - rgb[2]) * percent / 100);
 
         return rgb;
-        // return '#' +
-        //     ((0|(1<<8) + rgb[0] + (256 - rgb[0]) * percent / 100).toString(16)).substr(1) +
-        //     ((0|(1<<8) + rgb[1] + (256 - rgb[1]) * percent / 100).toString(16)).substr(1) +
-        //     ((0|(1<<8) + rgb[2] + (256 - rgb[2]) * percent / 100).toString(16)).substr(1); 
     }
 
     diffColorAtPercentage(startColor, endColor, perc) {
@@ -161,35 +177,5 @@ export default class Triangles {
             Math.floor(startColor[1] - (startColor[1] - endColor[1]) * perc),
             Math.floor(startColor[2] - (startColor[2] - endColor[2]) * perc)
         ];
-
-
     }
-
-    // componentToHex(c) {
-    //     var hex = c.toString(16);
-    //     return hex.length == 1 ? "0" + hex : hex;
-    // }
-
-    // rgbToHex(r, g, b) {
-    //     return "#" + this.componentToHex(r) + this.componentToHex(g) + this.componentToHex(b);
-    // }
-
-    // hexToRgb(hex) {
-    //     var rgb = [];
-    //     // strip the leading # if it's there
-    //     hex = hex.replace(/^\s*#|\s*$/g, '');
-        
-    //     // convert 3 char codes --> 6, e.g. `E0F` --> `EE00FF`
-    //     if(hex.length == 3){
-    //         hex = hex.replace(/(.)/g, '$1$1');
-    //     }
-        
-    //     //convert to rgb
-    //     rgb.push(parseInt(hex.substr(0, 2), 16));
-    //     rgb.push(parseInt(hex.substr(2, 2), 16));
-    //     rgb.push(parseInt(hex.substr(4, 2), 16));
-
-    //     return rgb;
-    // }
-
 }
