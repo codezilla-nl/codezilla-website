@@ -6,6 +6,7 @@ export default class Triangles {
         this.options = {
             canvas: document.querySelector(el),
             polygon: {
+                baseColor: [31, 36, 39],
                 nodes: [],
                 width: 30,
                 height: 30,
@@ -16,14 +17,15 @@ export default class Triangles {
 
         this.init();
         this.addListeners();
-        this.trianglesInView();
     }
 
     init() {
         this.generate();
         this.cycleColors();
+        this.isInView();
     }
 
+    // Set events, listeners
     addListeners() {
         let debounce;
         window.addEventListener("resize", () => {
@@ -31,16 +33,18 @@ export default class Triangles {
             debounce = setTimeout(this.init.bind(this), 100);
         });
 
-        new UtilRegisterScroll(this.trianglesInView.bind(this), 'requestAnimationFrame');
+        new UtilRegisterScroll(this.isInView.bind(this), 'requestAnimationFrame');
     }
 
-    trianglesInView() {
+    // Determine if the canvas is in view
+    isInView() {
         let state = UtilInViewport(this.options.canvas);
-        this.animate(state.inView);
+        this.toggleAnimate(state.inView);
     }
 
-    animate(state) {
-        if (state) {
+    // Toggle animate (set intervals or clear them)
+    toggleAnimate(doAnimate) {
+        if (doAnimate) {
             // Regenerate colors every color cycle
             if (!this.options.colorCycle) {
                 this.options.colorCycle = setInterval(() => {
@@ -62,9 +66,10 @@ export default class Triangles {
         }
     }
 
+    // Generate new colors for all nodes
     cycleColors() {
-        this.options.polygon.intervalCycle = 0;
         let polygons = this.options.polygon.nodes;
+        this.options.polygon.intervalCycle = 0;
 
         for (p=0; p < polygons.length; p++) {
             if (polygons[p].endColor) {
@@ -73,42 +78,45 @@ export default class Triangles {
             polygons[p].endColor = this.generateColor();
         }
         this.options.polygon.nodes = polygons;
-        this.drawPolygons(polygons);
     }
 
+    // Transition colors from start to end color
     transitionColors() {
         let polygons = this.options.polygon.nodes,
             cycle = ((100 / (this.options.polygon.colorCycle / this.options.polygon.transitionCycle)) / 100) * ++this.options.polygon.intervalCycle; //100% / (cycle time) = 2.5% => 2.5/100 = 0.025
 
         for (p=0; p < polygons.length; p++) {
-            if (Math.random() > 0.5) { // Put some randomness in the calc
+            if (Math.random() > 0.5) { // This will give more randomness to the transitioning colors
                 polygons[p].color = this.diffColorAtPercentage(polygons[p].startColor, polygons[p].endColor, cycle);
             }
         }
         this.drawPolygons(polygons);
     }
 
+    // Generates the nodes (polygons) based on context size
     generate() {
         const c = this.options.canvas,
             parent = c.parentElement,
             width = this.options.polygon.width,
-            height = this.options.polygon.height;
+            height = this.options.polygon.height,
+            nodes = this.options.polygon.nodes;
         
         c.width = parent.offsetWidth;
         c.height = parent.offsetHeight;
       
-        let nodes = this.options.polygon.nodes;
 
-        for (h=0; h < Math.ceil(c.width/width)+1; h++) {
+        for (h=0; h < Math.ceil(c.width/width)+1; h++) { // Horizontal rows
             let v = 0;
-            for (v=0; v < Math.ceil(c.height/(height/2))+1; v++) {
+            for (v=0; v < Math.ceil(c.height/(height/2))+1; v++) { // Vertical rows
                 
-                let color = this.generateColor(),
-                    offset = (h%2) ? width : 0;
-
+                let color = this.generateColor();
+                
+                //Every 'odd' row needs to offset 1/2 a triangle to match them up
+                let offset = (h%2) ? width : 0;
                 if (v%2) {
                   offset = (h%2) ? 0 : width;
                 }
+
                 nodes.push({
                     id: `polygon-${h}-${v}`,
                     width: width,
@@ -125,6 +133,7 @@ export default class Triangles {
         this.drawPolygons(nodes);
     }
 
+    // Draw polygon on the canvas
     drawPolygons(nodes) {
         const c = this.options.canvas,
             parent = c.parentElement,
@@ -136,7 +145,7 @@ export default class Triangles {
 
         let ctx = c.getContext("2d");
 
-        ctx.clearRect(0, 0, c.width, c.height);
+        ctx.clearRect(0, 0, parent.offsetWidth, parent.offsetHeight);
         ctx.save();
 
         for(var i = 0; i < nodes.length; i++){
@@ -146,6 +155,7 @@ export default class Triangles {
 
             ctx.lineWidth = 0;
 
+            // Will generate a triangle taking into account the general location (v, h) and odd / even row (offset)
             ctx.beginPath();
             ctx.moveTo((n.width*n.h)+n.offset, n.height/2*n.v);
             ctx.lineTo(((n.width)*(n.h+1)-n.offset), (((n.height/2)*n.v)+n.height/2));
@@ -159,11 +169,11 @@ export default class Triangles {
         ctx.restore();
     }
 
+    // Will generate a random color based on the base color
     generateColor() {
-        return this.brighten([31, 36, 39], Math.floor((Math.random()*20)-20));
-    }
+        let rgb = this.options.polygon.baseColor.slice(0),
+            percent = Math.floor((Math.random()*20)-20);
 
-    brighten(rgb, percent) {
         rgb[0] = Math.floor(rgb[0] + (256 - rgb[0]) * percent / 100);
         rgb[1] = Math.floor(rgb[1] + (256 - rgb[1]) * percent / 100);
         rgb[2] = Math.floor(rgb[2] + (256 - rgb[2]) * percent / 100);
@@ -171,6 +181,7 @@ export default class Triangles {
         return rgb;
     }
 
+    // Will return the color difference at a certain percentage between start and end color
     diffColorAtPercentage(startColor, endColor, perc) {
         return [
             Math.floor(startColor[0] - (startColor[0] - endColor[0]) * perc),
