@@ -35,12 +35,14 @@ export default class Triangles {
 
     // Set events, listeners
     addListeners() {
+        //On mousedown, set mousemove listener for glow
         this.options.canvas.addEventListener("mousedown", () => {
             this.options.canvas.onmousemove = (e) => {
                 this.glow(e);
             }
         });
 
+        // On mouseup, remove mousemove listener
         this.options.canvas.addEventListener("mouseup", () => {
             this.options.canvas.onmousemove = null;
         });
@@ -59,7 +61,6 @@ export default class Triangles {
 
     // Determine if the canvas is in view
     isInView() {
-
         let state = UtilInViewport(this.options.canvas);
         this.toggleAnimate(state.inView);
     }
