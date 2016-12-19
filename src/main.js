@@ -2,7 +2,8 @@ import Triangles from './classes/Triangles.js'
 
 class Main {
     constructor() {
-        new Triangles('#triangles');
+        var triangles = new Triangles('#triangles');
+        triangles.addGlobalListeners(); // TODO: this could be nicer
     }
 }
 

@@ -8,11 +8,11 @@ export default class Triangles {
             color: {
                 base: [31, 36, 39],
                 factor: function() {
-                    return Math.floor((Math.random()*20)-20);
+                    return Math.floor((Math.random()*25)-25);
                 }
             },
             polygon: {
-                nodes: [],
+                nodes: {},
                 width: 30,
                 height: 30,
                 colorCycle: 4000,
@@ -20,6 +20,8 @@ export default class Triangles {
                 transitionCycle: 100 // should never be higher than colorcycle. Maybe use requestAnimationFrame instead (although we might want a 'choppier' effect)? 
             }
          };
+
+        this.addGlobalListeners = this.addGlobalListeners;
 
         this.init();
         this.addListeners();
@@ -33,6 +35,19 @@ export default class Triangles {
 
     // Set events, listeners
     addListeners() {
+        this.options.canvas.addEventListener("mousedown", () => {
+            this.options.canvas.onmousemove = (e) => {
+                this.glow(e);
+            }
+        });
+
+        this.options.canvas.addEventListener("mouseup", () => {
+            this.options.canvas.onmousemove = null;
+        });
+    }
+
+    // These listeners should be called once.
+    addGlobalListeners() {
         let debounce;
         window.addEventListener("resize", () => {
             clearTimeout(debounce); //Poor man's debounce
@@ -44,8 +59,25 @@ export default class Triangles {
 
     // Determine if the canvas is in view
     isInView() {
+
         let state = UtilInViewport(this.options.canvas);
         this.toggleAnimate(state.inView);
+    }
+
+    glow(e) {
+        let bounds = this.options.canvas.getBoundingClientRect(),
+            h = Math.floor(Math.floor(e.clientX - bounds.left) / this.options.polygon.width),
+            v = Math.floor(Math.floor(e.clientY - bounds.top) / (this.options.polygon.height / 2));
+
+        let node = this.options.polygon.nodes[`${h}-${v}`],
+            offset = [
+                node.color[0],
+                node.color[1] + 15,
+                node.color[2]
+            ];
+
+        node.color = offset;
+        node.endColor = offset;
     }
 
     // Toggle animate (set intervals or clear them)
@@ -77,9 +109,10 @@ export default class Triangles {
         let polygons = this.options.polygon.nodes;
         this.options.polygon.intervalCycle = 0;
 
-        for (p=0; p < polygons.length; p++) {
-            if (polygons[p].endColor) {
-                polygons[p].startColor = polygons[p].endColor;
+        for(let p in polygons) { 
+            let polygon = polygons[p];
+            if (polygon.endColor) {
+                polygon.startColor = polygon.endColor;
             }
             polygons[p].endColor = this.generateColor();
         }
@@ -91,9 +124,10 @@ export default class Triangles {
         let polygons = this.options.polygon.nodes,
             cycle = ((100 / (this.options.polygon.colorCycle / this.options.polygon.transitionCycle)) / 100) * ++this.options.polygon.intervalCycle; //100% / (cycle time) = 2.5% => 2.5/100 = 0.025
 
-        for (p=0; p < polygons.length; p++) {
+        for(let p in polygons) { 
+            let polygon = polygons[p];
             if (Math.random() > this.options.polygon.drawFactor) { // This will give more randomness to the transitioning colors
-                polygons[p].color = this.diffColorAtPercentage(polygons[p].startColor, polygons[p].endColor, cycle);
+                polygon.color = this.diffColorAtPercentage(polygon.startColor, polygon.endColor, cycle);
             }
         }
         this.drawPolygons(polygons);
@@ -123,8 +157,7 @@ export default class Triangles {
                   offset = (h%2) ? 0 : width;
                 }
 
-                nodes.push({
-                    id: `polygon-${h}-${v}`,
+                nodes[`${h}-${v}`] = {
                     width: width,
                     height: height,
                     h: h,
@@ -132,7 +165,7 @@ export default class Triangles {
                     offset: offset,
                     color: color,
                     startColor: color
-                });
+                };
             }
         }
 
@@ -154,8 +187,8 @@ export default class Triangles {
         ctx.clearRect(0, 0, parent.offsetWidth, parent.offsetHeight);
         ctx.save();
 
-        for(var i = 0; i < nodes.length; i++){
-            var n=nodes[i];
+        for(let n in nodes) { 
+            let n = nodes[n];
             ctx.strokeStyle = `rgb(${n.color[0]},${n.color[1]},${n.color[2]})`;
             ctx.fillStyle = `rgb(${n.color[0]},${n.color[1]},${n.color[2]})`;
 
