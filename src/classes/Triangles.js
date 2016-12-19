@@ -65,19 +65,24 @@ export default class Triangles {
     }
 
     glow(e) {
+        //Determine bounds of canvas and offset mouse position to polygon node
         let bounds = this.options.canvas.getBoundingClientRect(),
-            h = Math.floor(Math.floor(e.clientX - bounds.left) / this.options.polygon.width),
-            v = Math.floor(Math.floor(e.clientY - bounds.top) / (this.options.polygon.height / 2));
+            posX = Math.floor(e.clientX - bounds.left),
+            posY = Math.floor(e.clientY - bounds.top),
+            h = Math.floor(posX / this.options.polygon.width),
+            v = Math.floor(posY / (this.options.polygon.height / 2));
 
-        let node = this.options.polygon.nodes[`${h}-${v}`],
-            offset = [
-                node.color[0],
-                node.color[1] + 15,
-                node.color[2]
-            ];
+        if (posX > 0 && posY > 0 && posX < bounds.width && posY < bounds.height) { // If within canvas
+            let node = this.options.polygon.nodes[`${h}-${v}`], // Select node based on mouse position
+                offset = [
+                    node.color[0],
+                    node.color[1] + 15, // Make it green
+                    node.color[2]
+                ];
 
-        node.color = offset;
-        node.endColor = offset;
+            node.color = offset;
+            node.endColor = offset;
+        }
     }
 
     // Toggle animate (set intervals or clear them)
