@@ -97,10 +97,7 @@ $diamond-dimensions: 100px;
 
 .cz-split-panels__panel-bg--animate {
     transition:
-        transform $diamond-anim-speed $diamond-anim-ease,
-        width $diamond-anim-speed $diamond-anim-ease,
-        height $diamond-anim-speed $diamond-anim-ease;
-    transform-style: preserve-3d;
+        transform $diamond-anim-speed $diamond-anim-ease;
 }
 
 .cz-split-panels__title {
