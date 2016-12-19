@@ -72,3 +72,42 @@
     position: absolute;
     width: 1px;
 }
+
+@mixin vendor($property, $value) {
+    #{'@-webkit-' + $property}: $value;
+    #{'@-moz-' + $property}: $value;
+    #{'@-ms-' + $property}: $value;
+    #{'@-o-' + $property}: $value;
+    #{$property}: $value;
+}
+
+// From: http://joshbroton.com/quick-fix-sass-mixins-for-css-keyframe-animations/
+@mixin animation($animate...) {
+    $max: length($animate);
+    $animations: '';
+
+    @for $i from 1 through $max {
+        $animations: #{$animations + nth($animate, $i)};
+
+        @if $i < $max {
+            $animations: #{$animations + ", "};
+        }
+    }
+
+    @include vendor(animation, $animations);
+}
+// Continuing: http://joshbroton.com/quick-fix-sass-mixins-for-css-keyframe-animations/
+@mixin keyframes($animationName) {
+    @-webkit-keyframes #{$animationName} {
+        @content;
+    }
+    @-moz-keyframes #{$animationName} {
+        @content;
+    }
+    @-o-keyframes #{$animationName} {
+        @content;
+    }
+    @keyframes #{$animationName} {
+        @content;
+    }
+}
