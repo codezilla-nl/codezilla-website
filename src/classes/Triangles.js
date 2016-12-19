@@ -5,13 +5,19 @@ export default class Triangles {
     constructor(el) {
         this.options = {
             canvas: document.querySelector(el),
+            color: {
+                base: [31, 36, 39],
+                factor: function() {
+                    return Math.floor((Math.random()*20)-20);
+                }
+            },
             polygon: {
-                baseColor: [31, 36, 39],
                 nodes: [],
                 width: 30,
                 height: 30,
                 colorCycle: 4000,
-                transitionCycle: 100 //should never be higher than colorcycle. Maybe use requestAnimationFrame instead (although we might want a 'choppier' effect)? 
+                drawFactor: 0.5, // likeliness of color transition being drawn
+                transitionCycle: 100 // should never be higher than colorcycle. Maybe use requestAnimationFrame instead (although we might want a 'choppier' effect)? 
             }
          };
 
@@ -86,7 +92,7 @@ export default class Triangles {
             cycle = ((100 / (this.options.polygon.colorCycle / this.options.polygon.transitionCycle)) / 100) * ++this.options.polygon.intervalCycle; //100% / (cycle time) = 2.5% => 2.5/100 = 0.025
 
         for (p=0; p < polygons.length; p++) {
-            if (Math.random() > 0.5) { // This will give more randomness to the transitioning colors
+            if (Math.random() > this.options.polygon.drawFactor) { // This will give more randomness to the transitioning colors
                 polygons[p].color = this.diffColorAtPercentage(polygons[p].startColor, polygons[p].endColor, cycle);
             }
         }
@@ -169,10 +175,10 @@ export default class Triangles {
         ctx.restore();
     }
 
-    // Will generate a random color based on the base color
+    // Will generate a random color based on the base color and offset percentage
     generateColor() {
-        let rgb = this.options.polygon.baseColor.slice(0),
-            percent = Math.floor((Math.random()*20)-20);
+        let rgb = this.options.color.base.slice(0),
+            percent = this.options.color.factor();
 
         rgb[0] = Math.floor(rgb[0] + (256 - rgb[0]) * percent / 100);
         rgb[1] = Math.floor(rgb[1] + (256 - rgb[1]) * percent / 100);
@@ -182,11 +188,11 @@ export default class Triangles {
     }
 
     // Will return the color at a certain percentage between start and end color
-    diffColorAtPercentage(startColor, endColor, perc) {
+    diffColorAtPercentage(startColor, endColor, percent) {
         return [
-            Math.floor(startColor[0] - (startColor[0] - endColor[0]) * perc),
-            Math.floor(startColor[1] - (startColor[1] - endColor[1]) * perc),
-            Math.floor(startColor[2] - (startColor[2] - endColor[2]) * perc)
+            Math.floor(startColor[0] - (startColor[0] - endColor[0]) * percent),
+            Math.floor(startColor[1] - (startColor[1] - endColor[1]) * percent),
+            Math.floor(startColor[2] - (startColor[2] - endColor[2]) * percent)
         ];
     }
 }
