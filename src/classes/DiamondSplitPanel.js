@@ -43,16 +43,11 @@ function DiamondSplitPanel() {
         );
         
         Object.assign($panel.style, transformations);
-        $panel.style.transformOrigin = 'center center';
-
-        $panel.classList.add(panelPreAnimateClass);
         
         requestAnimationFrame(()=>{
             $splitPanels.classList.add(panelsAnimateClass);
             $panel.classList.add(panelAnimateClass);
             $panel.style.transform = null;
-            $panel.style.width = null;
-            $panel.style.height = null;
             $panel.classList.remove(panelPreAnimateClass);
             onPrefixedEvent($panel, 'transitionend', removeAnimateClass);
         });
@@ -79,11 +74,11 @@ function DiamondSplitPanel() {
     function calculatePanelTransformations(diamondDimensions, panelDimensions){
         var translateX = diamondDimensions.left - panelDimensions.left;
         var translateY = diamondDimensions.top - panelDimensions.top;
+        var scaleX = diamondDimensions.width / panelDimensions.width;
+        var scaleY = diamondDimensions.height / panelDimensions.height;
         
         return {
-            transform:`translateX(${translateX}px) translateY(${translateY}px) rotate(-45deg)`,
-            width: `${diamondDimensions.width}px`,
-            height: `${diamondDimensions.height}px`
+            transform:`translate3d(${translateX}px, ${translateY}px, 0) rotate(-45deg) scale(${scaleX}, ${scaleY})`
         }
     }
     

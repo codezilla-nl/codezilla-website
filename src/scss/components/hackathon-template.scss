@@ -1,7 +1,8 @@
 @import '../settings/variables';
 
-$diamond-anim-speed: 0.3s;
+$diamond-anim-speed: 0.5s;
 $diamond-anim-ease: cubic-bezier(.53,.8,.63,.91);
+$diamond-dimensions: 100px;
 
 .cz-diamond-grid{
     display: flex;
@@ -41,10 +42,10 @@ $diamond-anim-ease: cubic-bezier(.53,.8,.63,.91);
     position: absolute;
     left:50%;
     top:50%;
-    margin-top:-50px;
-    margin-left:-50px;
-    width:100px;
-    height:100px;
+    margin-top:-0.5 * $diamond-dimensions;
+    margin-left:-0.5 * $diamond-dimensions;
+    width:$diamond-dimensions;
+    height:$diamond-dimensions;
     background: $cz-color-primary;
     transform: rotate(45deg);
     border-radius: 15px;
@@ -89,9 +90,9 @@ $diamond-anim-ease: cubic-bezier(.53,.8,.63,.91);
     position: absolute;
     width:100%;
     height:100%;
-    transform: none;
-    transform-origin: 200px 200px;
+    transform: translate3d(0, 0, 0) rotate3d(0, 0, 0, 0deg) scale(1,1);
     opacity: 1;
+    transform-origin: $diamond-dimensions/2 $diamond-dimensions/2;
 }
 
 .cz-split-panels__panel-bg--animate {
