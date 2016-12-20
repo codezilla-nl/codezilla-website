@@ -20,7 +20,7 @@ export default class Eastereggs {
         this.audio.pause();
         this.audio.currentTime = 0;
         this.audio.play();
-        this.shaker('logo');
+        this.shaker('page');
 
         this.audio.addEventListener('ended', this.stopShaking.bind(this));
     }
@@ -30,7 +30,7 @@ export default class Eastereggs {
     }
 
     stopShaking() {
-        document.querySelectorAll('.shaker').forEach(function(el) {
+        document.querySelectorAll('.shaker').forEach((el) => {
             el.classList.remove('shaker');
         });
     }
