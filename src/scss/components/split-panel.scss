@@ -1,56 +1,5 @@
 @import '../settings/variables';
 
-$diamond-anim-speed: 0.5s;
-$diamond-anim-ease: cubic-bezier(.53,.8,.63,.91);
-$diamond-dimensions: 100px;
-
-.cz-diamond-grid{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-}
-
-.cz-diamond-grid__block{
-    width:30vw;
-    height:30vh;
-    position: relative;
-    overflow: hidden;
-}
-
-//.cz-diamond-grid__line{
-//    position: absolute;
-//    display: block;
-//    width:100%;
-//    height:100%;
-//    left:0;
-//    top:50%;
-//
-//    &:before{
-//        content:" ";
-//        display: block;
-//        height:1px;
-//        background: #ccc;
-//        width:200%;
-//        left:-50%;
-//        position: absolute;
-//        transform: rotate(45deg);
-//    }
-//}
-
-.cz-diamond{
-    display:block;
-    position: absolute;
-    left:50%;
-    top:50%;
-    margin-top:-0.5 * $diamond-dimensions;
-    margin-left:-0.5 * $diamond-dimensions;
-    width:$diamond-dimensions;
-    height:$diamond-dimensions;
-    background: $cz-color-primary;
-    transform: rotate(45deg);
-    border-radius: 15px;
-}
-
 .cz-split-panels{
     position: relative;
     background: #fff;
@@ -62,7 +11,7 @@ $diamond-dimensions: 100px;
     left:0;
     opacity: 0;
     transition: opacity ease-out 0.3s;
-    transform-style: preserve-3d;
+    transform: translate3d(0,0,0);
 }
 
 .cz-split-panels--active{
@@ -112,5 +61,3 @@ $diamond-dimensions: 100px;
 .cz-split-panels-combiner {
     position: relative;
 }
-
-
