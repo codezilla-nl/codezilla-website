@@ -67,11 +67,11 @@ export default class Triangles {
 
     glow(e) {
         //Determine bounds of canvas and offset mouse position to polygon node
-        let bounds = this.options.canvas.getBoundingClientRect(),
-            posX = Math.floor(e.clientX - bounds.left),
-            posY = Math.floor(e.clientY - bounds.top),
-            h = Math.floor(posX / this.options.polygon.width),
-            v = Math.floor(posY / (this.options.polygon.height / 2));
+        let bounds = this.options.canvas.getBoundingClientRect();
+        let posX = Math.floor(e.clientX - bounds.left);
+        let posY = Math.floor(e.clientY - bounds.top);
+        let h = Math.floor(posX / this.options.polygon.width);
+        let v = Math.floor(posY / (this.options.polygon.height / 2));
 
         if (posX > 0 && posY > 0 && posX < bounds.width && posY < bounds.height) { // If within canvas
             let node = this.options.polygon.nodes[`${h}-${v}`], // Select node based on mouse position
@@ -141,11 +141,11 @@ export default class Triangles {
 
     // Generates the nodes (polygons) based on context size
     generate() {
-        const c = this.options.canvas,
-            parent = c.parentElement,
-            width = this.options.polygon.width,
-            height = this.options.polygon.height,
-            nodes = this.options.polygon.nodes;
+        const c = this.options.canvas;
+        const parent = c.parentElement;
+        const width = this.options.polygon.width;
+        const height = this.options.polygon.height;
+        const nodes = this.options.polygon.nodes;
         
         c.width = parent.offsetWidth;
         c.height = parent.offsetHeight;
@@ -180,10 +180,10 @@ export default class Triangles {
 
     // Draw polygon on the canvas
     drawPolygons(nodes) {
-        const c = this.options.canvas,
-            parent = c.parentElement,
-            width = this.options.polygon.width,
-            height = this.options.polygon.height;
+        const c = this.options.canvas;
+        const parent = c.parentElement;
+        const width = this.options.polygon.width;
+        const height = this.options.polygon.height;
         
         c.width = parent.offsetWidth;
         c.height = parent.offsetHeight;

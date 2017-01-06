@@ -1,5 +1,5 @@
 export default function UtilInViewport(element) {
-    var rect = element.getBoundingClientRect(),
+    let rect = element.getBoundingClientRect(),
         html = document.documentElement,
         result = {
             inView: false,
