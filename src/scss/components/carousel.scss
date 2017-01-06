@@ -1,6 +1,6 @@
 .cz-header {
-    width: 100vw;
     height: 100vh;
+    width: 100vw;
     color: $cz-text-inverse;
 
     @media screen and (max-width: $cz-breakpoint-desktop) {
@@ -10,6 +10,8 @@
 
 .cz-carousel {
     > li {
+        display: flex;
+        min-height: 300px;
         position: absolute;
         z-index: 1;
         top: 0;
@@ -39,15 +41,27 @@
     }
 }
 
+.cz-carousel__content {
+    align-self: center;
+    width: 100vw;
+
+    @media screen and (max-width: $cz-breakpoint-desktop) {
+        padding: 0 20px;
+    }
+}
+
 .cz-carousel__title {
     position: relative;
     z-index: 1;
     text-align: center;
     color: $cz-text-inverse;
     padding-bottom: $cz-inner-spacing * 2;
+    transition: font 150ms ease-out;
 
     @media screen and (max-width: $cz-breakpoint-desktop) {
         text-align: left;
+        font-size: 45px;
+        line-height: 1.3;
     }
 }
 
@@ -55,6 +69,8 @@
     position: relative;
     z-index: 1;
     text-align: left;
+    font-size: 20px;
+    transition: font 150ms ease-out;
 
     @media screen and (min-width: $cz-breakpoint-desktop) {
             text-align: right;
