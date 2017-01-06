@@ -3,6 +3,7 @@ import Foo from './classes/Foo.js'
 class Main {
     constructor() {
         new Foo();
+        new Triangles('#triangles');
     }
 }
 
