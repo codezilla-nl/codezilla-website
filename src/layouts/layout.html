@@ -18,13 +18,14 @@
     <!-- Allows control over how referrer information is passed -->
     <meta name="referrer" content="no-referrer">
     <!-- Links -->
-    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="/main.css">
 </head>
 <body>
     {{> header }}
 
     {{{ contents }}}
 
-    <script src="bundle.js"></script>
+    {{> footer nextPage = nextPage }}
+    <script src="/bundle.js"></script>
 </body>
 </html>

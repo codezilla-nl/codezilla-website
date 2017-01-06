@@ -8,7 +8,20 @@
     color: $cz-text-heading;
 }
 
-h1,
+@mixin heading-divider {
+    position: relative;
+
+    &::after {
+        background-color: $cz-color-primary;
+        content: '';
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        height: 3px;
+        width: 40px;
+    }
+}
+
 .cz-heading-1 {
     @include cz-heading;
     font-size: 70px;
@@ -16,14 +29,12 @@ h1,
     text-transform: uppercase;
 }
 
-h1 small,
 .cz-heading-1-sub {
     @include cz-heading;
     font-size: 26px;
     line-height: 1;
 }
 
-h2,
 .cz-heading-2 {
     @include cz-heading;
     @include cz-divider;
@@ -34,7 +45,6 @@ h2,
     margin: $cz-inner-spacing 0 $cz-inner-spacing;
 }
 
-h3,
 .cz-heading-3 {
     @include cz-heading;
     font-size: 19px;
@@ -42,13 +52,15 @@ h3,
     margin: $cz-inner-spacing 0 $cz-inner-spacing;
 }
 
-h4,
 .cz-heading-4 {
     @include cz-heading;
 }
 
+.heading-inverse {
+    color: $cz-text-heading-inverse;
+}
+
 // Link
-a,
 .cz-link {
     @include cz-font-base;
     color: $cz-color-secondary-dark;
