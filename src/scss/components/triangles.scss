@@ -1,0 +1,8 @@
+.cz-triangles {
+    cursor: pointer;
+    cursor: -webkit-grab;
+
+    &:active {
+        cursor: -webkit-grabbing;
+    }
+}
