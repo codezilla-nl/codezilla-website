@@ -7,7 +7,7 @@ $cz-font-height: 32px;
 /* COLORS */
 
 // Colors
-$cz-color-primary:          rgb(82,215,11);         // #52d70b
+$cz-color-primary:          rgb(104,213,23);        // #68d517
 $cz-color-secondary:        rgb(32,193,203);        // #20c1cb
 $cz-color-secondary-dark:   rgb(4,156,165);         // #049ca5
 
@@ -33,3 +33,7 @@ $cz-inner-spacing: 16px;
 $cz-breakpoint-tablet: 520px;
 $cz-breakpoint-desktop: 770px;
 $cz-max-width-desktop: 1000px;
+
+// Named colors
+$cz-background: $cz-fill-grey-dark;
+$cz-text-inverse: $cz-fill-light;

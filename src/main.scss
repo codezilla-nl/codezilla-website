@@ -8,6 +8,7 @@
 
 /* Tools */
 // @import 'scss/mixins';
+// @import 'scss/divider';
 
 /* Generic */
 @import 'node_modules/normalize-css/normalize';
@@ -25,7 +26,10 @@
 @import 'scss/components/section';
 @import 'scss/components/footer';
 @import 'scss/components/container';
+@import 'scss/components/carousel';
+@import 'scss/components/menu';
 @import 'scss/components/text';
 @import 'scss/components/media-block';
 
 /* Utilities */
+@import 'scss/utilities/utilities';

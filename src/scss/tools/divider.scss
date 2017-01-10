@@ -1,0 +1,21 @@
+@mixin cz-divider {
+    position: relative;
+
+    &::after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        height: 3px;
+        width: 40px;
+        background-color: $cz-color-primary;
+        transition: left 150ms ease-out;
+
+        @media screen and (min-width: $cz-breakpoint-desktop) {
+            // transform: translateX(calc(50% - 75px));
+            left: 50%;
+            margin-left: -75px;
+            width: 150px;
+        }
+    }
+}
