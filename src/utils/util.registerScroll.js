@@ -34,7 +34,7 @@ export default class UtilRegisterScroll {
 
     // Use throttle on callback for performance
     throttle(callback, limit) {
-        var _self = this;
+        let _self = this;
         if (!_self.ticking) {
             _self.ticking = true;
 
