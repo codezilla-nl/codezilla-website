@@ -1,5 +1,6 @@
 /* [OBJECT] typography */
 @import 'scss/settings/variables';
+@import 'scss/tools/divider';
 
 // Heading
 @mixin cz-heading {
@@ -36,7 +37,7 @@
 
 .cz-heading-2 {
     @include cz-heading;
-    @include heading-divider;
+    @include cz-divider;
 
     font-size: 29px;
     line-height: 1;
