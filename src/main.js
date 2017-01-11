@@ -1,8 +1,9 @@
 import Foo from './classes/Foo.js'
+import Triangles from './classes/Triangles.js'
 
 class Main {
     constructor() {
-        new Foo();
+        // new Foo();
         new Triangles('#triangles');
     }
 }
