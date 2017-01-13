@@ -1,4 +1,4 @@
-@mixin cz-divider {
+@mixin cz-divider($position: "center", $size: "large") {
     position: relative;
 
     &::after {
@@ -13,9 +13,20 @@
 
         @media screen and (min-width: $cz-breakpoint-desktop) {
             // transform: translateX(calc(50% - 75px));
-            left: 50%;
-            margin-left: -75px;
-            width: 150px;
+
+            @if $position == "left" {
+                left: 0;
+                margin-left: 0;
+            } @else {
+                left: 50%;
+                margin-left: -75px;
+            }
+
+            @if $size == "large" {
+                width: 150px;
+            } @else {
+                width: 50px;
+            }
         }
     }
 }

@@ -37,7 +37,7 @@
 
 .cz-heading-2 {
     @include cz-heading;
-    @include cz-divider;
+    @include cz-divider("left", "small");
 
     font-size: 29px;
     line-height: 1;

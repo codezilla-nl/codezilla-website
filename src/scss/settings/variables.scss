@@ -21,7 +21,7 @@ $cz-fill-light:             rgb(255,255,255);       // #ffffff
 $cz-text-heading:           $cz-fill-grey;
 $cz-text-heading-inverse:   $cz-fill-light;
 $cz-text:                   $cz-fill-grey-light;
-$cz-text-inverse:           rgba(255, 255, 255, .7);
+$cz-text-inverse:           rgb(105,111,114);
 
 // Contexts
 $cz-color-shadow:           rgb(226,231,233);       // #e2e7e9
@@ -36,4 +36,3 @@ $cz-max-width-desktop: 1000px;
 
 // Named colors
 $cz-background: $cz-fill-grey-dark;
-$cz-text-inverse: $cz-fill-light;
