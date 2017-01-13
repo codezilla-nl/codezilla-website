@@ -6,6 +6,6 @@ export default class Foo {
     }
 
     set bar(value) {
-        this.bar = value;
+        // this.bar = value;
     }
 }
