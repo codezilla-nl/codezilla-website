@@ -5,8 +5,7 @@ export default class Foo {
         this.bar('foo');
     }
 
-    
     bar(value) {
-        this.bar = value;
+        // this.bar = value;
     }
 }
