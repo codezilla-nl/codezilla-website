@@ -1,7 +1,15 @@
 .cz-header {
     height: 100vh;
     width: 100vw;
+    background-color: $cz-background;
     color: $cz-text-inverse;
+    display: block;
+
+    &:before, &:after{
+        content:" ";
+        clear: both;
+        display: table;
+    }
 
     @media screen and (max-width: $cz-breakpoint-desktop) {
         padding: $cz-inner-spacing;
@@ -18,7 +26,6 @@
         left: 0;
         right: 0;
         bottom: 0;
-        background-color: $cz-background;
     }
 
     .cz-carousel__image {

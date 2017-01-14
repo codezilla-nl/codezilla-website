@@ -34,6 +34,11 @@ $cz-breakpoint-tablet: 520px;
 $cz-breakpoint-desktop: 770px;
 $cz-max-width-desktop: 1000px;
 
+$cz-breakpoints-map: (
+    "tablet" : $cz-breakpoint-tablet,
+    "desktop" : $cz-breakpoint-desktop
+);
+
 // Named colors
 $cz-background: $cz-fill-grey-dark;
 $cz-text-inverse: $cz-fill-light;

@@ -3,6 +3,7 @@
 .cz-split-panels{
     position: relative;
     background: #fff;
+    overflow: hidden;
 }
 
 .cz-split-panels--overlay{
@@ -20,13 +21,30 @@
 
 .cz-split-panels__wrapper {
     display: flex;
-    justify-content: space-around;
     height: 100vh;
+    justify-content: space-around;
+    flex-flow: column;
+
+    @media (min-width: $cz-breakpoint-tablet) {
+        flex-flow: row;
+    }
 }
 
 .cz-split-panels__panel {
-    width: 50%;
     position: relative;
+    height: 50vh;
+
+    @include min-width("tablet") {
+        width: 50%;
+        height: auto;
+    }
+}
+
+
+.cz-split-panels__panel--left {
+    @include max-width("tablet") {
+        order: 2;
+    }
 }
 
 .cz-split-panels__panel-content{
