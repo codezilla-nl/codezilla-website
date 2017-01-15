@@ -1,5 +1,5 @@
-$cz-carousel-transition-duration: 700ms;
-$cz-carousel-transition-delay: 900ms;
+$cz-carousel-transition-duration: 500ms;
+$cz-carousel-transition-delay: 700ms;
 
 .cz-header {
     height: 100vh;
@@ -29,7 +29,6 @@ $cz-carousel-transition-delay: 900ms;
         left: 0;
         right: 0;
         bottom: 0;
-        // background-color: $cz-background; //removeme
     }
 
     .cz-carousel__image {
@@ -43,9 +42,8 @@ $cz-carousel-transition-delay: 900ms;
         background-size: cover;
         background-position: 50% 50%;
         transition: 
-            // opacity 300ms ease-out, 
-            opacity $cz-carousel-transition-duration ease-in-out $cz-carousel-transition-delay,
-            transform $cz-carousel-transition-duration ease-in-out $cz-carousel-transition-delay;
+            opacity $cz-carousel-transition-duration ease-out $cz-carousel-transition-delay,
+            transform $cz-carousel-transition-duration ease-out $cz-carousel-transition-delay;
         transform: translateX(50%);
     }
 
@@ -75,14 +73,35 @@ $cz-carousel-transition-delay: 900ms;
     padding-bottom: $cz-inner-spacing * 2;
     transition: 
         font 150ms ease-out, 
-        opacity $cz-carousel-transition-duration ease-in-out,
-        transform $cz-carousel-transition-duration ease-in-out;
+        opacity $cz-carousel-transition-duration ease-out,
+        transform $cz-carousel-transition-duration ease-out;
     transform: translateY(50%);
     opacity: 0;
 
     &:after {
-        transition: bottom $cz-carousel-transition-duration ease-in-out;
+        transition: bottom $cz-carousel-transition-duration ease-out;
         bottom: $cz-inner-spacing;
+        background-color: rgba(255, 255, 255, 0.7);
+    }
+
+    &:before {
+        content: '';
+        position: absolute;
+        bottom: $cz-inner-spacing;
+        left: 0;
+        height: 3px;
+        width: 40px;
+        background-color: #68d517;
+        transition: 
+            bottom $cz-carousel-transition-duration ease-out,
+            transform 9000ms - $cz-carousel-transition-duration * 2 linear 600ms;
+        z-index: 1;
+        transform: scaleX(0);
+
+        @media screen and (min-width: $cz-breakpoint-desktop) {
+            left: 50%;
+            margin-left: -75px;
+        }
     }
 
     @media screen and (max-width: $cz-breakpoint-desktop) {
@@ -98,8 +117,8 @@ $cz-carousel-transition-delay: 900ms;
     font-size: 20px;
     transition: 
         font 150ms ease-out, 
-        opacity $cz-carousel-transition-duration ease-in-out $cz-carousel-transition-delay,
-        transform $cz-carousel-transition-duration ease-in-out $cz-carousel-transition-delay;
+        opacity $cz-carousel-transition-duration ease-out $cz-carousel-transition-delay,
+        transform $cz-carousel-transition-duration ease-out $cz-carousel-transition-delay;
     transform: translateX(-50%);
     opacity: 0;
 
@@ -110,7 +129,6 @@ $cz-carousel-transition-delay: 900ms;
 }
 
 .cz-carousel--current {
-
     .cz-carousel & {
         z-index: 1;
     }
@@ -122,8 +140,20 @@ $cz-carousel-transition-delay: 900ms;
             opacity: 1;
 
             &:after {
-                transition: bottom $cz-carousel-transition-duration ease-in-out $cz-carousel-transition-delay * 2;
+                transition: bottom $cz-carousel-transition-duration ease-out $cz-carousel-transition-delay * 2;
                 bottom: 0;
+            }
+
+            &:before {
+                bottom: 0;
+                width: 40px;
+                transition: 
+                    bottom $cz-carousel-transition-duration ease-out $cz-carousel-transition-delay * 2,
+                    transform 9000ms - $cz-carousel-transition-duration * 2 linear 600ms;
+
+                @media screen and (min-width: $cz-breakpoint-desktop) {
+                    transform: scaleX(1);
+                }
             }
         }
         .cz-carousel__slogan {
@@ -138,9 +168,3 @@ $cz-carousel-transition-delay: 900ms;
         }
     }
 }
-// .cz-section-cta {
-//     @include cz-font-family('Light', 'Radikal');
-//     font-size: 39px;
-//     line-height: 1;
-//     color: $cz-text-heading;
-// }

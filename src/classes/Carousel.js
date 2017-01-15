@@ -1,10 +1,13 @@
+// import listenForTransitionEnd from '../../utils/util.listenForEnd.js';
+import { listenForTransitionEnd } from '../utils/util.listenForEnd.js';
+
 export default class {
     constructor(instance) {
         const el = document.querySelector(instance);
         this.cycle = undefined;
         this.slides = el.children;
         this.options = {
-            interval: 6000,
+            interval: 9000,
             class: {
                 current: 'cz-carousel--current',
                 transition: 'cz-carousel--transition'
@@ -38,27 +41,12 @@ export default class {
 
         current.classList.add(this.options.class.transition);
 
-        //on transitionend
         let _self = this;
-        setTimeout(function() {
+        listenForTransitionEnd(current, function() {
+            console.info('trisistransi');
             current.classList.remove(_self.options.class.transition);
             current.classList.remove(_self.options.class.current);
             next.classList.add(_self.options.class.current);
-        }, 1600);
-
+        });
     }
-
-    //get from rabo
-    // el.addEventListener('webkitTransitionEnd', vm.transitionEnd(someEl), false);
-
-    // };
-
-    // vm.transitionEnd = function(somEl) {
-    //     angular.element(somEl).removeClass('animating'); 
-    // };
-
-    // set bar(value) {
-    //     this.bar = value;
-    // }
-
 }
