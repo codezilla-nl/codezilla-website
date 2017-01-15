@@ -43,7 +43,6 @@ export default class {
 
         let _self = this;
         listenForTransitionEnd(current, function() {
-            console.info('trisistransi');
             current.classList.remove(_self.options.class.transition);
             current.classList.remove(_self.options.class.current);
             next.classList.add(_self.options.class.current);
