@@ -5,7 +5,7 @@ import Carousel from './classes/Carousel.js'
 class Main {
     constructor() {
         // new Foo();
-        const triangles = new Triangles('[cz-triangles]');
+        const triangles = new Triangles('#cz-triangles-header');
         triangles.addGlobalListeners(); // TODO: this could be nicer
 
         const carousel = new Carousel('[cz-carousel]');
