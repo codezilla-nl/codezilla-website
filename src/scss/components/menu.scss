@@ -1,4 +1,4 @@
-$color-fill: #133637;
+$color-fill: #fff;
 $base-size: 90px;
 $line-height: 16%;
 $text-height: 30%;
@@ -80,6 +80,7 @@ $mb-easing-alt: cubic-bezier(0.68, -0.3, 0.2, 1.55);
 }
 
 .menu__text {
+  fill: $color-fill;
   height: $text-height;
   width: 104%;
   position: absolute;

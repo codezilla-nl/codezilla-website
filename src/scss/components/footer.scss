@@ -14,6 +14,7 @@
 
 .cz-footer__block {
     position: relative; // Hack for weird color issue
+    pointer-events: none; // Pass click through to triangles
 
     // TODO: Decide on a proper breakpoint, 520 is too small
     @media screen and (min-width: 900px) {
