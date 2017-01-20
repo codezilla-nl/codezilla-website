@@ -4,10 +4,14 @@ $diamond-anim-speed: 0.3s;
 $diamond-anim-ease: cubic-bezier(.53,.8,.63,.91);
 $diamond-dimensions: 100px;
 $diamond-spacing-y: 50px;
-$diamong-grid-width-md: 60vw;
+$diamong-grid-width-md: 80vw;
 
 .cz-diamond-grid{
-    height: 100vh;
+    padding: 10vh 0;
+    min-height: 80vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .cz-diamond-grid__inner {
@@ -30,8 +34,18 @@ $diamong-grid-width-md: 60vw;
     overflow: hidden;
 
     @media (min-width: $cz-breakpoint-tablet) {
-        width:$diamong-grid-width-md/3;
-        height:$diamong-grid-width-md/3;
+        width:33%;
+        height:150px;
+
+        &:nth-child(5n+4), &:nth-child(5n+5){
+            width: calc( 33% + 1vw);
+        }
+        &:nth-child(5n+4){
+            right: -1/2vw;
+        }
+        &:nth-child(5n+5) {
+            left: -1/2vw;
+        }
     }
 }
 

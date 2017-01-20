@@ -13,6 +13,7 @@
     opacity: 0;
     transition: opacity ease-out 0.3s;
     transform: translate3d(0,0,0);
+    height: 100%;
 }
 
 .cz-split-panels--active{
@@ -21,7 +22,7 @@
 
 .cz-split-panels__wrapper {
     display: flex;
-    height: 100vh;
+    height: 100%;
     justify-content: space-around;
     flex-flow: column;
 
