@@ -37,8 +37,6 @@
 
 .cz-heading-2 {
     @include cz-heading;
-    @include cz-divider;
-
     font-size: 29px;
     line-height: 1;
     padding-bottom: $cz-inner-spacing;

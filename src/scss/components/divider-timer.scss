@@ -1,0 +1,24 @@
+@import 'scss/tools/divider';
+@import 'scss/settings/variables';
+
+.cz-divider-timer {
+    @include cz-divider;
+    position: relative;
+    background: #fff;
+
+    @media screen and (min-width: $cz-breakpoint-desktop) {
+        width: 150px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+//animate transform: translateX with GreenSock
+.cz-divider-timer__divider {
+    position: absolute;
+    background-color: $cz-color-primary;
+    height: 100%;
+    width: 100%;
+    transition: transform;
+}
+
