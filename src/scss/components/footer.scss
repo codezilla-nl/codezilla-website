@@ -4,7 +4,16 @@
     height: 630px;
 }
 
+.cz-footer__blocks {
+
+    // TODO: Decide on a proper breakpoint, 520 is too small
+    @media screen and (min-width: 900px) {
+        height: 465px;
+    }
+}
+
 .cz-footer__block {
+    position: relative; // Hack for weird color issue
 
     // TODO: Decide on a proper breakpoint, 520 is too small
     @media screen and (min-width: 900px) {
@@ -12,6 +21,11 @@
         width: 50%;
         height: 465px;
     }
+
+}
+
+.cz-footer__triangles {
+    position: absolute;
 }
 
 .cz-footer__block-container {
