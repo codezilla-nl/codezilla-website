@@ -5,6 +5,7 @@
     @include cz-divider;
     position: relative;
     background: #fff;
+    overflow: hidden;
 
     @media screen and (min-width: $cz-breakpoint-desktop) {
         width: 150px;
@@ -14,11 +15,12 @@
 }
 
 //animate transform: translateX with GreenSock
-.cz-divider-timer__divider {
+.cz-divider-timer__inner {
     position: absolute;
     background-color: $cz-color-primary;
     height: 100%;
     width: 100%;
-    transition: transform;
+    transition: transform 0.3s ease-out;
+    transform: translateX(0);
 }
 
