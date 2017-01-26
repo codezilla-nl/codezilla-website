@@ -1,7 +1,7 @@
 import UtilInViewport from "../utils/util.inViewport.js";
 import UtilRegisterScroll from "../utils/util.registerScroll.js";
 
-export default class {
+export default Triangles class {
     constructor(el) {
         this.options = {
             canvas: document.querySelector(el),
