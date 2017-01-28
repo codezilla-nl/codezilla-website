@@ -1,14 +1,9 @@
 @import "../settings/variables";
 
-.cz-footer {
-    height: 630px;
-}
-
 .cz-footer__blocks {
     background-color: $cz-fill-grey-dark;
 
-    // TODO: Decide on a proper breakpoint, 520 is too small
-    @media screen and (min-width: 900px) {
+    @media screen and (min-width: $cz-max-width-desktop) {
         height: 465px;
     }
 }
@@ -27,8 +22,7 @@
         }
     }
 
-    // TODO: Decide on a proper breakpoint, 520 is too small
-    @media screen and (min-width: 900px) {
+    @media screen and (min-width: $cz-max-width-desktop) {
         float: left;
         width: 50%;
         height: 465px;
