@@ -4,7 +4,7 @@
 .cz-divider-timer {
     @include cz-divider;
     position: relative;
-    background: #fff;
+    background: $cz-fill-light;
     overflow: hidden;
 
     @include cz-divider-center-desktop();
