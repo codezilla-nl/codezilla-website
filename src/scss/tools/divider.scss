@@ -3,4 +3,14 @@
     height: 3px;
     width: 40px;
     background-color: $cz-color-primary;
+    margin-left: 0;
+    border: 0;
+}
+
+@mixin cz-divider-center-desktop {
+    @media screen and (min-width: $cz-breakpoint-desktop) {
+        width: 150px;
+        margin-left: auto;
+        margin-right: auto;
+    }
 }
