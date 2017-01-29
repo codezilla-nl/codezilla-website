@@ -1,15 +1,16 @@
 import Foo from './classes/Foo.js'
 import DiamondSplitPanel from './classes/DiamondSplitPanel';
 import Triangles from './classes/Triangles.js'
+import Carousel from './classes/Carousel.js'
 
 class Main {
     constructor() {
         //new Foo();
         new DiamondSplitPanel();
-        // new Foo();
-        // const triangles = new Triangles('#triangles');
-        // triangles.addGlobalListeners(); // TODO: this could be nicer
+        const triangles = new Triangles('#cz-triangles-header');
+        triangles.addGlobalListeners(); // TODO: this could be nicer
 
+        const carousel = new Carousel('[cz-carousel]');
     }
 }
 
