@@ -5,6 +5,7 @@
 // Heading
 @mixin cz-heading {
     @include cz-font-family('Bold');
+    line-height: $cz-base-line-height;
     color: $cz-text-heading;
 }
 
@@ -25,14 +26,12 @@
 .cz-heading-1 {
     @include cz-heading;
     font-size: 70px;
-    line-height: 1;
     text-transform: uppercase;
 }
 
 .cz-heading-1-sub {
     @include cz-heading;
     font-size: 26px;
-    line-height: 1;
 }
 
 .cz-heading-2 {
@@ -40,7 +39,6 @@
     @include cz-divider;
 
     font-size: 29px;
-    line-height: 1;
     padding-bottom: $cz-inner-spacing;
     margin: $cz-inner-spacing 0 $cz-inner-spacing;
 }
@@ -48,7 +46,6 @@
 .cz-heading-3 {
     @include cz-heading;
     font-size: 19px;
-    line-height: 1;
     margin: $cz-inner-spacing 0 $cz-inner-spacing;
 }
 

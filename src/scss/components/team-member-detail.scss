@@ -1,0 +1,23 @@
+@import "../settings/variables";
+
+.cz-team-member-detail{
+    padding: 30px;
+
+    @media screen and (min-width: $cz-breakpoint-desktop) {
+        padding-left: 10vw;
+        padding-right: 10vw;
+
+    }
+}
+
+.cz-team-member-detail__quote {
+    font-size: 34px;
+    font-weight: bold;
+    line-height: 1.3;
+
+    &:before, &:after{
+        content: '"';
+        font-size: 40px;
+        color: $cz-fill-grey-lighter;
+    }
+}
