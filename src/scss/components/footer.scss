@@ -1,14 +1,17 @@
 @import "../settings/variables";
 
 .cz-footer__blocks {
+    display: flex;
+    flex-direction: column;
     background-color: $cz-fill-grey-dark;
 
     @media screen and (min-width: $cz-max-width-desktop) {
-        height: 465px;
+        flex-direction: row;
     }
 }
 
 .cz-footer__block {
+    flex: 1;
     position: relative; // Hack for weird color issue
     pointer-events: none; // Pass click through to triangles
 
@@ -23,9 +26,7 @@
     }
 
     @media screen and (min-width: $cz-max-width-desktop) {
-        float: left;
         width: 50%;
-        height: 465px;
     }
 }
 
