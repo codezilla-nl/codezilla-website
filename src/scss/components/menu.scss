@@ -16,6 +16,7 @@ $mb-easing-alt: cubic-bezier(0.68, -0.3, 0.2, 1.55);
   padding: 0;
   margin: 0;
   position: relative;
+  z-index: 2;
 
   //Debugging
   // &:after {
@@ -40,7 +41,7 @@ $mb-easing-alt: cubic-bezier(0.68, -0.3, 0.2, 1.55);
   // }
 }
 
-.mb-menu:hover {
+.mb-menu--active {
   .menu__line { 
     transition-timing-function: $mb-easing;
      &:first-of-type {

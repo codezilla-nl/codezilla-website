@@ -21,11 +21,15 @@
     <link rel="stylesheet" href="/main.css">
 </head>
 <body>
-    {{> header }}
+    {{> menu }}
+    <div id="body-container" class="cz-body-container">
+        <div id="body-container-overlay" class="cz-body-container__loader-overlay"></div>
+        {{> header }}
 
-    {{{ contents }}}
+        {{{ contents }}}
 
-    {{> footer nextPage = nextPage }}
+        {{> footer nextPage = nextPage }}
+    </div>
     <script src="/bundle.js"></script>
 </body>
 </html>

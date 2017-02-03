@@ -9,6 +9,7 @@ var permalinks = require('metalsmith-permalinks');
 var collections = require('metalsmith-collections');
 var rollup = require('metalsmith-rollup');
 var babel = require('rollup-plugin-babel');
+var nodeResolve = require('rollup-plugin-node-resolve');
 var sass = require('metalsmith-sass');
 var inPlace = require('metalsmith-in-place');
 var asset = require('metalsmith-static');
@@ -59,6 +60,8 @@ var run = module.exports = function(cb) {
       plugins: [
         babel({
           exclude: 'node_modules/**'
+        }),
+        nodeResolve({
         })
       ]
     }))

@@ -1,10 +1,15 @@
-import Foo from './classes/Foo.js'
+import Navigation from './classes/Navigation.js'
 import Triangles from './classes/Triangles.js'
 import Carousel from './classes/Carousel.js'
+import SmoothZilla from 'smooth-zilla' 
 
 class Main {
     constructor() {
-        // new Foo();
+        const nav = new Navigation({
+            content: '#body-container',
+            switch: '[cz-navigation-switch]'
+        });
+
         const triangles = new Triangles('#cz-triangles-header');
         triangles.addGlobalListeners(); // TODO: this could be nicer
 

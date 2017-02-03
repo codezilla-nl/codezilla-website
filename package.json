@@ -41,6 +41,7 @@
     "nightwatch": "^0.9.8",
     "phantomjs": "^2.1.7",
     "rollup-plugin-babel": "^2.6.1",
+    "rollup-plugin-node-resolve": "^2.0.0",
     "selenium-download": "^2.0.6",
     "stylelint": "^7.6.0"
   }
