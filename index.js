@@ -67,7 +67,7 @@ var run = module.exports = function(cb) {
     }))
     .build(function (err, files) {
       if (err) {
-        throw err;
+        console.error(err);
       }
     });
 
@@ -79,7 +79,7 @@ var run = module.exports = function(cb) {
     .use(sass({}))
     .build(function (err, files) {
       if (err) {
-        throw err;
+        console.error(err);
       }
 
       if (cb) {
