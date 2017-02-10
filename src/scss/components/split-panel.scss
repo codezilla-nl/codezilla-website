@@ -1,19 +1,39 @@
 @import '../settings/variables';
+@import '../tools/mixins';
 
 .cz-split-panels{
     position: relative;
     background: #fff;
     overflow: hidden;
+
+    &:before{
+        content:"";
+        display: block;
+        width: 150px;
+        height: 145px;
+        background-image:url('/images/claw-marks.png');
+        background-size:cover;
+        position: absolute;
+        opacity: 0.2;
+        top:0;
+        right:0;
+    }
 }
 
 .cz-split-panels--overlay{
-    position: absolute;
+    position: fixed;
+    overflow: scroll;
     top:0;
     left:0;
     opacity: 0;
     transition: opacity ease-out 0.3s;
     transform: translate3d(0,0,0);
     height: 100%;
+
+    @include min-width("tablet") {
+        position: absolute;
+        overflow: hidden;
+    }
 }
 
 .cz-split-panels--active{
@@ -26,7 +46,7 @@
     justify-content: space-around;
     flex-flow: column;
 
-    @media (min-width: $cz-breakpoint-tablet) {
+    @include min-width("tablet") {
         flex-flow: row;
     }
 }
@@ -41,7 +61,6 @@
     }
 }
 
-
 .cz-split-panels__panel--left {
     @include max-width("tablet") {
         order: 2;
@@ -53,7 +72,9 @@
 }
 
 .cz-split-panels__panel-content--pad-top {
-    padding-top: 200px;
+    @include min-width("tablet") {
+        padding-top: 200px;
+    }
 }
 
 .cz-split-panels__panel-content--full-height {
@@ -61,13 +82,25 @@
 }
 
 .cz-split-panels__panel-bg{
-    background: $cz-color-primary;
+    background-color: $cz-color-primary;
     position: absolute;
     width:100%;
     height:100%;
     transform: translate3d(0, 0, 0) rotate3d(0, 0, 0, 0deg) scale(1,1);
     opacity: 1;
     transform-origin: $diamond-dimensions/2 $diamond-dimensions/2;
+
+    &:before{
+        content:"";
+        display: block;
+        width: 140px;
+        height: 152px;
+        background-image:url('/images/cross.svg');
+        background-size:cover;
+        position: absolute;
+        top:10px;
+        right:0;
+    }
 }
 
 .cz-split-panels__panel-bg--animate {

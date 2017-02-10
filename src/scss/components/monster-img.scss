@@ -1,0 +1,13 @@
+.monster-img--has-shadow {
+    &:before{
+        display: block;
+        content:"";
+        position: absolute;
+        background-image:url('/images/monster-shadow.svg');
+        width:40px;
+        height:20px;
+        bottom:0;
+        left:50%;
+        transform: scaleX(2.5);
+    }
+}

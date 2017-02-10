@@ -15,7 +15,7 @@ const panelDisplayStyle = {
     show: 'block'
 };
 
-function DiamondSplitPanel() {
+function DiamondSplitPanel(bodyLocker) {
     
     initialize();
     
@@ -26,7 +26,9 @@ function DiamondSplitPanel() {
     }
     
     function showPanel($diamond){
+        bodyLocker.lockMobile();
         $splitPanels.style.display = panelDisplayStyle.show;
+        $splitPanels.scrollTop = 0;
         
         openPanelBgFromDiamond($panelFromDiamond, $diamond);
         
@@ -55,7 +57,6 @@ function DiamondSplitPanel() {
         function removeAnimateClass(){
             $panel.classList.remove(panelAnimateClass);
             offPrefixedEvent($panel, 'transitionend', removeAnimateClass);
-            
         }
     }
     
@@ -68,14 +69,15 @@ function DiamondSplitPanel() {
         function hideSplitPanels(){
             $splitPanels.style.display = panelDisplayStyle.hide;
             offPrefixedEvent($splitPanels, 'transitionend', hideSplitPanels);
+            bodyLocker.unlockMobile();
         }
     }
     
     function calculatePanelTransformations(diamondDimensions, panelDimensions){
-        var translateX = diamondDimensions.left - panelDimensions.left;
-        var translateY = diamondDimensions.top - panelDimensions.top;
-        var scaleX = diamondDimensions.width / panelDimensions.width;
-        var scaleY = diamondDimensions.height / panelDimensions.height;
+        const translateX = diamondDimensions.left - panelDimensions.left;
+        const translateY = diamondDimensions.top - panelDimensions.top;
+        const scaleX = diamondDimensions.width / panelDimensions.width;
+        const scaleY = diamondDimensions.height / panelDimensions.height;
         
         return {
             transform:`translate3d(${translateX}px, ${translateY}px, 0) rotate(-45deg) scale(${scaleX}, ${scaleY})`
