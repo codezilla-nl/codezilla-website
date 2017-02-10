@@ -1,6 +1,6 @@
 @import "../settings/variables";
 
-.cz-team-member-detail{
+.cz-team-detail{
     padding: 30px;
 
     @media screen and (min-width: $cz-breakpoint-desktop) {
@@ -10,7 +10,7 @@
     }
 }
 
-.cz-team-member-detail__quote {
+.cz-team-detail__quote {
     font-size: 34px;
     font-weight: bold;
     line-height: 1.3;

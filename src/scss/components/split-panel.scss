@@ -49,8 +49,15 @@
 }
 
 .cz-split-panels__panel-content{
-    padding-top: 200px;
     position: relative;
+}
+
+.cz-split-panels__panel-content--pad-top {
+    padding-top: 200px;
+}
+
+.cz-split-panels__panel-content--full-height {
+    height: 100%;
 }
 
 .cz-split-panels__panel-bg{
@@ -79,4 +86,8 @@
 
 .cz-split-panels-combiner {
     position: relative;
+}
+
+.cz-split-panels__content-img{
+
 }
