@@ -1,21 +1,16 @@
 @mixin cz-divider {
-    position: relative;
+    display: block;
+    height: 3px;
+    width: 40px;
+    background-color: $cz-color-primary;
+    margin-left: 0;
+    border: 0;
+}
 
-    &::after {
-        content: '';
-        position: absolute;
-        bottom: 0;
-        left: 0;
-        height: 3px;
-        width: 40px;
-        background-color: $cz-color-primary;
-        transition: left 150ms ease-out;
-
-        @media screen and (min-width: $cz-breakpoint-desktop) {
-            // transform: translateX(calc(50% - 75px));
-            left: 50%;
-            margin-left: -75px;
-            width: 150px;
-        }
+@mixin cz-divider-center-desktop {
+    @media screen and (min-width: $cz-breakpoint-desktop) {
+        width: 150px;
+        margin-left: auto;
+        margin-right: auto;
     }
 }
