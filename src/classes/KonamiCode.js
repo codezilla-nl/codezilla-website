@@ -11,7 +11,9 @@ export default class KonamiCode {
             Q: 81,
             ESCAPE: 27
         };
-        this.interval = 0;
+        this.start = null;
+        this.posX = 0;
+        this.posY = 0;
         this.directionEnum = {
             UP: 'top',
             DOWN: 'bottom',
@@ -19,29 +21,36 @@ export default class KonamiCode {
             RIGHT: 'right'
         };
 
+        this.interval = 5;
+
+        this.gameAssets = {
+            SNAKE: document.querySelector('[data-js=snake]'),
+            GRID: document.querySelector('[data-js=grid]'),
+            SNAKE_PART: document.querySelector('[data-js=snake-body]'),
+        };
 
         this.code = [];
-        this.konamiCode = [
-            this.keyCodesEnum.KEY_UP,
-            this.keyCodesEnum.KEY_UP,
-            this.keyCodesEnum.KEY_DOWN,
-            this.keyCodesEnum.KEY_DOWN,
-            this.keyCodesEnum.KEY_LEFT,
-            this.keyCodesEnum.KEY_RIGHT,
-            this.keyCodesEnum.KEY_LEFT,
-            this.keyCodesEnum.KEY_RIGHT,
-            this.keyCodesEnum.B,
-            this.keyCodesEnum.A,
-        ];
+        // this.konamiCode = [
+        //     this.keyCodesEnum.KEY_UP,
+        //     this.keyCodesEnum.KEY_UP,
+        //     this.keyCodesEnum.KEY_DOWN,
+        //     this.keyCodesEnum.KEY_DOWN,
+        //     this.keyCodesEnum.KEY_LEFT,
+        //     this.keyCodesEnum.KEY_RIGHT,
+        //     this.keyCodesEnum.KEY_LEFT,
+        //     this.keyCodesEnum.KEY_RIGHT,
+        //     this.keyCodesEnum.B,
+        //     this.keyCodesEnum.A,
+        // ];
 
         this.events = {
             KEY_DOWN: 'keydown'
         };
 
-        // this.konamiCode = [
-        //     this.keyCodesEnum.KEY_UP,
-        //     this.keyCodesEnum.KEY_UP
-        // ];
+        this.konamiCode = [
+            this.keyCodesEnum.KEY_UP,
+            this.keyCodesEnum.KEY_UP
+        ];
 
         // Binding
         this.codeInputHandler = event => this.codeInputEventHandler(event);
@@ -51,7 +60,8 @@ export default class KonamiCode {
     }
 
     initialize() {
-        this.addListener(this.events.KEY_DOWN, this.codeInputHandler);
+        // this.addListener(this.events.KEY_DOWN, this.codeInputHandler);
+        this.initGame();
     }
 
     addListener(type, handler) {
@@ -103,8 +113,8 @@ export default class KonamiCode {
                 break;
             default:
                 break;
-                event.preventDefault();
         }
+        event.preventDefault();
     }
 
     // Check if the input code is equal to the Konami Code
@@ -122,7 +132,7 @@ export default class KonamiCode {
         }
     }
 
-    // Reset the code array when you each 10 inputs
+    // Reset the code array when you enter 10 inputs
     resetCode() {
         this.code = [];
     }
@@ -139,36 +149,68 @@ export default class KonamiCode {
 
     // Build player
     setupPlayer() {
-        // const img = new Image();
-        // img.onload = () => ctx.drawImage(img, 0, 0);
-        // img.src = "/images/team/rory-monster.svg";
-        // img.style.position = 'absolute';
-        const player = document.querySelector('[data-js=player]');
-        player.classList.remove('-hidden');
+        const gridBlocks = document.querySelectorAll('[data-js=grid__block]');
 
-        this.addListener(this.events.KEY_DOWN, this.playerInputHandler);
-        window.requestAnimationFrame(this.movePlayer.bind(this));
+        gridBlocks.forEach((block, index) =>{
+            console.log(block, index);
+        });
+
+        // this.addListener(this.events.KEY_DOWN, this.playerInputHandler);
+        // window.requestAnimationFrame(this.movePlayer.bind(this));
     }
 
     // Draw player movement
-    movePlayer() {
-        const player = document.querySelector('[data-js=player]');
-        console.log('t', this.direction, player.style[this.direction]);
+    movePlayer(time) {
+        if (!this.start) this.start = time;
+        const progress = time - this.start;
+        // console.log(progress);
 
-        if (this.direction === this.directionEnum.RIGHT || this.direction === this.directionEnum.DOWN) {
-            this.interval += 5;
-        }
-
-        if (this.direction === this.directionEnum.LEFT || this.direction === this.directionEnum.UP) {
-            this.interval -= 5;
+        switch (this.direction) {
+            case this.directionEnum.LEFT:
+                this.posX -= this.interval;
+                break;
+            case this.directionEnum.RIGHT:
+                this.posX += this.interval;
+                break;
+            case this.directionEnum.DOWN:
+                this.posY += this.interval;
+                break;
+            case this.directionEnum.UP:
+                this.posY -= this.interval;
+                break;
         }
 
         if (this.direction === this.directionEnum.UP || this.direction === this.directionEnum.DOWN) {
-            player.style.top = this.interval + 'px';
+            this.gameAssets.SNAKE.style.top = `${this.posY}px`;
         } else {
-            player.style.left = this.interval + 'px';
+            this.gameAssets.SNAKE.style.left = `${this.posX}px`;
         }
 
+        this.detectCollision(this.gameAssets.SNAKE);
         window.requestAnimationFrame(this.movePlayer.bind(this));
+    }
+
+    createFood() {
+
+    }
+
+    placeFood() {
+
+    }
+
+    resetGame() {
+
+    }
+
+    detectCollision(player) {
+        // if (player.getBoundingClientRect().bottom >= this.gameAssets.GRID.getBoundingClientRect().bottom ||
+        //     player.getBoundingClientRect().top >= this.gameAssets.GRID.getBoundingClientRect().top ||
+        //     player.getBoundingClientRect().right >= this.gameAssets.GRID.getBoundingClientRect().right ||
+        //     player.getBoundingClientRect().left >= this.gameAssets.GRID.getBoundingClientRect().left
+        // ) {
+        //     this.interval = 0;
+        // }
+        console.log('bounds', player.getBoundingClientRect());
+        console.log('bounds', this.gameAssets.GRID.getBoundingClientRect());
     }
 }
