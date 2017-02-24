@@ -5,5 +5,5 @@
 }
 
 .cz-divider--center-desktop {
-    @include cz-divider-center-desktop;
+    @include cz-divider("center", "large");
 }

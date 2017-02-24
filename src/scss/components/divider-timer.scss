@@ -7,7 +7,7 @@
     background: $cz-fill-light;
     overflow: hidden;
 
-    @include cz-divider-center-desktop();
+    @include cz-divider("center", "large");
 }
 
 //animate transform: translateX with GreenSock
