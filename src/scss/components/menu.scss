@@ -46,7 +46,15 @@ $mb-easing-alt: cubic-bezier(0.68, -0.3, 0.2, 1.55);
             @include cz-divider();
         }
     }
+}
 
+.cz-navigation__list-link--active {
+    opacity: 1;
+
+    &:after {
+        content: ' ';
+        @include cz-divider();
+    }
 }
 
 .cz-menu__button {

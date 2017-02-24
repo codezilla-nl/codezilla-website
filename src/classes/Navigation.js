@@ -3,6 +3,7 @@ import whichTransitionEvent from '../utils/util.whichTransitionEvent';
 const SKEWED_CLASSNAME = 'cz-body-container--skewed';
 const OVERLAY_ACTIVE_CLASSNAME = 'cz-body-container__loader-overlay--active';
 const BUTTON_ACTIVE_CLASSNAME = 'cz-menu-button--active';
+const MENU_LINK_ACTIVE_CLASSNAME = 'cz-navigation__list-link--active';
 
 export default class Navigation {
     constructor(nav, content, isOpen) {
@@ -11,15 +12,14 @@ export default class Navigation {
         this.$contentOverlay = document.querySelector(`${content}-overlay`);
         this.$switch = this.$nav.querySelector('[cz-menu-button]');
         this.$links = this.$nav.getElementsByTagName('a');
-
-        console.log('this.$switch', this.$switch);
-
+        
         this._open = false;
         this._loading = false;
 
         this.open = isOpen;
 
         this.setListeners();
+        this.setActiveLink();
     }
 
     setListeners() {
@@ -32,6 +32,14 @@ export default class Navigation {
                 e.preventDefault();
                 this.navigate($link.getAttribute('href'));
             });
+        });
+    }
+
+    setActiveLink() {
+        [...this.$links].forEach(($link) => {
+            if ($link.getAttribute('href') === window.location.pathname) {
+                $link.classList.add(MENU_LINK_ACTIVE_CLASSNAME);
+            }
         });
     }
 
