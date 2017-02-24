@@ -37,12 +37,14 @@
 
 .cz-heading-2 {
     @include cz-heading;
-    @include cz-divider("left", "small");
-
     font-size: 29px;
     line-height: 1;
     padding-bottom: $cz-inner-spacing;
     margin: $cz-inner-spacing 0 $cz-inner-spacing;
+
+    &::after {
+        @include cz-divider("left", "small");
+    }
 }
 
 .cz-heading-3 {

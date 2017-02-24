@@ -1,32 +1,22 @@
 @mixin cz-divider($position: "center", $size: "large") {
-    position: relative;
+    display: block;
+    height: 3px;
+    width: 40px;
+    background-color: $cz-color-primary;
+    margin-left: 0;
+    border: 0;
 
-    &::after {
-        content: '';
-        position: absolute;
-        bottom: 0;
-        left: 0;
-        height: 3px;
-        width: 40px;
-        background-color: $cz-color-primary;
-        transition: left 150ms ease-out;
+    @media screen and (min-width: $cz-breakpoint-desktop) {
+        // transform: translateX(calc(50% - 75px));
 
-        @media screen and (min-width: $cz-breakpoint-desktop) {
-            // transform: translateX(calc(50% - 75px));
+        @if $position == "center" {
+            margin-left: auto;
+            margin-right: auto;
+        }
 
-            @if $position == "left" {
-                left: 0;
-                margin-left: 0;
-            } @else {
-                left: 50%;
-                margin-left: -75px;
-            }
-
-            @if $size == "large" {
-                width: 150px;
-            } @else {
-                width: 50px;
-            }
+        @if $size == "large" {
+            width: 150px;
         }
     }
+
 }
