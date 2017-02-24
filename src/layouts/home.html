@@ -21,11 +21,18 @@
     <link rel="stylesheet" href="/main.css">
 </head>
 <body>
-    {{> carousel }}
+    {{> menu }}
+    <div class="cz-logo">
+        <a href="/"><img class="cz-logo__image" src="/images/logo-light.svg" /></a>
+    </div>
+    <div id="body-container" class="cz-body-container">
+        <div id="body-container-overlay" class="cz-body-container__loader-overlay"></div>
+        {{> carousel }}
 
-    {{{ contents }}}
+        {{{ contents }}}
 
-    {{> footer nextPage = nextPage }}
+        {{> footer nextPage = nextPage }}
+    </div>
     <script src="/bundle.js"></script>
 </body>
 </html>
