@@ -43,6 +43,8 @@
     margin: $cz-inner-spacing 0 $cz-inner-spacing;
 
     &::after {
+        display: block;
+        content: '';
         @include cz-divider("left", "small");
     }
 }
