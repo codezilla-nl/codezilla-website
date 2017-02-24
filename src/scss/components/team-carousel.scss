@@ -1,3 +1,6 @@
+@import '../settings/variables';
+@import '../tools/mixins';
+
 .cz-team-carousel{
     height:100%;
 }
@@ -12,6 +15,10 @@
 
 .cz-team-carousel__img-wrapper{
     position: relative;
+
+    @include max-width('tablet') {
+        margin-bottom: -20px;
+    }
 }
 
 .cz-team-carousel__img {

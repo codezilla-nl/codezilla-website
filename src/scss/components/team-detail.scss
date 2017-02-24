@@ -1,12 +1,17 @@
 @import "../settings/variables";
+@import "../tools/mixins";
 
-.cz-team-detail{
+.cz-team-detail {
     padding: 30px;
 
     @media screen and (min-width: $cz-breakpoint-desktop) {
         padding-left: 10vw;
         padding-right: 10vw;
 
+    }
+
+    @include min-width('tablet') {
+        padding-bottom: 10vh;
     }
 }
 

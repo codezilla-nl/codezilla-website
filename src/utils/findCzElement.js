@@ -2,7 +2,7 @@ export function findCzElements(dataAttr) {
     return findByAttr(dataAttr);
 }
 
-function findByAttr(dataAttr, dataAttrVal, scope = document) {
+export function findByAttr(dataAttr, dataAttrVal, scope = document) {
     let queryAddition = '';
     
     if (dataAttrVal) {

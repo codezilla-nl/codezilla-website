@@ -2,7 +2,5 @@
 @import '../tools/mixins';
 
 .body--locked-mobile {
-    @include max-width('tablet'){
-        overflow: hidden;
-    }
+    overflow: hidden;
 }

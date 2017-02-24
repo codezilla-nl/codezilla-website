@@ -31,7 +31,6 @@ $diamong-grid-width-md: 80vw;
     width: 100%;
     height: 200px;
     position: relative;
-    overflow: hidden;
 
     @media (min-width: $cz-breakpoint-tablet) {
         width:33%;
@@ -68,8 +67,15 @@ $diamong-grid-width-md: 80vw;
         transform: rotate(45deg);
     }
 }
-
 .cz-diamond{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    height: 200px;
+}
+
+.cz-diamond__shape{
     display:block;
     position: absolute;
     left:50%;
@@ -81,4 +87,12 @@ $diamong-grid-width-md: 80vw;
     background: $cz-color-primary;
     transform: rotate(45deg);
     border-radius: 15px;
+}
+
+.cz-diamond__title {
+    position: absolute;
+    bottom: 15px;
+    font-size: 24px;
+    font-weight: bold;
+    text-transform: uppercase;
 }
