@@ -111,6 +111,11 @@ $cz-carousel-transition-delay: 700ms;
     }
 }
 
+.cz-carousel__divider {
+    position: relative;
+    z-index: 1;
+}
+
 .cz-carousel__slogan {
     position: relative;
     z-index: 1;
