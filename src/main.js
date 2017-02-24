@@ -10,7 +10,10 @@ class Main {
         triangles.addGlobalListeners(); // TODO: this could be nicer
         //footer.addGlobalListeners(); // TODO: re-enable whenever the perf bug has been fixed
 
-        const carousel = new Carousel('[cz-carousel]');
+        // only create a carousel when the attribute cz-carousel is present
+        if (document.querySelector('[cz-carousel]') !== null) {
+            const carousel = new Carousel('[cz-carousel]');
+        }
     }
 }
 
