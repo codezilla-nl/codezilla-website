@@ -5,10 +5,9 @@ import SmoothZilla from 'smooth-zilla'
 
 class Main {
     constructor() {
-        const nav = new Navigation({
-            content: '#body-container',
-            switch: '[cz-navigation-switch]'
-        });
+        console.log(`window.location.hash`, window.location.hash);
+        
+        const nav = new Navigation('[cz-menu]', '#body-container');
 
         const triangles = new Triangles('#cz-triangles-header');
         triangles.addGlobalListeners(); // TODO: this could be nicer
