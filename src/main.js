@@ -4,8 +4,6 @@ import Carousel from './classes/Carousel.js'
 
 class Main {
     constructor() {
-        console.log(`window.location.hash`, window.location.hash);
-        
         const nav = new Navigation('[cz-menu]', '#body-container');
 
         const triangles = new Triangles('#cz-triangles-header');
