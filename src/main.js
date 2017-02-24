@@ -1,10 +1,11 @@
-import Foo from './classes/Foo.js'
+import Navigation from './classes/Navigation.js'
 import Triangles from './classes/Triangles.js'
 import Carousel from './classes/Carousel.js'
 
 class Main {
     constructor() {
-        // new Foo();
+        const nav = new Navigation('[cz-menu]', '#body-container');
+
         const triangles = new Triangles('#cz-triangles-header');
         const footer = new Triangles('#cz-triangles-footer');
         triangles.addGlobalListeners(); // TODO: this could be nicer

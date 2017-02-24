@@ -1,12 +1,20 @@
-<button class="mb-menu">
-    <div class="menu__lines">
-        <div class="menu__line"></div>
-        <div class="menu__line"></div>
-    </div>
-    <div class="menu__text">
-        <svg viewBox="0 0 33.5 9" xmlns="http://www.w3.org/2000/svg">
-            <path class="menu__text" d="M8.63.17h0L4.71,5.66.82.17h0V8.11H2.4V4.84L4.68,8.21h.07L7,4.85V8.11H8.63Zm7.42.14H11v7.8h5.12V6.62h-3.5V4.85h3V3.46h-3V1.8h3.42ZM18.17.17h0V8.11h1.62V3.77l4.6,4.48h0V.31H22.77V4.64ZM32.76.31H31.14V5.2a1.43,1.43,0,1,1-2.84,0V.31H26.67v5a2.75,2.75,0,0,0,3,2.94,2.75,2.75,0,0,0,3-2.94Z">
-            </path>
-        </svg>
-    </div>
-</button>
+<nav cz-menu class="cz-menu">
+    <button cz-menu-button class="cz-menu__button cz-menu-button">
+        <div class="cz-menu-button__lines">
+            <div class="cz-menu-button__line"></div>
+            <div class="cz-menu-button__line"></div>
+        </div>
+        <div class="cz-menu-button__text">
+            <svg viewBox="0 0 33.5 9" xmlns="http://www.w3.org/2000/svg">
+                <path class="cz-menu-button__text" d="M8.63.17h0L4.71,5.66.82.17h0V8.11H2.4V4.84L4.68,8.21h.07L7,4.85V8.11H8.63Zm7.42.14H11v7.8h5.12V6.62h-3.5V4.85h3V3.46h-3V1.8h3.42ZM18.17.17h0V8.11h1.62V3.77l4.6,4.48h0V.31H22.77V4.64ZM32.76.31H31.14V5.2a1.43,1.43,0,1,1-2.84,0V.31H26.67v5a2.75,2.75,0,0,0,3,2.94,2.75,2.75,0,0,0,3-2.94Z">
+                </path>
+            </svg>
+        </div>
+    </button>
+
+    <ul class="cz-menu__list">
+        <li class="cz-navigation__list-item"><a href="/" class="cz-navigation__list-link cz-text-inverse">Home</a></li>
+        <li class="cz-navigation__list-item"><a href="/team/" class="cz-navigation__list-link cz-text-inverse">Over ons</a></li>
+        <li class="cz-navigation__list-item"><a href="/projecten/" class="cz-navigation__list-link cz-text-inverse">Werken bij</a></li>
+    </ul>
+</nav>
