@@ -1,7 +1,6 @@
 import Navigation from './classes/Navigation.js'
 import Triangles from './classes/Triangles.js'
 import Carousel from './classes/Carousel.js'
-import SmoothZilla from 'smooth-zilla' 
 
 class Main {
     constructor() {

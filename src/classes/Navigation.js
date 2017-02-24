@@ -6,6 +6,12 @@ const BUTTON_ACTIVE_CLASSNAME = 'cz-menu-button--active';
 const MENU_LINK_ACTIVE_CLASSNAME = 'cz-navigation__list-link--active';
 
 export default class Navigation {
+    /**
+     * Create a navigation instance
+     * @param nav {string} Reference to the navigation element
+     * @param content{string} Reference to the content element
+     * @param isOpen {Boolean} Defines the initial open state
+     */
     constructor(nav, content, isOpen) {
         this.$nav = document.querySelector(nav);
         this.$content = document.querySelector(content);
@@ -22,6 +28,9 @@ export default class Navigation {
         this.setActiveLink();
     }
 
+    /**
+     * Sets global listeners
+     */
     setListeners() {
         this.$switch.addEventListener('click', (e) => {
             this.open = !this.open;
@@ -35,6 +44,9 @@ export default class Navigation {
         });
     }
 
+    /**
+     * Adds an active class to the link for the current page
+     */
     setActiveLink() {
         [...this.$links].forEach(($link) => {
             if ($link.getAttribute('href') === window.location.pathname) {
@@ -43,6 +55,10 @@ export default class Navigation {
         });
     }
 
+    /**
+     * Sets the 'open' state
+     * @param isOpen {Boolean}
+     */
     set open(isOpen) {
         this._open = isOpen;
 
@@ -56,6 +72,10 @@ export default class Navigation {
         }
     }
 
+    /**
+     * Sets the 'loading' state
+     * @param isLoading {Boolean}
+     */
     set loading(isLoading) {
         this._loading = isLoading;
 
@@ -66,14 +86,26 @@ export default class Navigation {
         }
     }
 
+    /**
+     * Returns the loading state
+     * @returns {Boolean}
+     */
     get loading() {
         return this._loading;
     }
 
+    /**
+     * Returns the open state
+     * @returns {Boolean}
+     */
     get open() {
         return this._open;
     }
 
+    /**
+     * Navigates to a specific url
+     * @param href {string} Url href
+     */
     navigate(href) {
         var transitionEvent = whichTransitionEvent();
 
