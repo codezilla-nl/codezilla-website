@@ -1,17 +1,37 @@
 @import "../settings/variables";
 
-.cz-footer {
-    height: 630px;
+.cz-footer__blocks {
+    display: flex;
+    flex-direction: column;
+    background-color: $cz-fill-grey-dark;
+
+    @media screen and (min-width: $cz-max-width-desktop) {
+        flex-direction: row;
+    }
 }
 
 .cz-footer__block {
+    flex: 1;
+    position: relative; // Hack for weird color issue
+    pointer-events: none; // Pass click through to triangles
 
-    // TODO: Decide on a proper breakpoint, 520 is too small
-    @media screen and (min-width: 900px) {
-        float: left;
-        width: 50%;
-        height: 465px;
+    @media screen and (min-width: $cz-breakpoint-desktop) {
+        &:nth-of-type(1) {
+            background-color: rgba(26, 33, 26, .5);
+        }
+
+        &:nth-of-type(2) {
+            background-color: rgba(0, 0, 0, .25);
+        }
     }
+
+    @media screen and (min-width: $cz-max-width-desktop) {
+        width: 50%;
+    }
+}
+
+.cz-footer__triangles {
+    position: absolute;
 }
 
 .cz-footer__block-container {
@@ -33,6 +53,7 @@
     font-size: 80px;
     text-transform: uppercase;
     line-height: 44px;
+    padding: 0 20px;
 
     background-color: $cz-color-primary;
 
