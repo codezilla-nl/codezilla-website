@@ -33,6 +33,7 @@ export default class Navigation {
      */
     setListeners() {
         this.$switch.addEventListener('click', (e) => {
+            this.$switch.blur();
             this.open = !this.open;
         });
 

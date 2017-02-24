@@ -1,15 +1,17 @@
+
 .cz-body-container {
     position: relative;
     min-height: 100%;
     background-color: #fff;
     transition: transform 300ms;
+    transition-delay: 200ms;
     z-index: 0;
     overflow-x: hidden;
     transform-origin: top right; // Has to be set on the container, or weird jumping occurs
 }
 
 .cz-body-container--skewed {
-    transform: translate(0, 150px) skew(0deg, -5deg) scale(0.7);
+    transform: translate(0, 120px) rotateY(-10deg) scale(0.75);
 }
 
 .cz-body-container__loader-overlay {

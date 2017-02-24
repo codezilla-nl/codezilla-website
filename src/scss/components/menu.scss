@@ -3,7 +3,7 @@ $base-size: 40px;
 $line-height: 16%;
 $text-height: 30%;
 
-$mb-duration: 800ms;
+$mb-duration: 400ms;
 $mb-easing: cubic-bezier(0.68, -0.55, 0.4, 1.3);
 $mb-easing-alt: cubic-bezier(0.68, -0.3, 0.2, 1.55);
 
@@ -57,12 +57,10 @@ $mb-easing-alt: cubic-bezier(0.68, -0.3, 0.2, 1.55);
     }
 }
 
-.cz-menu__button {
+.cz-menu-button {
     width: $base-size;
     height: $base-size * 0.84;
-}
-
-.cz-menu-button {
+    outline: none;
     border: none;
     cursor: pointer;
     background-color: transparent;
@@ -70,6 +68,12 @@ $mb-easing-alt: cubic-bezier(0.68, -0.3, 0.2, 1.55);
     margin: 0;
     position: relative;
     z-index: 3;
+
+    &:focus {
+        .cz-menu-button__line {
+            box-shadow: 0 0 8px #fff;
+        }
+    }
 }
 
 .cz-menu-button--active {

@@ -12,6 +12,9 @@ body {
     @include cz-font-base;
 
     background-color: #242f34;
+
+    // Perspective for the body container
+    perspective: 600px;
 }
 
 p {
