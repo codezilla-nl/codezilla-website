@@ -41,12 +41,6 @@
     line-height: 1;
     padding-bottom: $cz-inner-spacing;
     margin: $cz-inner-spacing 0 $cz-inner-spacing;
-
-    &::after {
-        display: block;
-        content: '';
-        @include cz-divider("left", "small");
-    }
 }
 
 .cz-heading-3 {
