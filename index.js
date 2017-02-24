@@ -12,6 +12,7 @@ var babel = require('rollup-plugin-babel');
 var sass = require('metalsmith-sass');
 var inPlace = require('metalsmith-in-place');
 var asset = require('metalsmith-static');
+var helpers = require('metalsmith-register-helpers');
 
 var run = module.exports = function(cb) {
   Metalsmith(__dirname)
@@ -34,6 +35,9 @@ var run = module.exports = function(cb) {
     .use(inPlace({
       engine: 'handlebars',
       partials: './src/partials/'
+    }))
+    .use(helpers({
+      directory: "./src/helpers"
     }))
     .use(layouts({
       engine: 'handlebars',

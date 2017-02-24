@@ -1,0 +1,32 @@
+<div cz-diamond-split-panel cz-team-member="{{name}}" class="cz-split-panels cz-split-panels--overlay" style="display: none">
+    <h2 class="cz-heading-1 cz-split-panels__title">{{ displayName}}</h2>
+    <div class="cz-split-panels__wrapper">
+        <div class="cz-split-panels__panel cz-split-panels__panel--left">
+            <div class="cz-split-panels__panel-content cz-split-panels__panel-content--pad-top">
+                <div class="cz-team-detail">
+                    <span class="cz-team-detail__quote">{{quote}}</span>
+                    <h3 class="cz-heading-2">Likes</h3>
+                    <p>{{> likes }}</p>
+                    <div class="cz-team-detail__job">
+                        <h3 class="cz-heading-2">{{ displayName}} schrijft monsterlijk goede code voor...</h3>
+                        {{> writesCodeFor }}
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="cz-split-panels__panel cz-split-panels__panel--right">
+            <div class="cz-split-panels__panel-bg" cz-panel-from-diamond=""></div>
+            <div class="cz-split-panels__panel-content cz-split-panels__panel-content--full-height">
+                <div class="cz-team-carousel">
+                    <div class="cz-team-carousel__content">
+                        <div class="cz-team-carousel__img-wrapper">
+                            <div class="monster-img monster-img--has-shadow monster-img--large">
+                                <img class="monster-img__img" src="{{ svg }}" width="200px" height="200px"  />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -16,13 +16,24 @@
 }
 
 .cz-team-detail__quote {
-    font-size: 34px;
+    font-size: 30px;
     font-weight: bold;
     line-height: 1.3;
 
     &:before, &:after{
         content: '"';
-        font-size: 40px;
+        font-size: 30px;
         color: $cz-fill-grey-lighter;
     }
+
+    @include min-width('tablet') {
+        width: 80vw;
+        display: block;
+        text-align: center;
+        margin-top: -40px;
+    }
+}
+
+.cz-team-detail__job {
+    margin-top: 8vh;
 }

@@ -30,6 +30,7 @@
     transition: opacity ease-out 0.3s;
     transform: translate3d(0,0,0);
     height: 100%;
+    width: 100%;
 }
 
 .cz-split-panels--active{
@@ -58,6 +59,7 @@
 }
 
 .cz-split-panels__panel--left {
+    z-index: 1;
     @include max-width("tablet") {
         order: 2;
     }
