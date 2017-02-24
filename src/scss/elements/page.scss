@@ -15,6 +15,10 @@ body {
 
     // Perspective for the body container
     perspective: 600px;
+
+    @media screen and (max-width: $cz-breakpoint-tablet) {
+        overflow-x: hidden;
+    }
 }
 
 p {

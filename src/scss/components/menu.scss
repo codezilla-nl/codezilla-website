@@ -11,7 +11,13 @@ $mb-easing-alt: cubic-bezier(0.68, -0.3, 0.2, 1.55);
     position: absolute;
     top: 50px;
     left: 70px;
+    right: 0;
     height: 100%;
+
+    @media screen and (max-width: $cz-breakpoint-desktop) {
+        top: 30px;
+        left: 30px;
+    }
 }
 
 .cz-menu__list {
@@ -74,6 +80,14 @@ $mb-easing-alt: cubic-bezier(0.68, -0.3, 0.2, 1.55);
             box-shadow: 0 0 8px #fff;
         }
     }
+
+    @media screen and (max-width: $cz-breakpoint-desktop) {
+        position: absolute;
+        right: 30px;
+        // Scale, because the sizing is still a bit wonky
+        // TODO: Make menu button sizable with one setting
+        transform: scale(0.8);
+    }
 }
 
 .cz-menu-button--active {
@@ -98,8 +112,8 @@ $mb-easing-alt: cubic-bezier(0.68, -0.3, 0.2, 1.55);
   height: $line-height;
   position: absolute;
   transition: transform $mb-duration $mb-easing-alt $mb-duration/20;
-  
-  &:first-of-type {   
+
+  &:first-of-type {
       top: 0;
       left: 0;
       transform: rotate(0) translate(0, 0);

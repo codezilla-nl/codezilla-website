@@ -12,6 +12,14 @@
 
 .cz-body-container--skewed {
     transform: translate(0, 120px) rotateY(-10deg) scale(0.75);
+
+    @media screen and (max-width: $cz-breakpoint-desktop) {
+        transform: translate(0, 120px) rotateY(-10deg) scale(0.65);
+    }
+
+    @media screen and (max-width: $cz-breakpoint-tablet) {
+        transform: translate(40%, 180px) rotateY(-10deg) scale(0.75);
+    }
 }
 
 .cz-body-container__loader-overlay {
