@@ -5,10 +5,14 @@
             <div class="cz-split-panels__panel-content cz-split-panels__panel-content--pad-top">
                 <div class="cz-team-detail">
                     <span class="cz-team-detail__quote">{{quote}}</span>
-                    <h3 class="cz-heading-2">Likes</h3>
-                    <p>{{> likes }}</p>
-                    <div class="cz-team-detail__job">
-                        <h3 class="cz-heading-2">{{ displayName}} schrijft monsterlijk goede code voor...</h3>
+                    <div class="cz-team-detail__section">
+                        <h3 class="cz-heading-2 cz-no-m-b cz-no-p-b">Likes</h3>
+                        <hr class="cz-divider " />
+                        <p>{{> likes }}</p>
+                    </div>
+                    <div class="cz-team-detail__section">
+                        <h3 class="cz-heading-2 cz-no-m-b cz-no-p-b">{{ displayName}} schrijft monsterlijk goede code voor...</h3>
+                        <hr class="cz-divider" />
                         {{> writesCodeFor }}
                     </div>
                 </div>

@@ -1,5 +1,9 @@
 @import 'scss/tools/divider';
 
 .cz-divider {
-    @include cz-divider;
+    @include cz-divider("", "");
+}
+
+.cz-divider--center-desktop {
+    @include cz-divider("center", "large");
 }
