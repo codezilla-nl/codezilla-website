@@ -5,13 +5,18 @@
     color: $cz-text;
 }
 
-.cz-text-inverse{
+.cz-text-inverse {
     @include cz-font-family('Regular', 'Radikal');
-    color: $cz-text-inverse;
+
+    &, a, a:hover {
+        color: $cz-text-inverse;
+    }
 }
 
-.cz-text-link-inverse {
+.cz-text-inverse--light {
     @include cz-font-family('Regular', 'Radikal');
-    color: $cz-text-inverse;
-}
 
+    &, a, a:hover {
+        color: $cz-text-inverse-light;
+    }
+}
