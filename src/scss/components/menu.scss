@@ -1,97 +1,47 @@
 $color-fill: #fff;
-$base-size: 40px;
+$base-size: 90px;
 $line-height: 16%;
 $text-height: 30%;
 
-$mb-duration: 400ms;
+$mb-duration: 800ms;
 $mb-easing: cubic-bezier(0.68, -0.55, 0.4, 1.3);
 $mb-easing-alt: cubic-bezier(0.68, -0.3, 0.2, 1.55);
 
-.cz-menu {
-    position: absolute;
-    top: 50px;
-    left: 70px;
-    right: 0;
-    height: 100%;
+.mb-menu {
+  width: $base-size;
+  height: $base-size * 0.84;
+  border: none;
+  cursor: pointer;
+  background-color: transparent;
+  padding: 0;
+  margin: 0;
+  position: relative;
 
-    @media screen and (max-width: $cz-breakpoint-desktop) {
-        top: 30px;
-        left: 30px;
-    }
+  //Debugging
+  // &:after {
+  //   content: '';
+  //   background-color: #0f0;
+  //   opacity: 0.5;
+  //   position: absolute;
+  //   top: 0;
+  //   left: 0;
+  //   bottom: 0;
+  //   right: 0;
+  // }
+  // &:before {
+  //   content: '';
+  //   background-color: #f00;
+  //   opacity: 0.5;
+  //   position: absolute;
+  //   left: 10%;
+  //   top: 10%;
+  //   bottom: 10%;
+  //   right: 10%;
+  // }
 }
 
-.cz-menu__list {
-    position: relative;
-    margin: 100px 0 0 0;
-    padding: 0;
-    list-style: none;
-}
-
-.cz-navigation__list-item {
-    margin: 18px 0;
-}
-
-.cz-navigation__list-link {
-    font-size: 24px;
-    text-decoration: none;
-    opacity: .5;
-    padding-bottom: 3px;
-
-    &:after {
-        display: block;
-        content: ' ';
-        height: 3px;
-    }
-
-    &:hover {
-        opacity: 1;
-        padding-bottom: 0;
-
-        &:after {
-            content: ' ';
-            @include cz-divider();
-        }
-    }
-}
-
-.cz-navigation__list-link--active {
-    opacity: 1;
-
-    &:after {
-        content: ' ';
-        @include cz-divider();
-    }
-}
-
-.cz-menu-button {
-    width: $base-size;
-    height: $base-size * 0.84;
-    outline: none;
-    border: none;
-    cursor: pointer;
-    background-color: transparent;
-    padding: 0;
-    margin: 0;
-    position: relative;
-    z-index: 3;
-
-    &:focus {
-        .cz-menu-button__line {
-            box-shadow: 0 0 8px #fff;
-        }
-    }
-
-    @media screen and (max-width: $cz-breakpoint-desktop) {
-        position: absolute;
-        right: 30px;
-        // Scale, because the sizing is still a bit wonky
-        // TODO: Make menu button sizable with one setting
-        transform: scale(0.8);
-    }
-}
-
-.cz-menu-button--active {
-  .cz-menu-button__line {
+.mb-menu:hover {
+  .menu__line { 
     transition-timing-function: $mb-easing;
      &:first-of-type {
           transform: rotate(45deg) translate(10%, -80%);
@@ -100,20 +50,20 @@ $mb-easing-alt: cubic-bezier(0.68, -0.3, 0.2, 1.55);
           transform: rotate(-45deg) translate(9%, -215%);
       }
   }
-  .cz-menu-button__text {
+  .menu__text {
     transform: translateY(40%) scaleY(0.8);
     opacity:0;
   }
 }
 
-.cz-menu-button__line { 
+.menu__line { 
   background-color: $color-fill;
   width: 100%;
   height: $line-height;
   position: absolute;
   transition: transform $mb-duration $mb-easing-alt $mb-duration/20;
-
-  &:first-of-type {
+  
+  &:first-of-type {   
       top: 0;
       left: 0;
       transform: rotate(0) translate(0, 0);
@@ -129,7 +79,7 @@ $mb-easing-alt: cubic-bezier(0.68, -0.3, 0.2, 1.55);
   }
 }
 
-.cz-menu-button__text {
+.menu__text {
   fill: $color-fill;
   height: $text-height;
   width: 104%;

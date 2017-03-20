@@ -3,6 +3,7 @@
 /* FONT */
 $cz-font-size: 16px;
 $cz-font-height: 32px;
+$cz-base-line-height: 1.2;
 
 /* COLORS */
 
@@ -12,7 +13,8 @@ $cz-color-secondary:        rgb(32,193,203);        // #20c1cb
 $cz-color-secondary-dark:   rgb(4,156,165);         // #049ca5
 
 // Fills
-$cz-fill-grey-light:        rgb(105,111,114);       // #696F72
+$cz-fill-grey-lighter:      rgb(217,224,228);       // #D9E0E4
+$cz-fill-grey-light:        rgb(49,65,74);          // #31414a
 $cz-fill-grey:              rgb(32,42,47);          // #202a2f
 $cz-fill-grey-dark:         rgb(31,36,39);          // #1e2326
 $cz-fill-light:             rgb(255,255,255);       // #ffffff
@@ -21,8 +23,7 @@ $cz-fill-light:             rgb(255,255,255);       // #ffffff
 $cz-text-heading:           $cz-fill-grey;
 $cz-text-heading-inverse:   $cz-fill-light;
 $cz-text:                   $cz-fill-grey-light;
-$cz-text-inverse:           $cz-fill-light;
-$cz-text-inverse-light:     rgba($cz-fill-light, 0.7);
+$cz-text-inverse:           rgba(255, 255, 255, .7);
 
 // Contexts
 $cz-color-shadow:           rgb(226,231,233);       // #e2e7e9
@@ -34,6 +35,11 @@ $cz-inner-spacing: 16px;
 $cz-breakpoint-tablet: 520px;
 $cz-breakpoint-desktop: 770px;
 $cz-max-width-desktop: 1000px;
+
+$cz-breakpoints-map: (
+    "tablet" : $cz-breakpoint-tablet,
+    "desktop" : $cz-breakpoint-desktop
+);
 
 // Named colors
 $cz-background: $cz-fill-grey-dark;

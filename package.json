@@ -38,6 +38,7 @@
     "karma-chrome-launcher": "^2.0.0",
     "karma-jasmine": "^1.0.2",
     "karma-rollup-plugin": "^0.2.4",
+    "metalsmith-register-helpers": "^0.2.0",
     "nightwatch": "^0.9.8",
     "phantomjs": "^2.1.7",
     "rollup-plugin-babel": "^2.6.1",

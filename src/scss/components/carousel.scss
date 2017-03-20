@@ -4,8 +4,16 @@ $cz-carousel-transition-delay: 700ms;
 .cz-header {
     height: 100vh;
     width: 100vw;
+    background-color: $cz-background;
     color: $cz-text-inverse;
     position: relative;
+    display: block;
+
+    &:before, &:after{
+        content:" ";
+        clear: both;
+        display: table;
+    }
 
     @media screen and (max-width: $cz-breakpoint-desktop) {
         padding: $cz-inner-spacing;
@@ -18,7 +26,6 @@ $cz-carousel-transition-delay: 700ms;
     top: 0;
     z-index: -1;
 }
-
 
 .cz-carousel {
     > li {
@@ -42,7 +49,7 @@ $cz-carousel-transition-delay: 700ms;
         right: 0;
         background-size: cover;
         background-position: 50% 50%;
-        transition: 
+        transition:
             opacity $cz-carousel-transition-duration ease-out $cz-carousel-transition-delay,
             transform $cz-carousel-transition-duration ease-out $cz-carousel-transition-delay;
         transform: translateX(50%);
@@ -72,8 +79,8 @@ $cz-carousel-transition-delay: 700ms;
     text-transform: uppercase;
     color: $cz-text-inverse;
     padding-bottom: $cz-inner-spacing * 2;
-    transition: 
-        font 150ms ease-out, 
+    transition:
+        font 150ms ease-out,
         opacity $cz-carousel-transition-duration ease-out,
         transform $cz-carousel-transition-duration ease-out;
     transform: translateY(50%);
@@ -93,7 +100,7 @@ $cz-carousel-transition-delay: 700ms;
         height: 3px;
         width: 40px;
         background-color: #68d517;
-        transition: 
+        transition:
             bottom $cz-carousel-transition-duration ease-out,
             transform 9000ms - $cz-carousel-transition-duration * 2 linear 600ms;
         z-index: 1;
@@ -111,18 +118,13 @@ $cz-carousel-transition-delay: 700ms;
     }
 }
 
-.cz-carousel__divider {
-    position: relative;
-    z-index: 1;
-}
-
 .cz-carousel__slogan {
     position: relative;
     z-index: 1;
     text-align: left;
     font-size: 20px;
-    transition: 
-        font 150ms ease-out, 
+    transition:
+        font 150ms ease-out,
         opacity $cz-carousel-transition-duration ease-out $cz-carousel-transition-delay,
         transform $cz-carousel-transition-duration ease-out $cz-carousel-transition-delay;
     transform: translateX(-50%);
@@ -153,7 +155,7 @@ $cz-carousel-transition-delay: 700ms;
             &:before {
                 bottom: 0;
                 width: 40px;
-                transition: 
+                transition:
                     bottom $cz-carousel-transition-duration ease-out $cz-carousel-transition-delay * 2,
                     transform 9000ms - $cz-carousel-transition-duration * 2 linear 600ms;
 
@@ -172,32 +174,5 @@ $cz-carousel-transition-delay: 700ms;
             transform: translateX(0);
             opacity: 1;
         }
-    }
-}
-
-.cz-header--no-carousel {
-    height: 55vh;
-
-    .cz-carousel__image,
-    .cz-carousel__title,
-    .cz-carousel__slogan {
-        opacity: 1;
-    }
-
-    .cz-carousel__image,
-    .cz-carousel__slogan {
-        transform: translateX(0);
-    }
-
-    .cz-carousel__slogan {
-        @media screen and (min-width: $cz-breakpoint-desktop) {
-            text-align: center;
-            max-width: none;
-        }
-    }
-
-    .cz-divider {
-        position: relative;
-        height: 5px;
     }
 }

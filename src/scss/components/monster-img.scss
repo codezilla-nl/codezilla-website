@@ -1,0 +1,34 @@
+@import '../settings/variables';
+@import '../tools/mixins';
+
+.monster-img--has-shadow {
+    height: 100px;
+    position: relative;
+
+    &:before{
+        display: block;
+        content:"";
+        position: absolute;
+        background-image:url('/images/monster-shadow.svg');
+        width:40px;
+        height:20px;
+        bottom:50%;
+        margin-bottom: -45px;
+        margin-left: -20px;
+        left:50%;
+        transform: scaleX(1.5);
+    }
+}
+
+.monster-img__img {
+    transform: translate(2px,-62px) scale(0.5,0.5);
+}
+
+.monster-img--large .monster-img__img {
+    transform: translate(2px,-62px) scale(1,1);
+}
+
+.monster-img--large.monster-img--has-shadow:before {
+    margin-bottom: -96px;
+    transform: scaleX(2.5);
+}

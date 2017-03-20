@@ -1,0 +1,6 @@
+@import '../settings/variables';
+@import '../tools/mixins';
+
+.body--locked-mobile {
+    overflow: hidden;
+}
