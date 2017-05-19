@@ -14,6 +14,7 @@ var sass = require('metalsmith-sass');
 var inPlace = require('metalsmith-in-place');
 var asset = require('metalsmith-static');
 var helpers = require('metalsmith-register-helpers');
+var models = require("metalsmith-models");
 
 var run = module.exports = function(cb) {
   Metalsmith(__dirname)
@@ -32,6 +33,9 @@ var run = module.exports = function(cb) {
         pattern: '*.html',
         sortBy: 'index'
       }
+    }))
+    .use(models({
+      directory: "content/data"
     }))
     .use(inPlace({
       engine: 'handlebars',
