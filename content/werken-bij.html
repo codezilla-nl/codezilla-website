@@ -8,8 +8,8 @@ header:
     slogan: Always code as if the guy <br /> who ends up maintaining your code <br /> will be a violent psychopath who knows where you live.
 
 nextPage:
-    title: onze visie
-    url: /visie
+    title: team
+    url: /team
 ---
 
 
@@ -18,7 +18,7 @@ nextPage:
     <div class="container">
         <div class="media-block">
             <div class="media-block__image-wrapper">
-                <img class="media-block__image" src="/images/monsters/nicomonster.svg" width="200px" height="200px"/>
+                {{> team-member name="Jouw avatar?" svg="/images/monsters/anonymousmonster.svg" svgStyle="transform: scale(0.7) translateY(-80px)" }}
             </div>
 
             <div class="media-block__content">
@@ -43,7 +43,7 @@ nextPage:
                 </p>
             </div>
             <div class="media-block__image-wrapper">
-                <img class="media-block__image" src="/images/monsters/patrickmonster.svg" width="200px" height="200px"/>
+                {{> diamond-icon svg="/images/magnet.svg" inlineStyle="width: 60px; margin-left:-30px; margin-top: -30px" }}
             </div>
         </div>
     </div>
