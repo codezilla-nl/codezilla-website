@@ -23,6 +23,7 @@
 
 .cz-split-panels--overlay{
     position: fixed;
+    z-index: 10;
     overflow-y: auto;
     top:0;
     left:0;
