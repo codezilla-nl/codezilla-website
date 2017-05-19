@@ -15,6 +15,20 @@ class Main {
         if (document.querySelector('[cz-carousel]') !== null) {
             const carousel = new Carousel('[cz-carousel]');
         }
+        if (document.querySelector('[cz-bedrijven-carousel]') !== null) {
+            const carousel2 = new Carousel('[cz-bedrijven-carousel]', {
+                interval: 5000,
+                class: {
+                    current: 'cz-bedrijven-carousel--current',
+                    item: 'cz-bedrijven-carousel--item',
+                    transition: 'cz-bedrijven-carousel--transition',
+                    navigation: {
+                        next: 'cz-bedrijven-carousel--next',
+                        previous: 'cz-bedrijven-carousel--previous'
+                    }
+                }
+            });
+        }
     }
 }
 

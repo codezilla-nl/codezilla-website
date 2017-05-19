@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="257.333" height="257.333" viewBox="0 0 2681 2681" shape-rendering="geometricPrecision" text-rendering="geometricPrecision" image-rendering="optimizeQuality" fill-rule="evenodd" clip-rule="evenodd"><defs><style><![CDATA[
+    .fil0 {fill:#FEFEFE}
+    .fil2 {fill:#105394}
+    .fil1 {fill:#1B8DCD}
+   ]]></style></defs><g id="Layer_x0020_1"><path class="fil0" d="M0 2681h2677V3H0z"/><path class="fil1" d="M423 1360H118v1202h1202v-305h18v-915l-149 161 132 615-185-580-631-196h-83v18zm271 101l30 9c50 243 241 435 484 486l10 30c-266-49-475-259-524-526zM2559 121H1357v305h-18v915l149-161-132-615 185 580 631 196h83v-18h305V121zM1458 697c266 49 475 259 524 526l-30-9c-50-243-242-435-484-486l-10-30z"/><path class="fil2" d="M1320 427V122H118v1202h305v18h915l-161-149-614 133 580-186 196-632v834-915h-18zm-100 271l-9 30c-243 50-434 242-485 485l-30 10c49-266 259-476 525-525zM2254 1360v-18h-915l161 149 614-133-580 186-196 632v81h18v305h1202V1360h-305zm-272 102c-49 266-259 476-525 525l9-30c243-51 434-242 485-485l30-10z"/></g></svg>
