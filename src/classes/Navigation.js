@@ -4,6 +4,7 @@ const SKEWED_CLASSNAME = 'cz-body-container--skewed';
 const OVERLAY_ACTIVE_CLASSNAME = 'cz-body-container__loader-overlay--active';
 const BUTTON_ACTIVE_CLASSNAME = 'cz-menu-button--active';
 const MENU_LINK_ACTIVE_CLASSNAME = 'cz-navigation__list-link--active';
+const BODY_PERSPECTIVE_CLASSNAME = 'cz-body-perspective';
 
 export default class Navigation {
     /**
@@ -61,11 +62,19 @@ export default class Navigation {
      * @param isOpen {Boolean}
      */
     set open(isOpen) {
-        this._open = isOpen;
-        
-        console.log(`this.$content`, this.$content);
+        let transitionEvent = whichTransitionEvent();
+        let removePerspective = () => {
+            if (!this._open) {
+                document.body.classList.remove(BODY_PERSPECTIVE_CLASSNAME);
+            }
 
-        if(isOpen) {
+            this.$content.removeEventListener(transitionEvent, removePerspective);
+        };
+
+        this._open = isOpen;
+
+        if (isOpen) {
+            document.body.classList.add(BODY_PERSPECTIVE_CLASSNAME);
             this.$content.classList.add(SKEWED_CLASSNAME);
             this.$switch.classList.add(BUTTON_ACTIVE_CLASSNAME);
         } else {
@@ -73,6 +82,8 @@ export default class Navigation {
             this.$contentOverlay.classList.remove(OVERLAY_ACTIVE_CLASSNAME);
             this.$switch.classList.remove(BUTTON_ACTIVE_CLASSNAME);
         }
+
+        this.$content.addEventListener(transitionEvent, removePerspective);
     }
 
     /**
@@ -110,12 +121,15 @@ export default class Navigation {
      * @param href {string} Url href
      */
     navigate(href) {
-        var transitionEvent = whichTransitionEvent();
+        let transitionEvent = whichTransitionEvent();
+        let setWindowLocation = () => {
+            window.location = href;
+
+            this.$content.addEventListener(transitionEvent, setWindowLocation);
+        };
 
         this.open = false;
 
-        transitionEvent && this.$content.addEventListener(transitionEvent, function() {
-            window.location = href;
-        });
+        transitionEvent && this.$content.addEventListener(transitionEvent, setWindowLocation);
     }
 }

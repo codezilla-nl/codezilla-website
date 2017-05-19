@@ -179,39 +179,3 @@ $cz-carousel-transition-delay: 700ms;
     }
 }
 
-.cz-header--no-carousel {
-    min-height: 55vh;
-    height: auto;
-
-    .cz-carousel__content {
-        min-height: 55vh;
-    }
-
-    .cz-carousel > li {
-        position: relative;
-        height: 100%;
-    }
-
-    .cz-carousel__image,
-    .cz-carousel__title,
-    .cz-carousel__slogan {
-        opacity: 1;
-    }
-
-    .cz-carousel__image,
-    .cz-carousel__slogan {
-        transform: translateX(0);
-    }
-
-    .cz-carousel__slogan {
-        @media screen and (min-width: $cz-breakpoint-desktop) {
-            text-align: center;
-            max-width: none;
-        }
-    }
-
-    .cz-divider {
-        position: relative;
-        height: 5px;
-    }
-}

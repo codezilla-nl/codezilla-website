@@ -2,7 +2,6 @@
 
 $diamond-anim-speed: 0.3s;
 $diamond-anim-ease: cubic-bezier(.53,.8,.63,.91);
-$diamond-dimensions: 100px;
 $diamond-spacing-y: 50px;
 $diamong-grid-width-md: 80vw;
 
@@ -66,33 +65,4 @@ $diamong-grid-width-md: 80vw;
         position: absolute;
         transform: rotate(45deg);
     }
-}
-.cz-diamond{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: relative;
-    height: 200px;
-}
-
-.cz-diamond__shape{
-    display:block;
-    position: absolute;
-    left:50%;
-    top:50%;
-    margin-top:-0.5 * $diamond-dimensions;
-    margin-left:-0.5 * $diamond-dimensions;
-    width:$diamond-dimensions;
-    height:$diamond-dimensions;
-    background: $cz-color-primary;
-    transform: rotate(45deg);
-    border-radius: 15px;
-}
-
-.cz-diamond__title {
-    position: absolute;
-    bottom: 15px;
-    font-size: 24px;
-    font-weight: bold;
-    text-transform: uppercase;
 }
