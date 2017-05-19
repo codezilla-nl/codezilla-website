@@ -70,7 +70,7 @@ $cz-carousel-transition-delay: 700ms;
     text-align: center;
     font-size: 45px;
     text-transform: uppercase;
-    color: white;
+    color: $cz-fill-light;
     padding-bottom: $cz-inner-spacing * 2;
     transition:
         font 150ms ease-out,
