@@ -15,9 +15,11 @@
 
 .cz-team-carousel__img-wrapper{
     position: relative;
+    margin-top: 92px;
 
     @include max-width('tablet') {
         margin-bottom: -20px;
+        margin-top: 20px;
     }
 }
 

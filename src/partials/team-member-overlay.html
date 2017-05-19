@@ -10,11 +10,13 @@
                         <hr class="cz-divider " />
                         <p>{{> likes }}</p>
                     </div>
+                    {{#writesCodeFor}}
                     <div class="cz-team-detail__section">
                         <h3 class="cz-heading-2 cz-no-m-b cz-no-p-b">{{ displayName}} schrijft monsterlijk goede code voor...</h3>
                         <hr class="cz-divider" />
                         {{> writesCodeFor }}
                     </div>
+                    {{/writesCodeFor}}
                 </div>
             </div>
         </div>

@@ -8,6 +8,10 @@ $diamond-dimensions: 100px;
     height: 200px;
 }
 
+.cz-diamond--clickable {
+    cursor: pointer;
+}
+
 .cz-diamond__shape{
     display:block;
     position: absolute;
