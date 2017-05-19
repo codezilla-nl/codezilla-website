@@ -17,7 +17,6 @@ export default class {
             }
         }, options);
         this.slides = this.el.querySelectorAll('.'+this.options.class.item);
-        console.info(this.slides);
 
         if (!this.el.nodeName) {
             console.error(`Carousel ${this.el} is not a valid HTML element`);
