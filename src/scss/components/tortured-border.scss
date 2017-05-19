@@ -1,0 +1,19 @@
+.tortured-border-top,
+.tortured-border-bottom {
+    display: block;
+    content:" ";
+    position: absolute;
+    z-index: 1;
+    width: 100%;
+    height: 100px;
+    background-repeat: no-repeat;
+}
+
+.tortured-border-top{
+    margin-top: -22px;
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="1282" height="36"><path fill="#FFF" fill-rule="evenodd" d="M0 7.643h391.738L478.37 0l60.368 11.643 106.3-4 131.282-5 221.098 5H1282v28H0"></path></svg>');
+}
+
+.tortured-border-bottom {
+    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="1282" height="33"><path fill="#FFF" fill-rule="evenodd" d="M0 28h391.738l86.633 1.643L538.74 24l106.3 4 131.282 5 221.098-5H1282V0H0"></path></svg>');
+}
