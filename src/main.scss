@@ -19,22 +19,28 @@
 
 /* Objects */
 @import 'scss/objects/typography';
-// @import 'scss/objects/button';
 
 /* Components */
-@import 'scss/components/body-container';
 @import 'scss/components/divider';
 @import 'scss/components/divider-timer';
 @import 'scss/components/section';
 @import 'scss/components/footer';
 @import 'scss/components/container';
 @import 'scss/components/carousel';
-@import 'scss/components/menu';
 @import 'scss/components/logo';
+@import 'scss/components/menu';
 @import 'scss/components/text';
 @import 'scss/components/media-block';
+@import 'scss/components/team-detail';
+@import 'scss/components/team-carousel';
+@import 'scss/components/monster-img';
+@import 'scss/components/body';
 @import 'scss/components/triangles';
-@import 'scss/components/main-body';
+@import 'scss/components/body-container.scss';
+@import 'scss/components/header-static';
+
+@import 'scss/components/diamond-grid';
+@import 'scss/components/split-panel';
 
 /* Utilities */
 @import 'scss/utilities/utilities';

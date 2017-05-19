@@ -78,3 +78,15 @@
     position: absolute;
     width: 1px;
 }
+
+@mixin min-width($bp-name) {
+    @media (min-width: map-get($cz-breakpoints-map, $bp-name)) {
+        @content;
+    }
+}
+
+@mixin max-width($bp-name) {
+    @media (max-width: (map-get($cz-breakpoints-map, $bp-name) - 1px)) {
+        @content;
+    }
+}

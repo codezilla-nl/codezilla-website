@@ -3,7 +3,8 @@ module.exports = {
         browser
             .url(browser.launchUrl)
             .waitForElementVisible('body', 1000)
-            .assert.title('CODEZILLA')
+            //.assert.title()
+            .assert.elementPresent('h1')
             .end();
     }
 };

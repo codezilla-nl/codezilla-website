@@ -1,0 +1,135 @@
+@import '../settings/variables';
+@import '../tools/mixins';
+
+.cz-split-panels{
+    position: relative;
+    background: #fff;
+    overflow: hidden;
+    z-index: 1;
+
+    &:before{
+        content:"";
+        display: block;
+        width: 150px;
+        height: 145px;
+        background-image:url('/images/claw-marks.png');
+        background-size:cover;
+        position: absolute;
+        opacity: 0.2;
+        top:0;
+        right:0;
+    }
+}
+
+.cz-split-panels--overlay{
+    position: fixed;
+    overflow-y: auto;
+    top:0;
+    left:0;
+    opacity: 0;
+    transition: opacity ease-out 0.3s;
+    transform: translate3d(0,0,0);
+    height: 100%;
+    width: 100%;
+}
+
+.cz-split-panels--active{
+    opacity: 1;
+}
+
+.cz-split-panels__wrapper {
+    display: flex;
+    justify-content: space-around;
+    flex-flow: column;
+    min-height: 100%;
+
+    @include min-width("tablet") {
+        flex-flow: row;
+    }
+}
+
+.cz-split-panels__panel {
+    position: relative;
+    height: 50vh;
+
+    @include min-width("tablet") {
+        width: 50%;
+        height: auto;
+    }
+}
+
+.cz-split-panels__panel--left {
+    z-index: 1;
+    @include max-width("tablet") {
+        order: 2;
+    }
+}
+
+.cz-split-panels__panel-content{
+    position: relative;
+}
+
+.cz-split-panels__panel-content--pad-top {
+    @include min-width("tablet") {
+        padding-top: 200px;
+    }
+}
+
+.cz-split-panels__panel-content--full-height {
+    height: 100%;
+}
+
+.cz-split-panels__panel-bg{
+    background-color: $cz-color-primary;
+    position: absolute;
+    width:100%;
+    height:100%;
+    transform: translate3d(0, 0, 0) rotate3d(0, 0, 0, 0deg) scale(1,1);
+    opacity: 1;
+    transform-origin: $diamond-dimensions/2 $diamond-dimensions/2;
+
+    &:before{
+        content:"";
+        display: block;
+        width: 140px;
+        height: 152px;
+        background-image:url('/images/cross.svg');
+        background-size:cover;
+        position: absolute;
+        top:10px;
+        right:0;
+
+        @include max-width('tablet') {
+            top:-40px;
+            right:-25px;
+            transform: scale(0.7);
+        }
+    }
+}
+
+.cz-split-panels__panel-bg--animate {
+    transition: transform $diamond-anim-speed $diamond-anim-ease;
+}
+
+.cz-split-panels__title {
+    position: absolute;
+    left:0;
+    top:0;
+    width:100%;
+    text-align: center;
+    z-index: 1;
+
+    @include max-width('tablet') {
+        text-align: left;
+        font-size: 24px;
+        padding: 0 30px;
+    }
+}
+
+.cz-split-panels-combiner {
+    position: relative;
+}
+
+.cz-split-panels__content-img{
+
+}

@@ -1,0 +1,39 @@
+@import "../settings/variables";
+@import "../tools/mixins";
+
+.cz-team-detail {
+    padding: 30px;
+
+    @media screen and (min-width: $cz-breakpoint-desktop) {
+        padding-left: 10vw;
+        padding-right: 10vw;
+
+    }
+
+    @include min-width('tablet') {
+        padding-bottom: 10vh;
+    }
+}
+
+.cz-team-detail__quote {
+    font-size: 30px;
+    font-weight: bold;
+    line-height: 1.3;
+
+    &:before, &:after{
+        content: '"';
+        font-size: 30px;
+        color: $cz-fill-grey-lighter;
+    }
+
+    @include min-width('tablet') {
+        width: 80vw;
+        display: block;
+        text-align: center;
+        margin-top: -40px;
+    }
+}
+
+.cz-team-detail__section {
+    margin-top: 8vh;
+}

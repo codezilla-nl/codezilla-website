@@ -91,53 +91,53 @@ $mb-easing-alt: cubic-bezier(0.68, -0.3, 0.2, 1.55);
 }
 
 .cz-menu-button--active {
-  .cz-menu-button__line {
-    transition-timing-function: $mb-easing;
-     &:first-of-type {
-          transform: rotate(45deg) translate(10%, -80%);
-      }
-      &:last-of-type { 
-          transform: rotate(-45deg) translate(9%, -215%);
-      }
-  }
-  .cz-menu-button__text {
-    transform: translateY(40%) scaleY(0.8);
-    opacity:0;
-  }
+    .cz-menu-button__line {
+        transition-timing-function: $mb-easing;
+        &:first-of-type {
+            transform: rotate(45deg) translate(10%, -80%);
+        }
+        &:last-of-type {
+            transform: rotate(-45deg) translate(9%, -215%);
+        }
+    }
+    .cz-menu-button__text {
+        transform: translateY(40%) scaleY(0.8);
+        opacity:0;
+    }
 }
 
-.cz-menu-button__line { 
-  background-color: $color-fill;
-  width: 100%;
-  height: $line-height;
-  position: absolute;
-  transition: transform $mb-duration $mb-easing-alt $mb-duration/20;
+.cz-menu-button__line {
+    background-color: $color-fill;
+    width: 100%;
+    height: $line-height;
+    position: absolute;
+    transition: transform $mb-duration $mb-easing-alt $mb-duration/20;
 
-  &:first-of-type {
-      top: 0;
-      left: 0;
-      transform: rotate(0) translate(0, 0);
-      transition: transform $mb-duration $mb-easing;
-      transform-origin: 0 50%;
-  }
-  &:last-of-type {
-      top: $line-height * 2;
-      left: 0;
-      transform: rotate(0) translate(0, 0);
-      transition: transform $mb-duration $mb-easing;
-      transform-origin: 100% 50%;
-  }
+    &:first-of-type {
+        top: 0;
+        left: 0;
+        transform: rotate(0) translate(0, 0);
+        transition: transform $mb-duration $mb-easing;
+        transform-origin: 0 50%;
+    }
+    &:last-of-type {
+        top: $line-height * 2;
+        left: 0;
+        transform: rotate(0) translate(0, 0);
+        transition: transform $mb-duration $mb-easing;
+        transform-origin: 100% 50%;
+    }
 }
 
 .cz-menu-button__text {
-  fill: $color-fill;
-  height: $text-height;
-  width: 104%;
-  position: absolute;
-  left: -2%;
-  bottom: 5%;
-  transform: translateY(0) scaleY(1);
-  transition: transform $mb-duration $mb-easing, opacity $mb-duration $mb-easing;
-  transform-origin: 50% 100%;
-  opacity: 1;
+    fill: $color-fill;
+    height: $text-height;
+    width: 104%;
+    position: absolute;
+    left: -2%;
+    bottom: 5%;
+    transform: translateY(0) scaleY(1);
+    transition: transform $mb-duration $mb-easing, opacity $mb-duration $mb-easing;
+    transform-origin: 50% 100%;
+    opacity: 1;
 }

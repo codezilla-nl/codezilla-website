@@ -7,16 +7,11 @@
 
 .cz-text-inverse {
     @include cz-font-family('Regular', 'Radikal');
-
-    &, a, a:hover {
-        color: $cz-text-inverse;
-    }
+    color: $cz-text-inverse;
 }
 
-.cz-text-inverse--light {
+.cz-text-link-inverse {
     @include cz-font-family('Regular', 'Radikal');
-
-    &, a, a:hover {
-        color: $cz-text-inverse-light;
-    }
+    color: $cz-text-inverse;
 }
+

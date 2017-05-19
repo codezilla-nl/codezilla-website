@@ -1,13 +1,10 @@
 @import "../settings/variables";
 
+.cz-footer {
+    position: relative;
+}
 .cz-footer__blocks {
     display: flex;
-    flex-direction: column;
-    position: relative;
-
-    @media screen and (min-width: $cz-max-width-desktop) {
-        flex-direction: row;
-    }
 }
 
 .cz-footer__block {
@@ -17,12 +14,21 @@
 
     @media screen and (min-width: $cz-breakpoint-desktop) {
         &:nth-of-type(2) {
-            background-color: rgba(0, 0, 0, .10);
+            background-color: rgba(0, 0, 0, .25);
         }
     }
 
     @media screen and (min-width: $cz-max-width-desktop) {
         width: 50%;
+    }
+}
+
+.cz-footer__blocks-inner {
+    display: flex;
+    flex-direction: column;
+
+    @media screen and (min-width: $cz-breakpoint-desktop) {
+        flex-direction: row;
     }
 }
 
@@ -34,7 +40,7 @@
     padding: 30px;
 
     @media screen and (min-width: $cz-breakpoint-desktop) {
-        padding: 64px 128px;
+        padding: 64px 10vw;
     }
 }
 
@@ -52,6 +58,8 @@
     padding: 0 20px;
 
     background-color: $cz-color-primary;
+
+    position: relative;
 
     @media screen and (min-width: $cz-breakpoint-desktop) {
         height: 165px;

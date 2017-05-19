@@ -1,10 +1,15 @@
-import Navigation from './classes/Navigation.js'
-import Triangles from './classes/Triangles.js'
-import Carousel from './classes/Carousel.js'
+import Navigation from './classes/Navigation';
+import DiamondSplitPanel from './classes/DiamondSplitPanel';
+import Triangles from './classes/Triangles.js';
+import Carousel from './classes/Carousel.js';
+import BodyLocker from './classes/BodyLocker';
 
 class Main {
+    
     constructor() {
         const nav = new Navigation('[cz-menu]', '#body-container');
+        const bodyLocker = new BodyLocker();
+        new DiamondSplitPanel(bodyLocker);
 
         // only create a carousel when the attribute cz-carousel is present
         if (document.querySelector('[cz-carousel]') !== null) {

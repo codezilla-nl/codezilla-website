@@ -21,6 +21,7 @@ $cz-carousel-transition-delay: 700ms;
 
 
 .cz-carousel {
+    height: 100%;
     > li {
         display: flex;
         min-height: 300px;
@@ -42,7 +43,7 @@ $cz-carousel-transition-delay: 700ms;
         right: 0;
         background-size: cover;
         background-position: 50% 50%;
-        transition: 
+        transition:
             opacity $cz-carousel-transition-duration ease-out $cz-carousel-transition-delay,
             transform $cz-carousel-transition-duration ease-out $cz-carousel-transition-delay;
         transform: translateX(50%);
@@ -70,19 +71,29 @@ $cz-carousel-transition-delay: 700ms;
     text-align: center;
     font-size: 45px;
     text-transform: uppercase;
-    color: $cz-text-inverse;
+    color: $cz-fill-light;
     padding-bottom: $cz-inner-spacing * 2;
-    transition: 
-        font 150ms ease-out, 
+    transition:
+        font 150ms ease-out,
         opacity $cz-carousel-transition-duration ease-out,
         transform $cz-carousel-transition-duration ease-out;
     transform: translateY(50%);
     opacity: 0;
 
     &:after {
+        content: '';
+        position: absolute;
+        left: 0;
+        height: 3px;
+        width: 80px;
         transition: bottom $cz-carousel-transition-duration ease-out;
         bottom: $cz-inner-spacing;
-        background-color: rgba(255, 255, 255, 0.7);
+        background-color: rgba(255, 255, 255, 0.6);
+
+        @media screen and (min-width: $cz-breakpoint-desktop) {
+            left: 50%;
+            margin-left: -40px;
+        }
     }
 
     &:before {
@@ -91,17 +102,18 @@ $cz-carousel-transition-delay: 700ms;
         bottom: $cz-inner-spacing;
         left: 0;
         height: 3px;
-        width: 40px;
+        width: 80px;
         background-color: #68d517;
-        transition: 
+        transition:
             bottom $cz-carousel-transition-duration ease-out,
             transform 9000ms - $cz-carousel-transition-duration * 2 linear 600ms;
         z-index: 1;
         transform: scaleX(0);
+        transform-origin: left;
 
         @media screen and (min-width: $cz-breakpoint-desktop) {
             left: 50%;
-            margin-left: -75px;
+            margin-left: -40px;
         }
     }
 
@@ -111,26 +123,21 @@ $cz-carousel-transition-delay: 700ms;
     }
 }
 
-.cz-carousel__divider {
-    position: relative;
-    z-index: 1;
-}
-
 .cz-carousel__slogan {
     position: relative;
     z-index: 1;
     text-align: left;
     font-size: 20px;
-    transition: 
-        font 150ms ease-out, 
+    transition:
+        font 150ms ease-out,
         opacity $cz-carousel-transition-duration ease-out $cz-carousel-transition-delay,
         transform $cz-carousel-transition-duration ease-out $cz-carousel-transition-delay;
     transform: translateX(-50%);
     opacity: 0;
 
     @media screen and (min-width: $cz-breakpoint-desktop) {
-            text-align: right;
-            max-width: calc(50% - #{$cz-inner-spacing});
+        text-align: right;
+        max-width: calc(50% - #{$cz-inner-spacing});
     }
 }
 
@@ -152,14 +159,11 @@ $cz-carousel-transition-delay: 700ms;
 
             &:before {
                 bottom: 0;
-                width: 40px;
-                transition: 
+                width: 80px;
+                transition:
                     bottom $cz-carousel-transition-duration ease-out $cz-carousel-transition-delay * 2,
                     transform 9000ms - $cz-carousel-transition-duration * 2 linear 600ms;
-
-                @media screen and (min-width: $cz-breakpoint-desktop) {
                     transform: scaleX(1);
-                }
             }
         }
         .cz-carousel__slogan {
@@ -175,29 +179,3 @@ $cz-carousel-transition-delay: 700ms;
     }
 }
 
-.cz-header--no-carousel {
-    height: 85vh;
-
-    .cz-carousel__image,
-    .cz-carousel__title,
-    .cz-carousel__slogan {
-        opacity: 1;
-    }
-
-    .cz-carousel__image,
-    .cz-carousel__slogan {
-        transform: translateX(0);
-    }
-
-    .cz-carousel__slogan {
-        @media screen and (min-width: $cz-breakpoint-desktop) {
-            text-align: center;
-            max-width: none;
-        }
-    }
-
-    .cz-divider {
-        position: relative;
-        height: 5px;
-    }
-}
