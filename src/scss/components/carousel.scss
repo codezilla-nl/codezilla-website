@@ -21,6 +21,7 @@ $cz-carousel-transition-delay: 700ms;
 
 
 .cz-carousel {
+    height: 100%;
     > li {
         display: flex;
         min-height: 300px;
@@ -171,7 +172,17 @@ $cz-carousel-transition-delay: 700ms;
 }
 
 .cz-header--no-carousel {
-    height: 55vh;
+    min-height: 55vh;
+    height: auto;
+
+    .cz-carousel__content {
+        min-height: 55vh;
+    }
+
+    .cz-carousel > li {
+        position: relative;
+        height: 100%;
+    }
 
     .cz-carousel__image,
     .cz-carousel__title,
