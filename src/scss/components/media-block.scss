@@ -3,9 +3,14 @@
 $media-block-gutter: 20px;
 
 .media-block {
+    padding-left: 30px;
+    padding-right: 30px;
+
     @media (min-width: $cz-breakpoint-desktop) {
         display: flex;
         align-items: center;
+        padding-left: 10vw;
+        padding-right: 10vw;
     }
 }
 
