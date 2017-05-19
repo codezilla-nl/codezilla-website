@@ -18,7 +18,7 @@ export default class Navigation {
         this.$contentOverlay = document.querySelector(`${content}-overlay`);
         this.$switch = this.$nav.querySelector('[cz-menu-button]');
         this.$links = this.$nav.getElementsByTagName('a');
-        
+
         this._open = false;
         this._loading = false;
 
@@ -62,6 +62,8 @@ export default class Navigation {
      */
     set open(isOpen) {
         this._open = isOpen;
+        
+        console.log(`this.$content`, this.$content);
 
         if(isOpen) {
             this.$content.classList.add(SKEWED_CLASSNAME);
