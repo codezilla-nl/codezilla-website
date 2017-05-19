@@ -71,7 +71,7 @@ $cz-carousel-transition-delay: 700ms;
     text-align: center;
     font-size: 45px;
     text-transform: uppercase;
-    color: $cz-text-inverse;
+    color: $cz-fill-light;
     padding-bottom: $cz-inner-spacing * 2;
     transition:
         font 150ms ease-out,
@@ -81,9 +81,19 @@ $cz-carousel-transition-delay: 700ms;
     opacity: 0;
 
     &:after {
+        content: '';
+        position: absolute;
+        left: 0;
+        height: 3px;
+        width: 80px;
         transition: bottom $cz-carousel-transition-duration ease-out;
         bottom: $cz-inner-spacing;
-        background-color: rgba(255, 255, 255, 0.7);
+        background-color: rgba(255, 255, 255, 0.6);
+
+        @media screen and (min-width: $cz-breakpoint-desktop) {
+            left: 50%;
+            margin-left: -40px;
+        }
     }
 
     &:before {
@@ -92,17 +102,18 @@ $cz-carousel-transition-delay: 700ms;
         bottom: $cz-inner-spacing;
         left: 0;
         height: 3px;
-        width: 40px;
+        width: 80px;
         background-color: #68d517;
         transition:
             bottom $cz-carousel-transition-duration ease-out,
             transform 9000ms - $cz-carousel-transition-duration * 2 linear 600ms;
         z-index: 1;
         transform: scaleX(0);
+        transform-origin: left;
 
         @media screen and (min-width: $cz-breakpoint-desktop) {
             left: 50%;
-            margin-left: -75px;
+            margin-left: -40px;
         }
     }
 
@@ -148,14 +159,11 @@ $cz-carousel-transition-delay: 700ms;
 
             &:before {
                 bottom: 0;
-                width: 40px;
+                width: 80px;
                 transition:
                     bottom $cz-carousel-transition-duration ease-out $cz-carousel-transition-delay * 2,
                     transform 9000ms - $cz-carousel-transition-duration * 2 linear 600ms;
-
-                @media screen and (min-width: $cz-breakpoint-desktop) {
                     transform: scaleX(1);
-                }
             }
         }
         .cz-carousel__slogan {
