@@ -1,6 +1,8 @@
 ---
 title: Ons team
 layout: layout.html
+model:
+    team: team
 
 header:
     image: /images/header-image-team.jpg
@@ -18,201 +20,18 @@ nextPage:
     <div class="cz-section">
         <div class="cz-diamond-grid">
             <div class="cz-diamond-grid__inner">
+                {{#each model.team}}
                 <div class="cz-diamond-grid__block">
-                    {{> team-member name="martin" displayName="Martin" svg="/images/monsters/martinmonster.svg" }}
+                    {{> team-member name=@key displayName=name svg=monster svgStyle=monsterStyle }}
                 </div>
-                <div class="cz-diamond-grid__block">
-                    {{> team-member name="huib" displayName="Huib" svg="/images/monsters/huibmonster.svg" }}
-                </div>
-                <div class="cz-diamond-grid__block">
-                    {{> team-member name="rory" displayName="Rory" svg="/images/monsters/rorymonster.svg" }}
-                </div>
-                <div class="cz-diamond-grid__block">
-                    {{> team-member name="jellebrouwer" displayName="Jelle" svg="/images/monsters/jellebmonster.svg" }}
-                </div>
-                <div class="cz-diamond-grid__block">
-                    {{> team-member name="jelle" displayName="Jelle" svg="/images/monsters/jellemonster.svg" }}
-                </div>
-                <div class="cz-diamond-grid__block">
-                    {{> team-member name="arno" displayName="Arno" svg="/images/monsters/arnomonster.svg" }}
-                </div>
-                <div class="cz-diamond-grid__block">
-                    {{> team-member name="michel" displayName="Michel" svg="/images/monsters/michelmonster.svg" }}
-                </div>
-                <div class="cz-diamond-grid__block">
-                    {{> team-member name="remi" displayName="Remi" svg="/images/monsters/remimonster.svg" }}
-                </div>
-                <div class="cz-diamond-grid__block">
-                    {{> team-member name="nico" displayName="Nico" svg="/images/monsters/nicomonster.svg" }}
-                </div>
-                <div class="cz-diamond-grid__block">
-                    {{> team-member name="remy" displayName="Remy" svg="/images/monsters/remymonster.svg" }}
-                </div>
-                <div class="cz-diamond-grid__block">
-                    {{> team-member name="patrick" displayName="Patrick" svg="/images/monsters/patrickmonster.svg" }}
-                </div>
-                <div class="cz-diamond-grid__block">
-                    {{> team-member name="ming" displayName="Ming" svg="/images/monsters/mingmonster.svg" }}
-                </div>
-                <div class="cz-diamond-grid__block">
-                    {{> team-member name="tjin" displayName="Tjin" svg="/images/monsters/tjinmonster.svg" }}
-                </div>
-                <div class="cz-diamond-grid__block">
-                    {{> team-member name="jeroen" displayName="Jeroen" svg="/images/monsters/jeroenmonster.svg" }}
-                </div>
-                <div class="cz-diamond-grid__block">
-                    {{> team-member name="bas" displayName="Bas" svg="/images/monsters/basmonster.svg" }}
-                </div>
-                <div class="cz-diamond-grid__block">
-                    {{> team-member name="joran" displayName="Joran" svg="/images/monsters/joranmonster.svg" svgStyle="transform: scale(0.7) translateY(-80px)" }}
-                </div>
+                {{/each}}
             </div>
         </div>
     </div>
 
-    {{#> team-member-overlay name="martin" displayName="Martin" quote="Don’t wait for the perfect moment, take the moment and make it perfect" svg="/images/monsters/huibmonster.svg"}}
-        {{#*inline "likes"}}
-            CODEZILLA, give spinning classes, dance music (mixing), travelling and Twente
-        {{/inline}}
-        {{#*inline "writesCodeFor"}}
-            <p></p>
-        {{/inline}}
-    {{/team-member-overlay}}
-
-    {{#> team-member-overlay name="huib" displayName="Huib" quote="A computer program does what you tell it to do, not what you want it to do" svg="/images/monsters/huibmonster.svg"}}
-        {{#*inline "likes"}}
-            Tinkering, Devouring websites and traveling
-        {{/inline}}
-        {{#*inline "writesCodeFor"}}
-            <p><strong>bol.com</strong></p>
-        {{/inline}}
-    {{/team-member-overlay}}
-
-    {{#> team-member-overlay name="rory" displayName="Rory" quote="Have you tried turning it off and on again?" svg="/images/monsters/rorymonster.svg"}}
-        {{#*inline "likes"}}
-            Games, cooking & eating, movies and music
-        {{/inline}}
-        {{#*inline "writesCodeFor"}}
-            <p><strong>Ahold</strong></p>
-        {{/inline}}
-    {{/team-member-overlay}}
-
-    {{#> team-member-overlay name="jellebrouwer" displayName="Jelle" quote="Love to turn innovative ideas into unbelievable user experiences" svg="/images/monsters/jellebmonster.svg"}}
-        {{#*inline "likes"}}
-            Sports, travelling, food and creative entrepreneurship
-        {{/inline}}
-        {{#*inline "writesCodeFor"}}
-            <p><strong></strong></p>
-        {{/inline}}
-    {{/team-member-overlay}}
-
-    {{#> team-member-overlay name="jelle" displayName="Jelle" quote="Talk is cheap. Show me the code." svg="/images/monsters/jellemonster.svg"}}
-        {{#*inline "likes"}}
-            Open Source Software, Retro Games, Speed Skating, Snowboarding
-        {{/inline}}
-        {{#*inline "writesCodeFor"}}
-        <p><strong>KPN</strong></p>
-        {{/inline}}
-    {{/team-member-overlay}}
-
-    {{#> team-member-overlay name="arno" displayName="Arno" quote="I don't do quotes" svg="/images/monsters/arnomonster.svg"}}
-        {{#*inline "likes"}}
-            Games, series & movies, cooking and coding
-        {{/inline}}
-        {{#*inline "writesCodeFor"}}
-        <p><strong>Pellentesque habitant morbi tristique</strong> senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. <em>Aenean ultricies mi vitae est.</em> Mauris placerat eleifend leo. Quisque sit amet est et sapien ullamcorper pharetra. Vestibulum erat wisi, condimentum sed, <code>commodo vitae</code>, ornare sit amet, wisi. Aenean fermentum, elit eget tincidunt condimentum, eros ipsum rutrum orci, sagittis tempus lacus enim ac dui. <a href="#">Donec non enim</a> in turpis pulvinar facilisis. Ut felis.</p>
-        {{/inline}}
-    {{/team-member-overlay}}
-
-    {{#> team-member-overlay name="michel" displayName="Michel" quote="Too much Javascript. I'll fix it with css.." svg="/images/monsters/michelmonster.svg"}}
-        {{#*inline "likes"}}
-            Hardware and Software tweaking. Watching movies, traveling and cars
-        {{/inline}}
-        {{#*inline "writesCodeFor"}}
-        <p><strong>SNS Bank</strong></p>
-        {{/inline}}
-    {{/team-member-overlay}}
-
-    {{#> team-member-overlay name="remi" displayName="Remi" quote="Keep calm and trust the JavaScript programmer" svg="/images/monsters/remimonster.svg"}}
-        {{#*inline "likes"}}
-            Game Development, Web Development, Aquarium and Taekwondo
-        {{/inline}}
-        {{#*inline "writesCodeFor"}}
-        <p><strong>...</strong></p>
-        {{/inline}}
-    {{/team-member-overlay}}
-
-    {{#> team-member-overlay name="nico" displayName="Nico" quote="Simplicity is the ultimate sophistication" svg="/images/monsters/nicomonster.svg"}}
-        {{#*inline "likes"}}
-            Voetbal, fitness, muziek en awesome user experiences
-        {{/inline}}
-        {{#*inline "writesCodeFor"}}
-            <p>Rabobank, bij de Rabobank werkt Nico mee in de SCRUM-teams aan Angular en React applicaties. Daarnaast fungeert hij ook als UX-designer.</p>
-        {{/inline}}
-    {{/team-member-overlay}}
-
-    {{#> team-member-overlay name="remy" displayName="Remy" quote="Listen carefully; I shall say this only once!" svg="/images/monsters/remymonster.svg"}}
-        {{#*inline "likes"}}
-            Pencak Silat, Magic: The Gathering, Movies
-        {{/inline}}
-        {{#*inline "writesCodeFor"}}
-            <p><strong>Nuon</strong></p>
-        {{/inline}}
-    {{/team-member-overlay}}
-
-    {{#> team-member-overlay name="patrick" displayName="Patrick" quote="Pasting code from the Internet into production code is like chewing gum found in the street" svg="/images/monsters/patrickmonster.svg"}}
-        {{#*inline "likes"}}
-            Shaolin Kempo, (Retro) Video Games, Open Source Software
-        {{/inline}}
-        {{#*inline "writesCodeFor"}}
-            <p><strong>Rabobank</strong></p>
-        {{/inline}}
-    {{/team-member-overlay}}
-    
-    {{#> team-member-overlay name="ming" displayName="Ming" quote="What could possibly go wrong?" svg="/images/monsters/mingmonster.svg"}}
-        {{#*inline "likes"}}
-            Auto's/motoren, snookeren/pool, lezen, IQ testen/puzzels, science, eten
-        {{/inline}}
-        {{#*inline "writesCodeFor"}}
-            <p><strong>Rabobank</strong></p>
-        {{/inline}}
-    {{/team-member-overlay}}
-    
-    {{#> team-member-overlay name="jeroen" displayName="Jeroen" quote="" svg="/images/monsters/jeroenmonster.svg"}}
-        {{#*inline "likes"}}
-            Cars, cars, cars
-        {{/inline}}
-        {{#*inline "writesCodeFor"}}
-            <p><strong>SNS Bank</strong></p>
-        {{/inline}}
-    {{/team-member-overlay}}
-
-    {{#> team-member-overlay name="tjin" displayName="Tjin" quote="Everything is solvable. You just need to make a choice!" svg="/images/monsters/tjinmonster.svg"}}
-        {{#*inline "likes"}}
-            Gaming (mainly IOS games now), Orchestra Music, Trading Card Games (for now just Yugioh)
-        {{/inline}}
-        {{#*inline "writesCodeFor"}}
-            <p><strong>Rabobank</strong></p>
-        {{/inline}}
-    {{/team-member-overlay}}
-
-    {{#> team-member-overlay name="bas" displayName="Bas" quote="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur tincidunt mauris non imperdiet placerat." svg="/images/monsters/basmonster.svg"}}
-        {{#*inline "likes"}}
-            Scouting, Fitness, Movies&amp;Series
-        {{/inline}}
-        {{#*inline "writesCodeFor"}}
-            <p><strong>Rabobank</strong></p>
-        {{/inline}}
-    {{/team-member-overlay}}
-
-    {{#> team-member-overlay name="joran" displayName="Joran" quote="" svg="/images/monsters/joranmonster.svg"}}
-        {{#*inline "likes"}}
-            
-        {{/inline}}
-        {{#*inline "writesCodeFor"}}
-            <p><strong>Rabobank</strong></p>
-        {{/inline}}
-    {{/team-member-overlay}}
+    {{#each model.team}}
+        {{> team-member-overlay name=@key displayName=name quote=quote svg=monster likes=likes writesCodeFor=writesCodeFor }}
+    {{/each}}
 </div>
 </main>
 <div class="tortured-border tortured-border--bottom"></div>
