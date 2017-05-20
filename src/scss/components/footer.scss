@@ -13,12 +13,6 @@
     pointer-events: none; // Pass click through to triangles
 
     @media screen and (min-width: $cz-breakpoint-desktop) {
-        &:nth-of-type(2) {
-            background-color: rgba(0, 0, 0, .25);
-        }
-    }
-
-    @media screen and (min-width: $cz-max-width-desktop) {
         width: 50%;
     }
 }
@@ -27,7 +21,12 @@
     display: flex;
     flex-direction: column;
 
-    @media screen and (min-width: $cz-breakpoint-desktop) {
+    @include max-width('desktop') {
+        padding-top: 60px;
+        padding-bottom: 40px;
+    }
+
+    @include min-width('desktop') {
         flex-direction: row;
     }
 }
@@ -37,7 +36,7 @@
 }
 
 .cz-footer__block-container {
-    padding: 30px;
+    padding: 0 30px;
 
     @media screen and (min-width: $cz-breakpoint-desktop) {
         padding: 64px 10vw;
@@ -101,5 +100,17 @@
             height: 35px;
 
         }
+    }
+}
+
+.cz-footer__2nd-half-darken {
+    @media screen and (min-width: $cz-breakpoint-desktop) {
+        background-color: rgba(0, 0, 0, .25);
+        display: block;
+        height: 100%;
+        width: 50%;
+        margin-left: 50%;
+        position: absolute;
+        z-index: -1;
     }
 }

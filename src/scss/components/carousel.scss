@@ -2,13 +2,14 @@ $cz-carousel-transition-duration: 500ms;
 $cz-carousel-transition-delay: 700ms;
 
 .cz-header {
-    height: 100vh;
+    height: 80vh;
     width: 100vw;
     color: $cz-text-inverse;
     position: relative;
 
-    @media screen and (max-width: $cz-breakpoint-desktop) {
+    @include max-width('desktop') {
         padding: $cz-inner-spacing;
+        height: 90vh;
     }
 }
 
@@ -59,6 +60,7 @@ $cz-carousel-transition-delay: 700ms;
 .cz-carousel__content {
     align-self: center;
     width: 100vw;
+    margin-top: 30px;
 
     @media screen and (max-width: $cz-breakpoint-desktop) {
         padding: 0 20px;
