@@ -15,11 +15,11 @@
 }
 
 .cz-logo__image {
-    width: 260px;
-    height: 52px;
+    width: 220px;
+    height: 44px;
 
     @media screen and (max-width: $cz-breakpoint-desktop) {
-        width: 220px;
-        height: 44px;
+        width: 200px;
+        height: 40px;
     }
 }

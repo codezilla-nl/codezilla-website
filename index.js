@@ -14,6 +14,8 @@ var sass = require('metalsmith-sass');
 var inPlace = require('metalsmith-in-place');
 var asset = require('metalsmith-static');
 var helpers = require('metalsmith-register-helpers');
+var models = require("metalsmith-models");
+var googleAnalytics = require('metalsmith-google-analytics').default;
 
 var run = module.exports = function(cb) {
   Metalsmith(__dirname)
@@ -33,6 +35,9 @@ var run = module.exports = function(cb) {
         sortBy: 'index'
       }
     }))
+    .use(models({
+      directory: "content/data"
+    }))
     .use(inPlace({
       engine: 'handlebars',
       partials: './src/partials/'
@@ -50,6 +55,7 @@ var run = module.exports = function(cb) {
       removeComments: true,
       removeAttributeQuotes: false
     }))
+    .use(googleAnalytics('UA-61200557-1'))
     .use(beautify({
       "js": false,
       "html": true

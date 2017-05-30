@@ -2,13 +2,14 @@ $cz-carousel-transition-duration: 500ms;
 $cz-carousel-transition-delay: 700ms;
 
 .cz-header {
-    height: 100vh;
+    height: 80vh;
     width: 100vw;
     color: $cz-text-inverse;
     position: relative;
 
-    @media screen and (max-width: $cz-breakpoint-desktop) {
+    @include max-width('desktop') {
         padding: $cz-inner-spacing;
+        height: 90vh;
     }
 }
 
@@ -21,6 +22,7 @@ $cz-carousel-transition-delay: 700ms;
 
 
 .cz-carousel {
+    height: 100%;
     > li {
         display: flex;
         min-height: 300px;
@@ -58,6 +60,7 @@ $cz-carousel-transition-delay: 700ms;
 .cz-carousel__content {
     align-self: center;
     width: 100vw;
+    margin-top: 30px;
 
     @media screen and (max-width: $cz-breakpoint-desktop) {
         padding: 0 20px;
@@ -178,29 +181,3 @@ $cz-carousel-transition-delay: 700ms;
     }
 }
 
-.cz-header--no-carousel {
-    height: 55vh;
-
-    .cz-carousel__image,
-    .cz-carousel__title,
-    .cz-carousel__slogan {
-        opacity: 1;
-    }
-
-    .cz-carousel__image,
-    .cz-carousel__slogan {
-        transform: translateX(0);
-    }
-
-    .cz-carousel__slogan {
-        @media screen and (min-width: $cz-breakpoint-desktop) {
-            text-align: center;
-            max-width: none;
-        }
-    }
-
-    .cz-divider {
-        position: relative;
-        height: 5px;
-    }
-}

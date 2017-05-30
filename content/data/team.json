@@ -1,0 +1,112 @@
+{
+    "martin": {
+        "name": "Martin",
+        "monster": "/images/monsters/martinmonster.svg",
+        "quote": "Don’t wait for the perfect moment, take the moment and make it perfect",
+        "likes": "CODEZILLA, instruct spinning classes, dance music (mixing), travelling and Twente",
+        "writesCodeFor" : "boodschappenlijstjes, telefoonnummers, sloten"
+    },
+    "huib": {
+        "name": "Huib",
+        "monster": "/images/monsters/huibmonster.svg",
+        "quote": "A computer program does what you tell it to do, not what you want it to do",
+        "likes": "Tinkering, Devouring websites and traveling",
+        "writesCodeFor": "bol.com"
+    },
+    "rory": {
+        "name": "Rory",
+        "monster": "/images/monsters/rorymonster.svg",
+        "quote": "Have you tried turning it off and on again?",
+        "likes": "Games, cooking & eating, movies and music",
+        "writesCodeFor": "Ahold"
+    },
+    "jellebrouwer": {
+        "name": "Jelle",
+        "monster": "/images/monsters/jellebmonster.svg",
+        "quote": "Love to turn innovative ideas into unbelievable user experiences",
+        "likes": "Sports, travelling, food and creative entrepreneurship"
+    },
+    "arno": {
+        "name": "Arno",
+        "monster": "/images/monsters/arnomonster.svg",
+        "quote": "I don't do quotes",
+        "likes": "Games, series & movies, cooking and coding"
+    },
+    "michel": {
+        "name": "Michel",
+        "monster": "/images/monsters/michelmonster.svg",
+        "quote": "Too much Javascript. I'll fix it with css..",
+        "likes": "Hardware and Software tweaking, watching movies, traveling and cars",
+        "writesCodeFor": "SNS Bank"
+    },
+    "jelle": {
+        "name": "Jelle",
+        "monster": "/images/monsters/jellemonster.svg",
+        "quote": "Talk is cheap. Show me the code.",
+        "likes": "Open Source Software, Retro Games, Tennis, Speed Skating, Snowboarding",
+        "writesCodeFor": "KPN"
+    },
+    "remi": {
+        "name": "Remi",
+        "monster": "/images/monsters/remimonster.svg",
+        "quote": "Keep calm and trust the JavaScript programmer",
+        "likes": "Game Development, Web Development, Aquarium and Taekwondo"
+    },
+    "nico": {
+        "name": "Nico",
+        "monster": "/images/monsters/nicomonster.svg",
+        "quote": "Simplicity is the ultimate sophistication",
+        "likes": "Voetbal, fitness, muziek en awesome user experiences",
+        "writesCodeFor": "Bij de Rabobank werkt Nico mee in de SCRUM-teams aan Angular en React applicaties. Daarnaast fungeert hij ook als UX-designer."
+    },
+    "remy": {
+        "name": "Remy",
+        "monster": "/images/monsters/remymonster.svg",
+        "quote": "Listen carefully; I shall say this only once!",
+        "likes": "Pencak Silat, Magic: The Gathering, Movies",
+        "writesCodeFor": "Nuon"
+    },
+    "patrick": {
+        "name": "Patrick",
+        "monster": "/images/monsters/patrickmonster.svg",
+        "quote": "Pasting code from the Internet into production code is like chewing gum found in the street",
+        "likes": "Shaolin Kempo, (Retro) Video Games, Open Source Software",
+        "writesCodeFor": "Rabobank"
+    },
+    "ming": {
+        "name": "Ming",
+        "monster": "/images/monsters/mingmonster.svg",
+        "quote": "What could possibly go wrong?",
+        "likes": "Auto's/motoren, snookeren/pool, lezen, IQ testen/puzzels, science, eten",
+        "writesCodeFor": "Rabobank"
+    },
+    "tjin": {
+        "name": "Tjin",
+        "monster": "/images/monsters/tjinmonster.svg",
+        "quote": "Everything is solvable. You just need to make a choice!",
+        "likes": "Gaming (mainly IOS games now), Orchestra Music, Trading Card Games (for now just Yugioh)",
+        "writesCodeFor": "Rabobank"
+    },
+    "jeroen": {
+        "name": "Jeroen",
+        "monster": "/images/monsters/jeroenmonster.svg",
+        "quote": "",
+        "likes": "",
+        "writesCodeFor": ""
+    },
+    "bas": {
+        "name": "Bas",
+        "monster": "/images/monsters/basmonster.svg",
+        "quote": "Hi!",
+        "likes": "Scouting, Fitness, Movies&amp;Series",
+        "writesCodeFor": "Rabobank"
+    },
+    "joran": {
+        "name": "Joran",
+        "monster": "/images/monsters/joranmonster.svg",
+        "monsterStyle": "transform: scale(0.7) translateY(-80px)",
+        "quote": "Hi!",
+        "likes": "",
+        "writesCodeFor": "Rabobank"
+    }
+}

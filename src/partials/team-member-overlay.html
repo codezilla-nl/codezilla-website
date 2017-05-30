@@ -8,13 +8,15 @@
                     <div class="cz-team-detail__section">
                         <h3 class="cz-heading-2 cz-no-m-b cz-no-p-b">Likes</h3>
                         <hr class="cz-divider " />
-                        <p>{{> likes }}</p>
+                        <p>{{ likes }}</p>
                     </div>
+                    {{#if writesCodeFor}}
                     <div class="cz-team-detail__section">
                         <h3 class="cz-heading-2 cz-no-m-b cz-no-p-b">{{ displayName}} schrijft monsterlijk goede code voor...</h3>
                         <hr class="cz-divider" />
-                        {{> writesCodeFor }}
+                        {{ writesCodeFor }}
                     </div>
+                    {{/if}}
                 </div>
             </div>
         </div>

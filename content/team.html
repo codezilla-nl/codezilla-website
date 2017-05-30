@@ -1,114 +1,37 @@
 ---
 title: Ons team
 layout: layout.html
+model:
+    team: team
 
 header:
-    image: http://lorempixel.com/1200/1920/technics/4
+    image: /images/header-image-team.jpg
     title: Het team
-    slogan: Always code as if the guy <br /> who ends up maintaining your code <br /> will be a violent psychopath who knows where you live.
+    slogan: We hebben passie voor code en zijn meer dan alleen werken
 
 nextPage:
-    title: onze visie
-    url: /visie
+    title: home
+    url: /
 ---
 
+<div class="tortured-border tortured-border--top"></div>
+<main>
 <div class="cz-split-panels">
     <div class="cz-section">
         <div class="cz-diamond-grid">
             <div class="cz-diamond-grid__inner">
+                {{#each model.team}}
                 <div class="cz-diamond-grid__block">
-                    {{> team-member name="remy" svg="/images/monsters/remymonster.svg" }}
+                    {{> team-member name=@key displayName=name svg=monster svgStyle=monsterStyle }}
                 </div>
-                <div class="cz-diamond-grid__block">
-                    {{> team-member name="jelle" svg="/images/monsters/jellemonster.svg" }}
-                </div>
-                <div class="cz-diamond-grid__block">
-                    {{> team-member name="nico" svg="/images/monsters/nicomonster.svg" }}
-                </div>
-                <div class="cz-diamond-grid__block">
-                    {{> team-member name="patrick" svg="/images/monsters/patrickmonster.svg" }}
-                </div>
-                <div class="cz-diamond-grid__block">
-                    {{> team-member name="rome" svg="/images/monsters/romemonster.svg" }}
-                </div>
-                <div class="cz-diamond-grid__block">
-                    {{> team-member name="arno" svg="/images/monsters/arnomonster.svg" }}
-                </div>
-                <div class="cz-diamond-grid__block">
-                    {{> team-member name="ming" svg="/images/monsters/mingmonster.svg" }}
-                </div>
-                <div class="cz-diamond-grid__block">
-                    {{> team-member name="tjin" svg="/images/monsters/tjinmonster.svg" }}
-                </div>
-                <div class="cz-diamond-grid__block">
-                    <div cz-diamond="" class="cz-diamond cz-diamond--spacer"></div>
-                </div>
+                {{/each}}
             </div>
         </div>
     </div>
 
-    {{#> team-member-overlay name="remy" displayName="Remy" quote="Hmm, that framework sounds delicious" svg="/images/monsters/remymonster.svg"}}
-        {{#*inline "likes"}}
-            Devouring websites and travel
-        {{/inline}}
-        {{#*inline "writesCodeFor"}}
-            <p><strong>Pellentesque habitant morbi tristique</strong> senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. <em>Aenean ultricies mi vitae est.</em> Mauris placerat eleifend leo. Quisque sit amet est et sapien ullamcorper pharetra. Vestibulum erat wisi, condimentum sed, <code>commodo vitae</code>, ornare sit amet, wisi. Aenean fermentum, elit eget tincidunt condimentum, eros ipsum rutrum orci, sagittis tempus lacus enim ac dui. <a href="#">Donec non enim</a> in turpis pulvinar facilisis. Ut felis.</p>
-        {{/inline}}
-    {{/team-member-overlay}}
-    {{#> team-member-overlay name="jelle" displayName="Jelle" quote="Talk is cheap. Show me the code." svg="/images/monsters/jellemonster.svg"}}
-        {{#*inline "likes"}}
-            Open Source Software, Retro Games, Speed Skating, Snowboarding
-        {{/inline}}
-        {{#*inline "writesCodeFor"}}
-        <p><strong>Pellentesque habitant morbi tristique</strong> senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. <em>Aenean ultricies mi vitae est.</em> Mauris placerat eleifend leo. Quisque sit amet est et sapien ullamcorper pharetra. Vestibulum erat wisi, condimentum sed, <code>commodo vitae</code>, ornare sit amet, wisi. Aenean fermentum, elit eget tincidunt condimentum, eros ipsum rutrum orci, sagittis tempus lacus enim ac dui. <a href="#">Donec non enim</a> in turpis pulvinar facilisis. Ut felis.</p>
-        {{/inline}}
-    {{/team-member-overlay}}
-    {{#> team-member-overlay name="nico" displayName="Nico" quote="Simplicity is the ultimate sophistication" svg="/images/monsters/nicomonster.svg"}}
-        {{#*inline "likes"}}
-            Voetbal, fitness, muziek en awesome user experiences
-        {{/inline}}
-        {{#*inline "writesCodeFor"}}
-            <p> Rabobank, bij de Rabobank werkt Nico mee in de SCRUM-teams aan Angular en React applicaties. Daarnaast fungeert hij ook als UX-designer.</p>
-        {{/inline}}
-    {{/team-member-overlay}}
-    {{#> team-member-overlay name="patrick" displayName="Patrick" quote="Crappy code smells like shit" svg="/images/monsters/patrickmonster.svg"}}
-        {{#*inline "likes"}}
-        Gamen gek
-        {{/inline}}
-        {{#*inline "writesCodeFor"}}
-    <p><strong>Pellentesque habitant morbi tristique</strong> senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. <em>Aenean ultricies mi vitae est.</em> Mauris placerat eleifend leo. Quisque sit amet est et sapien ullamcorper pharetra. Vestibulum erat wisi, condimentum sed, <code>commodo vitae</code>, ornare sit amet, wisi. Aenean fermentum, elit eget tincidunt condimentum, eros ipsum rutrum orci, sagittis tempus lacus enim ac dui. <a href="#">Donec non enim</a> in turpis pulvinar facilisis. Ut felis.</p>
-        {{/inline}}
-    {{/team-member-overlay}}
-    {{#> team-member-overlay name="rome" displayName="Rome" quote="Problems are only opportunities in work clothes" svg="/images/monsters/romemonster.svg"}}
-        {{#*inline "likes"}}
-            Sports, reading, cooking, eating and travelling the world
-        {{/inline}}
-        {{#*inline "writesCodeFor"}}
-        <p><strong>Pellentesque habitant morbi tristique</strong> senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. <em>Aenean ultricies mi vitae est.</em> Mauris placerat eleifend leo. Quisque sit amet est et sapien ullamcorper pharetra. Vestibulum erat wisi, condimentum sed, <code>commodo vitae</code>, ornare sit amet, wisi. Aenean fermentum, elit eget tincidunt condimentum, eros ipsum rutrum orci, sagittis tempus lacus enim ac dui. <a href="#">Donec non enim</a> in turpis pulvinar facilisis. Ut felis.</p>
-        {{/inline}}
-    {{/team-member-overlay}}
-    {{#> team-member-overlay name="arno" displayName="Arno" quote="I don't do quotes" svg="/images/monsters/arnomonster.svg"}}
-    {{#*inline "likes"}}
-    Games, series & movies, cooking and coding
-    {{/inline}}
-    {{#*inline "writesCodeFor"}}
-    <p><strong>Pellentesque habitant morbi tristique</strong> senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. <em>Aenean ultricies mi vitae est.</em> Mauris placerat eleifend leo. Quisque sit amet est et sapien ullamcorper pharetra. Vestibulum erat wisi, condimentum sed, <code>commodo vitae</code>, ornare sit amet, wisi. Aenean fermentum, elit eget tincidunt condimentum, eros ipsum rutrum orci, sagittis tempus lacus enim ac dui. <a href="#">Donec non enim</a> in turpis pulvinar facilisis. Ut felis.</p>
-    {{/inline}}
-    {{/team-member-overlay}}
-    {{#> team-member-overlay name="ming" displayName="Ming" quote="Please insert quote" svg="/images/monsters/mingmonster.svg"}}
-    {{#*inline "likes"}}
-    Various things
-    {{/inline}}
-    {{#*inline "writesCodeFor"}}
-    <p><strong>Pellentesque habitant morbi tristique</strong> senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. <em>Aenean ultricies mi vitae est.</em> Mauris placerat eleifend leo. Quisque sit amet est et sapien ullamcorper pharetra. Vestibulum erat wisi, condimentum sed, <code>commodo vitae</code>, ornare sit amet, wisi. Aenean fermentum, elit eget tincidunt condimentum, eros ipsum rutrum orci, sagittis tempus lacus enim ac dui. <a href="#">Donec non enim</a> in turpis pulvinar facilisis. Ut felis.</p>
-    {{/inline}}
-    {{/team-member-overlay}}
-    {{#> team-member-overlay name="tjin" displayName="Tjin" quote="Please insert quote" svg="/images/monsters/tjinmonster.svg"}}
-    {{#*inline "likes"}}
-    Various things
-    {{/inline}}
-    {{#*inline "writesCodeFor"}}
-    <p><strong>Pellentesque habitant morbi tristique</strong> senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. <em>Aenean ultricies mi vitae est.</em> Mauris placerat eleifend leo. Quisque sit amet est et sapien ullamcorper pharetra. Vestibulum erat wisi, condimentum sed, <code>commodo vitae</code>, ornare sit amet, wisi. Aenean fermentum, elit eget tincidunt condimentum, eros ipsum rutrum orci, sagittis tempus lacus enim ac dui. <a href="#">Donec non enim</a> in turpis pulvinar facilisis. Ut felis.</p>
-    {{/inline}}
-    {{/team-member-overlay}}
+    {{#each model.team}}
+        {{> team-member-overlay name=@key displayName=name quote=quote svg=monster likes=likes writesCodeFor=writesCodeFor }}
+    {{/each}}
 </div>
+</main>
+<div class="tortured-border tortured-border--bottom"></div>

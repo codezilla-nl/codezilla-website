@@ -13,4 +13,5 @@ selenium-debug.log
 
 # Test reports
 reports/
+screenshots/
 .idea
