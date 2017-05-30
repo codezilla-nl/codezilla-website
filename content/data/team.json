@@ -3,7 +3,8 @@
         "name": "Martin",
         "monster": "/images/monsters/martinmonster.svg",
         "quote": "Don’t wait for the perfect moment, take the moment and make it perfect",
-        "likes": "CODEZILLA, give spinning classes, dance music (mixing), travelling and Twente"
+        "likes": "CODEZILLA, instruct spinning classes, dance music (mixing), travelling and Twente",
+        "writesCodeFor" : "boodschappenlijstjes, telefoonnummers, sloten"
     },
     "huib": {
         "name": "Huib",
