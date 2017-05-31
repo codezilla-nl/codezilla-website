@@ -90,9 +90,9 @@
     "jeroen": {
         "name": "Jeroen",
         "monster": "/images/monsters/jeroenmonster.svg",
-        "quote": "",
-        "likes": "",
-        "writesCodeFor": ""
+        "quote": "Life would be much easier if I had the source code",
+        "likes": "Fast cars, gaming, snowboarding & Rollerderby",
+        "writesCodeFor": "SNS Bank"
     },
     "bas": {
         "name": "Bas",
