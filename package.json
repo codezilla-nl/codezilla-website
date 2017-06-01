@@ -42,6 +42,7 @@
     "metalsmith-google-analytics": "0.0.1",
     "metalsmith-models": "0.0.3",
     "metalsmith-register-helpers": "^0.2.0",
+    "metalsmith-robots": "^1.0.1",
     "metalsmith-sitemap": "^1.2.0",
     "nightwatch": "^0.9.8",
     "phantomjs": "^2.1.7",

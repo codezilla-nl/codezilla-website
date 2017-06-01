@@ -9,6 +9,7 @@ var permalinks = require('metalsmith-permalinks');
 var collections = require('metalsmith-collections');
 var sitemap = require('metalsmith-sitemap');
 var canonical = require('metalsmith-canonical');
+var robots = require('metalsmith-robots');
 var rollup = require('metalsmith-rollup');
 var babel = require('rollup-plugin-babel');
 var uglify = require('rollup-plugin-uglify');
@@ -68,6 +69,10 @@ var run = module.exports = function(cb) {
     .use(sitemap({
       hostname: 'http://www.codezilla.nl',
       omitIndex: true
+    }))
+    .use(robots({
+      allow: ENV === 'PROD' ? ['*'] : [],
+      disallow: ENV !== 'PROD' ? ['*'] : []
     }))
     .use(googleAnalytics('UA-61200557-1'))
     .use(beautify({

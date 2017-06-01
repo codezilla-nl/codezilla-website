@@ -17,11 +17,13 @@ fi
 
 # Save some useful information
 if [ ${TRAVIS_BRANCH} == develop ]; then
+    ENV="TEST"
     DEPLOY_KEY="deploy_key.dev"
     TARGET_BRANCH="gh-pages"
     REPO=`git config remote.origin.url`
     PUBLISH_DOMAIN="test.codezilla.nl"
 else
+    ENV="PROD"
     DEPLOY_KEY="deploy_key.prd"
     TARGET_BRANCH="master"
     REPO="https://github.com/codezilla-nl/codezilla-nl.github.io.git"
