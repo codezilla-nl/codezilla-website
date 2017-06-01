@@ -9,6 +9,7 @@ var permalinks = require('metalsmith-permalinks');
 var collections = require('metalsmith-collections');
 var rollup = require('metalsmith-rollup');
 var babel = require('rollup-plugin-babel');
+var uglify = require('rollup-plugin-uglify');
 var nodeResolve = require('rollup-plugin-node-resolve');
 var sass = require('metalsmith-sass');
 var inPlace = require('metalsmith-in-place');
@@ -16,6 +17,8 @@ var asset = require('metalsmith-static');
 var helpers = require('metalsmith-register-helpers');
 var models = require("metalsmith-models");
 var googleAnalytics = require('metalsmith-google-analytics').default;
+
+var ENV = process.env.ENV;
 
 var run = module.exports = function(cb) {
   Metalsmith(__dirname)
@@ -72,7 +75,8 @@ var run = module.exports = function(cb) {
           exclude: 'node_modules/**'
         }),
         nodeResolve({
-        })
+        }),
+        ENV === 'PROD' ? uglify() : () => {}
       ]
     }))
     .build(function (err, files) {
