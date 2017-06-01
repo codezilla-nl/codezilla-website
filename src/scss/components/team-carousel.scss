@@ -3,6 +3,9 @@
 
 .cz-team-carousel{
     height:100%;
+    @include min-width('tablet') {
+        height: 100vh;
+    }
 }
 .cz-team-carousel__content {
     display: flex;
