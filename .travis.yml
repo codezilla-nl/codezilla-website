@@ -5,6 +5,7 @@ node_js:
     - "6.3.1"
 env:
   global:
+    - ENV: "PROD"
     - ENCRYPTION_LABEL: "57b55b7ed9a3"
     - COMMIT_AUTHOR_EMAIL: "travis@codezilla.nl"
 addons:
