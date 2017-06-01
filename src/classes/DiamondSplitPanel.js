@@ -16,15 +16,18 @@ const panelDisplayStyle = {
 };
 
 function DiamondSplitPanel(bodyLocker) {
-    
+
     initialize();
-    
+
     function initialize() {
+        $splitPanels.forEach(($panel) => {
+            document.body.appendChild($panel);
+        });
         $diamonds.forEach($diamond =>
           $diamond.onclick = showPanel.bind(null, $diamond)
         );
     }
-    
+
     function showPanel($diamond){
         //Get the actual diamond shape
         const $diamondShape = findByAttr('diamond-shape', '', $diamond)[0];
