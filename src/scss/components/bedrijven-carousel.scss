@@ -6,7 +6,7 @@
 
 .cz-bedrijven-carousel {
     position: relative;
-    height: 170px;
+    min-height: 170px;
     margin-bottom: 20px;
 
     @media screen and (max-width: $cz-breakpoint-desktop) {
@@ -35,6 +35,9 @@
         @media screen and (max-width: $cz-breakpoint-desktop) {
             left: -3%;
         }
+        @media screen and (max-width: $cz-breakpoint-tablet) {
+            left: -8%;
+        }
         transform: scale(-1, 1);
 
         &:hover {
@@ -46,6 +49,9 @@
 
         @media screen and (max-width: $cz-breakpoint-desktop) {
             right: -3%;
+        }
+        @media screen and (max-width: $cz-breakpoint-tablet) {
+            right: -8%;
         }
 
         &:hover {
