@@ -6,6 +6,7 @@ export default class {
         this.cycle = undefined;
         this.options = Object.assign({
             interval: 9000, // set to 0 to disable
+            equaliseHeight: false,
             class: {
                 current: 'cz-carousel--current',
                 item: 'cz-carousel--item',
@@ -17,6 +18,13 @@ export default class {
             }
         }, options);
         this.slides = this.el.querySelectorAll('.'+this.options.class.item);
+
+        // TODO: Fix height issues with CSS instead of js
+        if (this.options.equaliseHeight) {
+            this.el.style.height = Array.from(this.slides).reduce((maxHeight, slide) => {
+                return slide.offsetHeight > maxHeight ? slide.offsetHeight : maxHeight;
+            }, 0) + 'px';
+        }
 
         if (!this.el.nodeName) {
             console.error(`Carousel ${this.el} is not a valid HTML element`);
