@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="nl">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>{{ title }}</title>
+    <!-- Allows control over where resources are loaded from -->
+    <!-- <meta http-equiv="Content-Security-Policy" content="default-src 'self' ws://localhost:* 'sha256-i7PshISEwg2EgnmQ50VZDYsuW/NpRTiflxGsrxist8k='"> -->
+    <!-- Short description of the page (limit to 150 characters) -->
+    <!-- In *some* situations this description is used as a part of the snippet shown in the search results. -->
+    <meta name="description" content="{{ description }}">
+    <!-- Control the behavior of search engine crawling and indexing -->
+    <meta name="robots" content="index,follow,noodp,noydir"><!-- All Search Engines -->
+    <meta name="googlebot" content="index,follow"><!-- Google Specific -->
+    <!-- Full domain name or web address -->
+    <meta name="url" content="https://www.codezilla.nl/">
+    <!-- Allows control over how referrer information is passed -->
+    <meta name="referrer" content="no-referrer">
+    <!-- Canonical link -->
+    <link rel="canonical" href="{{ canonical }}" />
+    <!-- Links -->
+    <link rel="stylesheet" href="/main.css">
+    <!-- Favicons -->
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png?v=BGBPjAyxEE">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png?v=BGBPjAyxEE">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png?v=BGBPjAyxEE">
+    <link rel="manifest" href="/manifest.json?v=BGBPjAyxEE">
+    <link rel="mask-icon" href="/safari-pinned-tab.svg?v=BGBPjAyxEE" color="#52d70b">
+    <link rel="shortcut icon" href="/favicon.ico?v=BGBPjAyxEE">
+    <meta name="msapplication-TileColor" content="#52d70b">
+    <meta name="msapplication-TileImage" content="/mstile-144x144.png?v=BGBPjAyxEE">
+    <meta name="theme-color" content="#ffffff">
+</head>
+<body>
+    {{> menu }}
+    <div class="cz-logo">
+        <a href="/"><img class="cz-logo__image" src="/images/logo-light.svg" /></a>
+    </div>
+    <div id="body-container" class="cz-body-container">
+        <div id="body-container-overlay" class="cz-body-container__loader-overlay"></div>
+        {{> carousel }}
+
+        {{{ contents }}}
+
+        {{> footer nextPage = nextPage }}
+    </div>
+    <script src="/bundle.js"></script>
+</body>
+</html>

@@ -1,13 +1,33 @@
 @import 'scss/tools/mixins';
 
+html, body {
+    height: 100%;
+}
+
 body {
     font-family: 'Helvetica Neue', Arial, Sans-serif;
     -webkit-font-smoothing: antialiased;
 
     @include cz-font-family('Light', 'Radikal');
     @include cz-font-base;
+
+    background-color: #242f34;
+
+    @media screen and (max-width: $cz-breakpoint-tablet) {
+        overflow-x: hidden;
+    }
+
+    &.cz-body-perspective {
+        // Perspective for the body container
+        perspective: 600px;
+    }
 }
 
 p {
     margin: $cz-inner-spacing 0;
+}
+
+a {
+    color: #009CA6;
+    text-decoration: none;
 }

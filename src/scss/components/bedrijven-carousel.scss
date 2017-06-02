@@ -1,0 +1,106 @@
+// TODO:
+// - fix height on smaller breakpoints: POC flexbox height?
+// - Hossel rabobank.svg & sns.svg
+// - fix flexbox layout to accommodate for small texts
+// - navigate w/ arrows
+
+.cz-bedrijven-carousel {
+    position: relative;
+    min-height: 170px;
+    margin-bottom: 20px;
+
+    @media screen and (max-width: $cz-breakpoint-desktop) {
+        height: 250px;
+        margin: 0 40px;
+    }
+
+    .cz-bedrijven-carousel--previous,
+    .cz-bedrijven-carousel--next {
+        position: absolute;
+        z-index: 2;
+        top: 37.5%;
+        width: 40px;
+        font-size: 20px;
+        text-align: center;
+        line-height: 10px;
+        cursor: pointer;
+        transition: transform 150ms ease-in-out;
+        border-radius: 50%;
+        background-color: $cz-fill-light;
+
+    }
+    .cz-bedrijven-carousel--previous {
+        left: 3%;
+
+        @media screen and (max-width: $cz-breakpoint-desktop) {
+            left: -3%;
+        }
+        @media screen and (max-width: $cz-breakpoint-tablet) {
+            left: -8%;
+        }
+        transform: scale(-1, 1);
+
+        &:hover {
+            transform: scale(-1, 1) translateX(5%);
+        }
+    }
+    .cz-bedrijven-carousel--next {
+        right: 3%;
+
+        @media screen and (max-width: $cz-breakpoint-desktop) {
+            right: -3%;
+        }
+        @media screen and (max-width: $cz-breakpoint-tablet) {
+            right: -8%;
+        }
+
+        &:hover {
+            transform: translateX(5%);
+        }
+    }
+
+    .cz-bedrijven-carousel--to-center {
+        transform: translate(0);
+    }
+
+    .cz-bedrijven-carousel--to-left {
+        transform: translate(-100%);
+    }
+
+    .cz-bedrijven-carousel--to-right {
+        transform: translate(100%);
+    }
+
+    .cz-bedrijven-carousel--item {
+        opacity: 0;
+        top: 0;
+        left: 0;
+        position: absolute;
+        list-style-type: none;
+    }
+    &[cz-carousel-direction="left"] .cz-bedrijven-carousel--item {
+        transform: translate(-100%);
+    }
+    &[cz-carousel-direction="right"] .cz-bedrijven-carousel--item {
+        transform: translate(100%);
+    }
+
+    .cz-bedrijven-carousel--current,
+    &[cz-carousel-direction] .cz-bedrijven-carousel--current {
+        opacity: 1;
+        z-index: 1;
+        transform: translate(0);
+        transition: all 300ms ease-in-out;
+    }
+
+    .cz-bedrijven-carousel--transition {
+        opacity: 1;
+        transition: all 300ms ease-in-out;
+    }
+    &[cz-carousel-direction="left"] .cz-bedrijven-carousel--transition {
+        transform: translate(100%);
+    }
+    &[cz-carousel-direction="right"] .cz-bedrijven-carousel--transition {
+        transform: translate(-100%);
+    }
+}

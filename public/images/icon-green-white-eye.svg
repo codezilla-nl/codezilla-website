@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="488px" height="488px" viewBox="0 0 488 488" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 42 (36781) - http://www.bohemiancoding.com/sketch -->
+    <title>Group</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Group" transform="translate(-0.207704, 0.329113)">
+            <path d="M467.051151,194.620243 L292.929733,20.5696192 C265.773181,-6.3291136 221.044744,-6.3291136 195.485637,20.5696192 L21.3642188,194.620243 C-5.7923326,221.518976 -5.7923326,265.822771 21.3642188,292.721504 L195.485637,466.772128 C222.642188,493.670861 267.370626,493.670861 292.929733,466.772128 L467.051151,292.721504 C494.207702,265.822771 494.207702,221.518976 467.051151,194.620243 Z" id="Shape" fill="#52D70B" fill-rule="nonzero"></path>
+            <polygon id="Path" fill="#FFFFFF" points="246.603851 405.06327 187.498416 346.51897 224.239632 310.126566 249.798739 335.443021 337.65817 248.417709 248.201295 159.810118 227.434521 180.379738 190.693304 145.569613 246.603851 90.1898688 404.750827 246.83543"></polygon>
+        </g>
+    </g>
+</svg>

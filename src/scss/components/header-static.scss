@@ -1,0 +1,112 @@
+.cz-header-static {
+    position: relative;
+    padding-top: 20px;
+
+    @media screen and (min-width: $cz-breakpoint-desktop) {
+        padding-top: 100px;
+    }
+}
+
+.cz-header-static__inner {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    min-height: 55vh;
+    color: $cz-text-inverse;
+
+    @media screen and (max-width: $cz-breakpoint-desktop) {
+        padding: $cz-inner-spacing;
+    }
+}
+
+.cz-header-static__title {
+    position: relative;
+    z-index: 1;
+    text-align: center;
+    font-size: 45px;
+    text-transform: uppercase;
+    color: white;
+    transform: translateY(50%);
+
+    &:after {
+        transition: bottom $cz-carousel-transition-duration ease-out;
+        bottom: $cz-inner-spacing;
+        background-color: rgba(255, 255, 255, 0.7);
+    }
+
+    &:before {
+        content: '';
+        position: absolute;
+        bottom: $cz-inner-spacing;
+        left: 0;
+        height: 3px;
+        width: 40px;
+        background-color: #68d517;
+        transition:
+            bottom $cz-carousel-transition-duration ease-out,
+            transform 9000ms - $cz-carousel-transition-duration * 2 linear 600ms;
+        z-index: 1;
+        transform: scaleX(0);
+
+        @media screen and (min-width: $cz-breakpoint-desktop) {
+            left: 50%;
+            margin-left: -75px;
+        }
+    }
+
+    @media screen and (max-width: $cz-breakpoint-desktop) {
+        text-align: left;
+        line-height: 1.3;
+    }
+}
+
+.cz-header-static__content {
+    align-self: center;
+    width: 100vw;
+    padding-top: 70px;
+    padding-bottom: 70px;
+    margin-top: -35px;
+
+    @media screen and (max-width: $cz-breakpoint-desktop) {
+        padding-left: 30px;
+        padding-right: 30px;
+    }
+}
+
+.cz-header-static__image {
+    position: absolute;
+    z-index: 0;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    background-size: cover;
+    background-position: 50% 50%;
+    transform: translateX(100%);
+    width: 50%;
+}
+
+.cz-header-static__divider {
+    @media screen and (min-width: $cz-breakpoint-desktop) {
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+.cz-header-static__slogan {
+    position: relative;
+    z-index: 1;
+    text-align: left;
+    font-size: 20px;
+
+    @media screen and (min-width: $cz-breakpoint-desktop) {
+        text-align: right;
+        transform: translateX(-50%);
+    }
+}
+
+.cz-header-static__slogan-inner {
+    max-width: 350px;
+    display: inline-block;
+    padding-right: 20px;
+}

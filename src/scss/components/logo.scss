@@ -1,0 +1,25 @@
+.cz-logo {
+    position: absolute;
+    display: flex;
+    left: 0px;
+    right: 0px;
+    top: 50px;
+    justify-content: center;
+    z-index: 2;
+
+    @media screen and (max-width: $cz-breakpoint-desktop) {
+        top: 25px;
+        left: 30px;
+        display: block;
+    }
+}
+
+.cz-logo__image {
+    width: 220px;
+    height: 44px;
+
+    @media screen and (max-width: $cz-breakpoint-desktop) {
+        width: 200px;
+        height: 40px;
+    }
+}

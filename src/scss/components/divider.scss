@@ -1,13 +1,9 @@
-.cz-divider {
-    position: relative;
+@import 'scss/tools/divider';
 
-    &::after {
-        content: '';
-        position: absolute;
-        top: 0;
-        left: 50%;
-        margin-left: -75px;
-        height: 3px;
-        width: 150px;
-    }
+.cz-divider {
+    @include cz-divider();
+}
+
+.cz-divider--center-desktop {
+    @include cz-divider("center", "large");
 }

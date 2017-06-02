@@ -1,0 +1,44 @@
+@import '../settings/variables';
+
+$media-block-gutter: 20px;
+
+.media-block {
+    padding-left: 30px;
+    padding-right: 30px;
+
+    @media (min-width: $cz-breakpoint-desktop) {
+        display: flex;
+        align-items: center;
+        padding-left: 10vw;
+        padding-right: 10vw;
+    }
+}
+
+.media-block__image-wrapper {
+    width: 30%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.media-block__content {
+    max-width: 600px;
+}
+
+.media-block__image {
+    width: 100px;
+    height: auto;
+}
+
+.media-block__image-wrapper:not(.media-block__image-wrapper--persist-mobile) {
+    @media (max-width: $cz-breakpoint-desktop) {
+        display: none;
+    }
+}
+
+.media-block__image-wrapper--persist-mobile {
+    @media (max-width: $cz-breakpoint-desktop) {
+        margin-bottom: 40px;
+        width: 100%;
+    }
+}

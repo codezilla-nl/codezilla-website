@@ -1,0 +1,36 @@
+---
+title: Ons team - CODEZILLA
+layout: layout.html
+model:
+    team: team
+
+header:
+    image: /images/header-image-team.jpg
+    title: Het team
+    slogan: We hebben passie voor code en zijn meer dan alleen werken
+
+nextPage:
+    title: home
+    url: /
+---
+
+<div class="tortured-border tortured-border--top"></div>
+<main>
+<div class="cz-split-panels">
+    <div class="cz-section">
+        <div class="cz-diamond-grid">
+            <div class="cz-diamond-grid__inner">
+                {{#each model.team}}
+                <div class="cz-diamond-grid__block">
+                    {{> team-member name=@key displayName=name svg=monster svgStyle=monsterStyle }}
+                </div>
+                {{/each}}
+            </div>
+        </div>
+    </div>
+    {{#each model.team}}
+        {{> team-member-overlay name=@key displayName=name quote=quote svg=monster likes=likes writesCodeFor=writesCodeFor }}
+    {{/each}}
+</div>
+</main>
+<div class="tortured-border tortured-border--bottom"></div>

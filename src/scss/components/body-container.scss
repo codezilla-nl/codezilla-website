@@ -1,0 +1,50 @@
+
+.cz-body-container {
+    position: relative;
+    min-height: 100%;
+    background-color: #fff;
+    transition: transform 300ms;
+    transition-delay: 200ms;
+    z-index: 0;
+    overflow-x: hidden;
+    transform-origin: top right; // Has to be set on the container, or weird jumping occurs
+}
+
+.cz-body-container--skewed {
+    transform: translate(0, 120px) rotateY(-10deg) scale(0.75);
+
+    @media screen and (max-width: $cz-breakpoint-desktop) {
+        transform: translate(0, 120px) rotateY(-10deg) scale(0.65);
+    }
+
+    @media screen and (max-width: $cz-breakpoint-tablet) {
+        transform: translate(40%, 180px) rotateY(-10deg) scale(0.75);
+    }
+}
+
+.cz-body-container__loader-overlay {
+    transition: visibility 300ms;
+    visibility: hidden;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background-color: green;
+    text-align: center;
+    color: white;
+    font-size: 40px;
+    opacity: .9;
+    z-index: 999;
+
+    &:after {
+        content: 'Loading...';
+        display: block;
+        position: relative;
+        top: 300px;
+    }
+}
+
+.cz-body-container__loader-overlay--active {
+    visibility: visible;
+}

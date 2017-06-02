@@ -1,0 +1,116 @@
+@import "../settings/variables";
+
+.cz-footer {
+    position: relative;
+}
+.cz-footer__blocks {
+    display: flex;
+}
+
+.cz-footer__block {
+    flex: 1;
+    position: relative; // Hack for weird color issue
+    pointer-events: none; // Pass click through to triangles
+
+    @media screen and (min-width: $cz-breakpoint-desktop) {
+        width: 50%;
+    }
+}
+
+.cz-footer__blocks-inner {
+    display: flex;
+    flex-direction: column;
+
+    @include max-width('desktop') {
+        padding-top: 60px;
+        padding-bottom: 40px;
+    }
+
+    @include min-width('desktop') {
+        flex-direction: row;
+    }
+}
+
+.cz-footer__triangles {
+    position: absolute;
+}
+
+.cz-footer__block-container {
+    padding: 0 30px;
+
+    @media screen and (min-width: $cz-breakpoint-desktop) {
+        padding: 64px 10vw;
+    }
+}
+
+.cz-footer__cta {
+    clear: both;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+
+    color: #fff;
+    font-size: 80px;
+    text-transform: uppercase;
+    line-height: 44px;
+    padding: 0 20px;
+
+    background-color: $cz-color-primary;
+
+    position: relative;
+
+    @media screen and (min-width: $cz-breakpoint-desktop) {
+        height: 165px;
+        background: $cz-color-primary url("images/footer-logo.svg") center no-repeat;
+    }
+}
+
+.cz-footer__cta-link {
+    display: block;
+    position: relative;
+    font-size: 39px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    color: #FFFFFF;
+    text-decoration: none;
+
+    margin: 50px 0 100px 0;
+
+    @media screen and (min-width: $cz-breakpoint-desktop) {
+        display: inline;
+        margin-bottom: 0;
+    }
+
+    &:after {
+        background-image: url("images/arrow-c2a.svg");
+        content: ' ';
+        position: absolute;
+        bottom: -50px;
+        right: 50%;
+        margin-right: -34px;
+        width: 68px;
+        height: 35px;
+
+        @media screen and (min-width: $cz-breakpoint-desktop) {
+            right: -90px;
+            margin-right: 0;
+            top: 0;
+            width: 68px;
+            height: 35px;
+
+        }
+    }
+}
+
+.cz-footer__2nd-half-darken {
+    @media screen and (min-width: $cz-breakpoint-desktop) {
+        background-color: rgba(0, 0, 0, .25);
+        display: block;
+        height: 100%;
+        width: 50%;
+        margin-left: 50%;
+        position: absolute;
+        z-index: -1;
+    }
+}

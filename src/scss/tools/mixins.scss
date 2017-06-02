@@ -61,6 +61,12 @@
     }
 }
 
+@mixin cz-list-reset {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+
 // Use when you want the text to be hidden on the screen but accessible to screen readers
 @mixin cz-sr-only {
     border: 0;
@@ -71,4 +77,16 @@
     padding: 0;
     position: absolute;
     width: 1px;
+}
+
+@mixin min-width($bp-name) {
+    @media (min-width: map-get($cz-breakpoints-map, $bp-name)) {
+        @content;
+    }
+}
+
+@mixin max-width($bp-name) {
+    @media (max-width: (map-get($cz-breakpoints-map, $bp-name) - 1px)) {
+        @content;
+    }
 }

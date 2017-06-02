@@ -1,0 +1,32 @@
+[
+    {
+        "name": "Agrifirm",
+        "text": "Agrifirm ontwikkelt innovatieve software applicaties (o.a. internet of things) voor de agrarische sector. CODEZILLA is betrokken bij deze projecten. We bouwen o.a. generieke componenten (library en templates) die voor nieuwe Angular2 applicaties gebruikt kunnen worden.",
+        "logo": "/images/companies/agrifirm-o.svg"
+    },
+    {
+        "name": "Ahold",
+        "text": "Bij Ahold-Delhaize werken we aan ah.nl website; wij richten ons op het online bestellen gedeelte voor de klant. Wij zorgen ervoor dat het bestelproces via de website eenvoudig en gebruiksvriendelijk verloopt.",
+        "logo": "/images/companies/ahold-o.svg"
+    },
+    {
+        "name": "Belastingdienst",
+        "text": "Bij verschillende overheidsinstanties werken we mee om mooie gebruikerservaringen te creëren en bedenken we innovatieve oplossingen waarbij eenvoudige interfaces prefereren.",
+        "logo": "/images/companies/belastingdienst-o.svg"
+    },
+    {
+        "name": "Deloitte",
+        "text": "Deloitte werkt aan een Risk Management System dat door haar klanten wordt gebruikt. CODEZILLA is betrokken bij de ontwikkeling en verbetering van het ‘client’-zijde van het systeem.",
+        "logo": "/images/companies/deloitte-o.svg"
+    },
+    {
+        "name": "Nuon",
+        "text": "Binnen de Self Service omgeving werken we aan de architectuur en de bouw van de Self Service omgeving voor (groot)zakelijke klanten.",
+        "logo": "/images/companies/nuon-o.svg"
+    },
+    {
+        "name": "Rabobank",
+        "text": "Bij de Rabobank helpen we de hypotheek afdeling met het ontwikkelen van een interactieve hypotheek digital dossier. Tevens ontwikkelen we aan een generieke componenten library dat binnen de Rabobank breed wordt gezet en zorgt voor een uniforme gebruikerservaring zowel op desktops als op mobiele devices.",
+        "logo": "/images/companies/rabobank.png"
+    }
+]

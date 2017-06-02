@@ -5,7 +5,7 @@ module.exports = {
     },
     "files": [{
         match: [
-            "./content/**/*.md",
+            "./content/**/*.html",
             "./src/**/*.js",
             "./src/**/*.html",
             "./src/**/*.scss"
