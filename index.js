@@ -7,6 +7,9 @@ var markdown = require('metalsmith-markdown');
 var layouts = require('metalsmith-layouts');
 var permalinks = require('metalsmith-permalinks');
 var collections = require('metalsmith-collections');
+var sitemap = require('metalsmith-sitemap');
+var canonical = require('metalsmith-canonical');
+var robots = require('metalsmith-robots');
 var rollup = require('metalsmith-rollup');
 var babel = require('rollup-plugin-babel');
 var uglify = require('rollup-plugin-uglify');
@@ -32,6 +35,11 @@ var run = module.exports = function(cb) {
     .use(filter('*.html'))
     .clean(true)
     .use(permalinks())
+    .use(canonical({
+      hostname: 'http://www.codezilla.nl',
+      omitIndex: true,
+      omitTrailingSlashes: false
+    }))
     .use(collections({
       blocks: {
         pattern: '*.html',
@@ -57,6 +65,14 @@ var run = module.exports = function(cb) {
       collapseWhitespace: false,
       removeComments: true,
       removeAttributeQuotes: false
+    }))
+    .use(sitemap({
+      hostname: 'http://www.codezilla.nl',
+      omitIndex: true
+    }))
+    .use(robots({
+      allow: ENV === 'PROD' ? ['*'] : [],
+      disallow: ENV !== 'PROD' ? ['*'] : []
     }))
     .use(googleAnalytics('UA-61200557-1'))
     .use(beautify({
