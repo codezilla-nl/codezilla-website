@@ -27,8 +27,8 @@ var run = module.exports = function(cb) {
   Metalsmith(__dirname)
     .metadata({
       title: 'CODEZILLA',
-      description: "CODEZILLA Front End Coding",
-      url: "http://www.codezilla.nl/"
+      description: 'Samen met haar klanten bouwt CODEZILLA complexe (mobiele) web applicaties met optimale gebruikersvriendelijkheid. Dit doet CODEZILLA door het tijdelijk inzetten van professionele, communicatieve en creatieve IT front end vakmensen. ',
+      url: 'http://www.codezilla.nl/'
     })
     .source('./content')
     .destination('./build')
