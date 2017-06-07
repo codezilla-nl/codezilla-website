@@ -30,6 +30,8 @@ else
     PUBLISH_DOMAIN="www.codezilla.nl"
 fi
 
+export ENV=${ENV}
+
 SSH_REPO=${REPO/https:\/\/github.com\//git@github.com:}
 SHA=`git rev-parse --verify HEAD`
 
