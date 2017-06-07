@@ -30,6 +30,11 @@
         "logo": "/images/companies/rabobank.png"
     },
     {
+        "name": "SNS - De Volksbank",
+        "text": "De Volksbank is bezig met het digitaliseren van het hypotheek aanvraag proces. CODEZILLA helpt mee aan de ontwikkeling van innovatieve webapplicaties ter ondersteuning van het hypotheek aanvraag proces.",
+        "logo": "/images/companies/volksbank-o.svg"
+    },
+    {
         "name": "KPN",
         "text": "Bij KPN ontwikkelen we mee aan de ontwikkeling van de Mijn KPN Selfcare omgeving.",
         "logo": "/images/companies/kpn-o.svg"
