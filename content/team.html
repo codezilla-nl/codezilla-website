@@ -22,7 +22,7 @@ nextPage:
             <div class="cz-diamond-grid__inner">
                 {{#each model.team}}
                 <div class="cz-diamond-grid__block">
-                    {{> team-member name=@key displayName=name svg=monster svgStyle=monsterStyle }}
+                    {{> team-member name=@key clickable=true displayName=name svg=monster svgStyle=monsterStyle }}
                 </div>
                 {{/each}}
             </div>
