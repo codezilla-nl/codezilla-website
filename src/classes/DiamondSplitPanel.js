@@ -15,7 +15,13 @@ const panelDisplayStyle = {
     show: 'block'
 };
 
+const KEYCODES = {
+    ESCAPE: 27
+};
+
 function DiamondSplitPanel(bodyLocker) {
+
+    let keyDownFunction;
 
     initialize();
 
@@ -63,6 +69,10 @@ function DiamondSplitPanel(bodyLocker) {
         );
         
         Object.assign($panel.style, transformations);
+
+        //Set up key down function and attach eventlistener
+        keyDownFunction = (e) => handleKeydown(e, $splitPanel);
+        document.addEventListener('keydown', keyDownFunction);
         
         requestAnimationFrame(()=>{
             $splitPanel.classList.add(panelsAnimateClass);
@@ -77,12 +87,20 @@ function DiamondSplitPanel(bodyLocker) {
             offPrefixedEvent($panel, 'transitionend', removeAnimateClass);
         }
     }
-    
+
+    function handleKeydown(e, $splitPanel) {
+        if (e.keyCode === KEYCODES.ESCAPE) {
+            closePanelToDiamond($splitPanel);
+        }
+    }
+
     function closePanelToDiamond($splitPanel){
         requestAnimationFrame(()=>{
             $splitPanel.classList.remove(panelsAnimateClass);
             onPrefixedEvent($splitPanel, 'transitionend', hideSplitPanels);
         });
+
+        document.removeEventListener('keydown', keyDownFunction);
     
         function hideSplitPanels(){
             $splitPanel.style.display = panelDisplayStyle.hide;
