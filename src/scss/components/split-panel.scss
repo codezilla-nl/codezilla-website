@@ -88,23 +88,25 @@
     transform: translate3d(0, 0, 0) rotate3d(0, 0, 0, 0deg) scale(1,1);
     opacity: 1;
     transform-origin: $diamond-dimensions/2 $diamond-dimensions/2;
+}
 
-    &:before{
-        content:"";
-        display: block;
-        width: 140px;
-        height: 152px;
-        background-image:url('/images/cross.svg');
-        background-size:cover;
-        position: absolute;
-        top:10px;
-        right:0;
+.cz-split-panels__close {
+    content:"";
+    display: block;
+    width: 140px;
+    height: 152px;
+    background-image:url('/images/cross.svg');
+    background-size:cover;
+    position: absolute;
+    top:10px;
+    right:0;
+    z-index: 2;
+    cursor: pointer;
 
-        @include max-width('tablet') {
-            top:-40px;
-            right:-25px;
-            transform: scale(0.7);
-        }
+    @include max-width('tablet') {
+        top:-40px;
+        right:-25px;
+        transform: scale(0.7);
     }
 }
 
