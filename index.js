@@ -19,6 +19,7 @@ var inPlace = require('metalsmith-in-place');
 var asset = require('metalsmith-static');
 var helpers = require('metalsmith-register-helpers');
 var models = require("metalsmith-models");
+var imagemin = require('metalsmith-imagemin');
 var googleAnalytics = require('metalsmith-google-analytics').default;
 
 var ENV = process.env.ENV;
@@ -103,19 +104,36 @@ var run = module.exports = function(cb) {
 
     // TODO: Research if this hacky system can be improved
     Metalsmith(__dirname)
-    .source('./src/')
-    .destination('./build')
-    .use(filter('*.scss'))
-    .use(sass({}))
-    .build(function (err, files) {
-      if (err) {
-        console.error(err);
-      }
+      .source('./src/')
+      .destination('./build')
+      .use(filter('*.scss'))
+      .use(sass({}))
+      .build(function (err, files) {
+        if (err) {
+          console.error(err);
+        }
 
-      if (cb) {
-        cb();
-      }
-    });
+        if (cb) {
+          cb();
+        }
+      });
+
+    Metalsmith(__dirname)
+      .source('./public/')
+      .destination('./build')
+      .use(filter(['**/*.gif', '**/*.png', '**/*.jpg', '**/*.svg']))
+      .use(imagemin({
+        optimizationLevel: 3
+      }))
+      .build(function (err, files) {
+        if (err) {
+            console.error(err);
+        }
+
+        if (cb) {
+            cb();
+        }
+      });
 
 };
 
