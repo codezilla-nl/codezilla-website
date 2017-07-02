@@ -4,7 +4,7 @@ module.exports = (function() {
         "output_folder" : "reports",
         "custom_commands_path" : "",
         "custom_assertions_path" : "",
-        "page_objects_path" : "",
+        "page_objects_path" : ["test/pageObjects"],
         "globals_path" : "",
 
         "selenium" : {
@@ -40,9 +40,7 @@ module.exports = (function() {
                     "waitForConditionTimeout": 5000 // sometimes internet is slow so wait.
                 },
                 "desiredCapabilities": { // use Chrome as the default browser for tests
-                    "browserName": "phantomjs",
-                    "phantomjs.binary.path": "./node_modules/.bin/phantomjs",
-                    "phantomjs.cli.args": [],
+                    "browserName": "chrome"
                 }
             }
         }
