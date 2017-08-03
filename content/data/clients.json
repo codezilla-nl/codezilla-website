@@ -6,7 +6,7 @@
     },
     {
         "name": "Ahold",
-        "text": "Bij Ahold-Delhaize werken we aan ah.nl website; wij richten ons op het online bestellen gedeelte voor de klant. Wij zorgen ervoor dat het bestelproces via de website eenvoudig en gebruiksvriendelijk verloopt.",
+        "text": "Bij Ahold-Delhaize werken we aan de ah.nl website; wij richten ons op het online bestellen gedeelte voor de klant. Wij zorgen ervoor dat het bestelproces via de website eenvoudig en gebruiksvriendelijk verloopt.",
         "logo": "/images/companies/ahold-o.svg"
     },
     {
@@ -26,7 +26,17 @@
     },
     {
         "name": "Rabobank",
-        "text": "Bij de Rabobank helpen we de hypotheek afdeling met het ontwikkelen van een interactieve hypotheek digital dossier. Tevens ontwikkelen we aan een generieke componenten library dat binnen de Rabobank breed wordt gezet en zorgt voor een uniforme gebruikerservaring zowel op desktops als op mobiele devices.",
+        "text": "Bij de Rabobank ontwikkelen we mee aan diverse interne en externe (klant) applicaties binnen de diverse door Rabobank gedefinieerde IT-domeinen.",
         "logo": "/images/companies/rabobank.png"
+    },
+    {
+        "name": "SNS - De Volksbank",
+        "text": "De Volksbank is bezig met het digitaliseren van het hypotheek aanvraag proces. CODEZILLA helpt mee aan de ontwikkeling van innovatieve webapplicaties ter ondersteuning van het hypotheek aanvraag proces.",
+        "logo": "/images/companies/volksbank-o.svg"
+    },
+    {
+        "name": "KPN",
+        "text": "Bij KPN ontwikkelen we mee aan de ontwikkeling van de Mijn KPN Selfcare omgeving.",
+        "logo": "/images/companies/kpn-o.svg"
     }
 ]

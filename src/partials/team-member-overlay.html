@@ -1,20 +1,21 @@
 <div cz-diamond-split-panel cz-team-member="{{name}}" class="cz-split-panels cz-split-panels--overlay" style="display: none">
+    <span class="cz-split-panels__close"></span>
     <h2 class="cz-heading-1 cz-split-panels__title">{{ displayName}}</h2>
     <div class="cz-split-panels__wrapper">
         <div class="cz-split-panels__panel cz-split-panels__panel--left">
             <div class="cz-split-panels__panel-content cz-split-panels__panel-content--pad-top">
                 <div class="cz-team-detail">
-                    <span class="cz-team-detail__quote">{{quote}}</span>
+                    <span class="cz-team-detail__quote">{{{ quote }}}</span>
                     <div class="cz-team-detail__section">
                         <h3 class="cz-heading-2 cz-no-m-b cz-no-p-b">Likes</h3>
                         <hr class="cz-divider " />
-                        <p>{{ likes }}</p>
+                        <p>{{{ likes }}}</p>
                     </div>
                     {{#if writesCodeFor}}
                     <div class="cz-team-detail__section">
-                        <h3 class="cz-heading-2 cz-no-m-b cz-no-p-b">{{ displayName}} schrijft monsterlijk goede code voor...</h3>
+                        <h3 class="cz-heading-2 cz-no-m-b cz-no-p-b">{{ displayName }} schrijft monsterlijk goede code voor...</h3>
                         <hr class="cz-divider" />
-                        {{ writesCodeFor }}
+                        {{{ writesCodeFor }}}
                     </div>
                     {{/if}}
                 </div>
@@ -27,7 +28,7 @@
                     <div class="cz-team-carousel__content">
                         <div class="cz-team-carousel__img-wrapper">
                             <div class="monster-img monster-img--has-shadow monster-img--large">
-                                <img class="monster-img__img" src="{{ svg }}" width="200px" height="200px"  />
+                                <img class="monster-img__img" src="{{ svg }}" alt="{{ displayName }}" width="200px" height="200px"  />
                             </div>
                         </div>
                     </div>
