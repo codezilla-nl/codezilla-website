@@ -1,6 +1,5 @@
 import Navigation from './classes/Navigation';
 import DiamondSplitPanel from './classes/DiamondSplitPanel';
-import Triangles from './classes/Triangles.js';
 import Carousel from './classes/Carousel.js';
 import BodyLocker from './classes/BodyLocker';
 
@@ -17,7 +16,7 @@ class Main {
         }
         if (document.querySelector('[cz-bedrijven-carousel]') !== null) {
             const carousel2 = new Carousel('[cz-bedrijven-carousel]', {
-                interval: 5000,
+                interval: 4000,
                 equaliseHeight: true,
                 class: {
                     current: 'cz-bedrijven-carousel--current',
