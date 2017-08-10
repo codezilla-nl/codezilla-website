@@ -5,7 +5,7 @@ export default class {
         this.el = document.querySelector(instance);
         this.cycle = undefined;
         this.options = Object.assign({
-            interval: 9000, // set to 0 to disable
+            interval: 5000, // set to 0 to disable
             equaliseHeight: false,
             class: {
                 current: 'cz-carousel--current',
