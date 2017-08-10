@@ -16,7 +16,7 @@ class Main {
         }
         if (document.querySelector('[cz-bedrijven-carousel]') !== null) {
             const carousel2 = new Carousel('[cz-bedrijven-carousel]', {
-                interval: 4000,
+                interval: 6000,
                 equaliseHeight: true,
                 class: {
                     current: 'cz-bedrijven-carousel--current',
