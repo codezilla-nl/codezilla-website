@@ -102,5 +102,13 @@
         "quote": "Hi!",
         "likes": "",
         "writesCodeFor": "Rabobank"
+    },
+    "sander": {
+        "name": "Sander",
+        "monster": "/images/monsters/sandermonster.svg",
+        "monsterStyle": "transform: scale(0.7) translateY(-80px)",
+        "quote": "Time flies, even if turkeys don't",
+        "likes": "My love, my daughter and sons, Netflix and Cycling",
+        "writesCodeFor": "Agrifirm"
     }
 }
