@@ -106,9 +106,14 @@
     "sander": {
         "name": "Sander",
         "monster": "/images/monsters/sandermonster.svg",
-        "monsterStyle": "transform: scale(0.7) translateY(-80px)",
         "quote": "Time flies, even if turkeys don't",
         "likes": "My love, my daughter and sons, Netflix and Cycling",
         "writesCodeFor": "Agrifirm"
+    },
+    "jimmy": {
+        "name": "Jimmy",
+        "monster": "/images/monsters/sandermonster.svg",
+        "quote": "I code, therefore I am",
+        "likes": "Motorcycles, cars, movement, great music and learning"
     }
 }
