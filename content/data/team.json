@@ -112,7 +112,7 @@
     },
     "jimmy": {
         "name": "Jimmy",
-        "monster": "/images/monsters/sandermonster.svg",
+        "monster": "/images/monsters/jimmymonster.svg",
         "quote": "I code, therefore I am",
         "likes": "Motorcycles, cars, movement, great music and learning"
     }
