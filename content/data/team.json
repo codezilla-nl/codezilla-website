@@ -103,5 +103,12 @@
         "quote": "Time flies, even if turkeys don't",
         "likes": "My love, my daughter and sons, Netflix and Cycling",
         "writesCodeFor": "Agrifirm"
+    },
+    "martijn": {
+        "name": "Martijn",
+        "monster": "/images/monsters/martijnmonster.svg",
+        "quote": "If it ain't broke, don't fix it",
+        "likes": "Cars, Gaming, Netflix, Snowboarding and Traveling",
+        "writesCodeFor": "KPN"
     }
 }
