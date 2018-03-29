@@ -110,5 +110,19 @@
         "quote": "If it ain't broke, don't fix it",
         "likes": "Cars, Gaming, Netflix, Snowboarding and Traveling",
         "writesCodeFor": "KPN"
+    },
+    "ferdi": {
+        "name": "Ferdi",
+        "monster": "/images/monsters/ferdimonster.svg",
+        "quote": "¿uᴉɐƃɐ uo puɐ ɟɟo ʇᴉ ƃuᴉuɹnʇ pǝᴉɹʇ noʎ ǝʌɐH",
+        "likes": "Coding, Gaming, Science fiction and Movies",
+        "writesCodeFor": "KLM"
+    },
+    "jij": {
+        "name": "Jij?",
+        "monster": "/images/monsters/anonymousmonster.svg",
+        "quote": "This could be you. Ge&iuml;nteresseerd? Bel dan 020 - 3120 458 of stuur een email naar martin@codezilla.nl",
+        "likes": "Front End Development",
+        "writesCodeFor": ""
     }
 }
