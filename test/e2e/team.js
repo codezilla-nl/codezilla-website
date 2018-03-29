@@ -7,7 +7,7 @@ module.exports = {
             .click('@teamMember')
             .waitForElementVisible('@teamMemberOverlay', 1000)
             .assert.visible('@teamMemberOverlayTitle')
-            .assert.containsText('@teamMemberOverlayTitle', 'JORAN');
+            .assert.containsText('@teamMemberOverlayTitle', 'SANDER');
 
         browser.end();
     },
