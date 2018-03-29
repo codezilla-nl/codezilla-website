@@ -35,13 +35,13 @@ $diamong-grid-width-md: 80vw;
         width:33%;
         height:150px;
 
-        &:nth-child(5n+1), &:nth-child(5n+2){
+        &:nth-child(5n+4), &:nth-child(5n+5){
             width: calc( 33% + 1vw);
         }
-        &:nth-child(5n+1){
+        &:nth-child(5n+4){
             right: -1/2vw;
         }
-        &:nth-child(5n+2) {
+        &:nth-child(5n+5) {
             left: -1/2vw;
         }
     }
