@@ -1,16 +1,16 @@
 module.exports = {
-    "port": 3000,
-    "ui": {
+    'port': 3000,
+    'ui': {
         port: 3001
     },
-    "files": [{
+    'files': [{
         match: [
-            "./content/**/*.html",
-            "./src/**/*.js",
-            "./src/**/*.html",
-            "./src/**/*.scss"
+            './content/**/*.html',
+            './src/**/*.js',
+            './src/**/*.html',
+            './src/**/*.scss'
         ],
-        fn: function (event, file) {
+        fn: function (event) {
             if (event === 'change') {
                 require('./index')(function() {
                     this.reload();
@@ -18,11 +18,11 @@ module.exports = {
             }
         }
     }],
-    "watchOptions": {},
-    "server": {
-        baseDir: ["build", "public"]
+    'watchOptions': {},
+    'server': {
+        baseDir: ['build', 'public']
     },
-    "open": true,
-    "notify": false,
-    "browser": process.env.DEV_BROWSER || 'default'
+    'open': true,
+    'notify': false,
+    'browser': process.env.DEV_BROWSER || 'default'
 };
