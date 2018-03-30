@@ -99,7 +99,6 @@
     "sander": {
         "name": "Sander",
         "monster": "/images/monsters/sandermonster.svg",
-        "monsterStyle": "transform: scale(0.7) translateY(-80px)",
         "quote": "Time flies, even if turkeys don't",
         "likes": "My love, my daughter and sons, Netflix and Cycling",
         "writesCodeFor": "Agrifirm"
@@ -117,6 +116,13 @@
         "quote": "¿uᴉɐƃɐ uo puɐ ɟɟo ʇᴉ ƃuᴉuɹnʇ pǝᴉɹʇ noʎ ǝʌɐH",
         "likes": "Coding, Gaming, Science fiction and Movies",
         "writesCodeFor": "KLM"
+    },
+    "jimmy": {
+        "name": "Jimmy",
+        "monster": "/images/monsters/jimmymonster.svg",
+        "quote": "I code, therefore I am",
+        "likes": "Motorcycles, cars, sports, great music and learning",
+        "writesCodeFor": "Zwitserleven"
     },
     "jij": {
         "name": "Jij?",
