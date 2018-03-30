@@ -81,7 +81,7 @@ export default class {
         }
 
         for (let i = 0; i < this.slides.length; i++) {
-            if (this.slides[i].classList.value.indexOf(this.options.class.current) > -1) {
+            if (this.slides[i].classList.contains(this.options.class.current)) {
                 current = this.slides[i];
 
                 if (direction === 'right') {
