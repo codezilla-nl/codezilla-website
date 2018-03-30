@@ -87,7 +87,7 @@ export default class {
                 if (direction === 'right') {
                     next = (i + 1 < this.slides.length) ? this.slides[i+1] : this.slides[0];
                 } else {
-                    next = (i - 1 > 0) ? this.slides[i-1] : this.slides[this.slides.length-1];
+                    next = (i - 1 >= 0) ? this.slides[i-1] : this.slides[this.slides.length-1];
                 }
             }
         }
