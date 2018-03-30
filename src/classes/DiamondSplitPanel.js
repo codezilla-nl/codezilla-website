@@ -35,12 +35,14 @@ function DiamondSplitPanel(bodyLocker, nav) {
     }
 
     function showPanel($diamond){
-        //500ms is the time for the navigation animation to close
-        const navigationCloseTimer = nav.open === false ? 0 : 500;
-        //Always close the navigation when a diamond has been clicked
-        nav.open = false;
-
-        setTimeout(function() {
+        if(!nav.open) {
+            animatePanel();
+        } else {
+            nav.open = false;
+            onPrefixedEvent(nav.$content, 'transitionend', animatePanel);
+        }
+        
+        function animatePanel() {
             //Get the actual diamond shape
             const $diamondShape = findByAttr('diamond-shape', '', $diamond)[0];
             //Get the member name from a diamond
@@ -63,7 +65,9 @@ function DiamondSplitPanel(bodyLocker, nav) {
                 //Init click handler for closing the overlay
                 $splitPanelOverlay.onclick = closePanelToDiamond.bind(null, $splitPanelOverlay);
             }
-        }, navigationCloseTimer);
+            offPrefixedEvent(nav.$content, 'transitionend', animatePanel);
+        }
+
     }
 
     function openPanelBgFromDiamond($panel, $splitPanel, $diamond){
