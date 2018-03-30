@@ -74,13 +74,6 @@
         "likes": "Auto's/motoren, snookeren/pool, lezen, IQ testen/puzzels, science, eten",
         "writesCodeFor": "Rabobank"
     },
-    "tjin": {
-        "name": "Tjin",
-        "monster": "/images/monsters/tjinmonster.svg",
-        "quote": "Everything is solvable. You just need to make a choice!",
-        "likes": "Gaming (mainly IOS games now), Orchestra Music, Trading Card Games (for now just Yugioh)",
-        "writesCodeFor": "Rabobank"
-    },
     "jeroen": {
         "name": "Jeroen",
         "monster": "/images/monsters/jeroenmonster.svg",
@@ -110,10 +103,31 @@
         "likes": "My love, my daughter and sons, Netflix and Cycling",
         "writesCodeFor": "Agrifirm"
     },
+    "martijn": {
+        "name": "Martijn",
+        "monster": "/images/monsters/martijnmonster.svg",
+        "quote": "If it ain't broke, don't fix it",
+        "likes": "Cars, Gaming, Netflix, Snowboarding and Traveling",
+        "writesCodeFor": "KPN"
+    },
+    "ferdi": {
+        "name": "Ferdi",
+        "monster": "/images/monsters/ferdimonster.svg",
+        "quote": "¿uᴉɐƃɐ uo puɐ ɟɟo ʇᴉ ƃuᴉuɹnʇ pǝᴉɹʇ noʎ ǝʌɐH",
+        "likes": "Coding, Gaming, Science fiction and Movies",
+        "writesCodeFor": "KLM"
+    },
     "jimmy": {
         "name": "Jimmy",
         "monster": "/images/monsters/jimmymonster.svg",
         "quote": "I code, therefore I am",
         "likes": "Motorcycles, cars, movement, great music and learning"
+    },
+    "jij": {
+        "name": "Jij?",
+        "monster": "/images/monsters/anonymousmonster.svg",
+        "quote": "This could be you. Ge&iuml;nteresseerd? Bel dan 020 - 3120 458 of stuur een email naar martin@codezilla.nl",
+        "likes": "Front End Development",
+        "writesCodeFor": ""
     }
 }
