@@ -63,9 +63,9 @@
     "patrick": {
         "name": "Patrick",
         "monster": "/images/monsters/patrickmonster.svg",
-        "quote": "Pasting code from the Internet into production code is like chewing gum found in the street",
+        "quote": "Always code as if the guy who ends up maintaining your code will be a violent psychopath who knows where you live",
         "likes": "Shaolin Kempo, (Retro) Video Games, Open Source Software",
-        "writesCodeFor": "Rabobank"
+        "writesCodeFor": "ServiceHouse"
     },
     "ming": {
         "name": "Ming",
@@ -99,7 +99,6 @@
     "sander": {
         "name": "Sander",
         "monster": "/images/monsters/sandermonster.svg",
-        "monsterStyle": "transform: scale(0.7) translateY(-80px)",
         "quote": "Time flies, even if turkeys don't",
         "likes": "My love, my daughter and sons, Netflix and Cycling",
         "writesCodeFor": "Agrifirm"
@@ -117,6 +116,20 @@
         "quote": "¿uᴉɐƃɐ uo puɐ ɟɟo ʇᴉ ƃuᴉuɹnʇ pǝᴉɹʇ noʎ ǝʌɐH",
         "likes": "Coding, Gaming, Science fiction and Movies",
         "writesCodeFor": "KLM"
+    },
+    "jimmy": {
+        "name": "Jimmy",
+        "monster": "/images/monsters/jimmymonster.svg",
+        "quote": "I code, therefore I am",
+        "likes": "Motorcycles, cars, sports, great music and learning",
+        "writesCodeFor": "Zwitserleven"
+    },
+    "jacco": {
+        "name": "Jacco",
+        "monster": "/images/monsters/jaccomonster.svg",
+        "quote": "Ik kom oet Losser en weet van niks",
+        "likes": "My family, koi, tech stuff &amp; shoes",
+        "writesCodeFor": "Rabobank"
     },
     "jij": {
         "name": "Jij?",

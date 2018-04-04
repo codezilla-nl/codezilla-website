@@ -81,13 +81,13 @@ export default class {
         }
 
         for (let i = 0; i < this.slides.length; i++) {
-            if (this.slides[i].classList.value.indexOf(this.options.class.current) > -1) {
+            if (this.slides[i].classList.contains(this.options.class.current)) {
                 current = this.slides[i];
 
                 if (direction === 'right') {
                     next = (i + 1 < this.slides.length) ? this.slides[i+1] : this.slides[0];
                 } else {
-                    next = (i - 1 > 0) ? this.slides[i-1] : this.slides[this.slides.length-1];
+                    next = (i - 1 >= 0) ? this.slides[i-1] : this.slides[this.slides.length-1];
                 }
             }
         }

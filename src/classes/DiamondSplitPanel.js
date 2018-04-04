@@ -19,7 +19,7 @@ const KEYCODES = {
     ESCAPE: 27
 };
 
-function DiamondSplitPanel(bodyLocker) {
+function DiamondSplitPanel(bodyLocker, nav) {
 
     let keyDownFunction;
 
@@ -35,45 +35,56 @@ function DiamondSplitPanel(bodyLocker) {
     }
 
     function showPanel($diamond){
-        //Get the actual diamond shape
-        const $diamondShape = findByAttr('diamond-shape', '', $diamond)[0];
-        //Get the member name from a diamond
-        const memberName = $diamond.getAttribute('cz-team-member');
-        //Get the panels by memberName
-        const $splitPanelsFiltered = $splitPanels.filter((panel) => panel.getAttribute('cz-team-member') === memberName);
-        if($splitPanelsFiltered && $splitPanelsFiltered.length) {
-            //Get the first panel (there should always be one)
-            const $splitPanelOverlay = $splitPanelsFiltered[0];
-            //Get the panel shape from the current
-            const $panelShape = findByAttr('panel-from-diamond', '', $splitPanelOverlay)[0];
-            //Lock the body for the overlay
-            bodyLocker.lockMobile();
-            //Show the panel overlay
-            $splitPanelOverlay.style.display = panelDisplayStyle.show;
-            //Set scrolling to top
-            $splitPanelOverlay.scrollTop = 0;
-            //Animate panel shape from diamond shape
-            openPanelBgFromDiamond($panelShape, $splitPanelOverlay, $diamondShape);
-            //Init click handler for closing the overlay
-            $splitPanelOverlay.onclick = closePanelToDiamond.bind(null, $splitPanelOverlay);
+        if(!nav.open) {
+            animatePanel();
+        } else {
+            nav.open = false;
+            onPrefixedEvent(nav.$content, 'transitionend', animatePanel);
         }
+        
+        function animatePanel() {
+            //Get the actual diamond shape
+            const $diamondShape = findByAttr('diamond-shape', '', $diamond)[0];
+            //Get the member name from a diamond
+            const memberName = $diamond.getAttribute('cz-team-member');
+            //Get the panels by memberName
+            const $splitPanelsFiltered = $splitPanels.filter((panel) => panel.getAttribute('cz-team-member') === memberName);
+            if($splitPanelsFiltered && $splitPanelsFiltered.length) {
+                //Get the first panel (there should always be one)
+                const $splitPanelOverlay = $splitPanelsFiltered[0];
+                //Get the panel shape from the current
+                const $panelShape = findByAttr('panel-from-diamond', '', $splitPanelOverlay)[0];
+                //Lock the body for the overlay
+                bodyLocker.lockMobile();
+                //Show the panel overlay
+                $splitPanelOverlay.style.display = panelDisplayStyle.show;
+                //Set scrolling to top
+                $splitPanelOverlay.scrollTop = 0;
+                //Animate panel shape from diamond shape
+                openPanelBgFromDiamond($panelShape, $splitPanelOverlay, $diamondShape);
+                //Init click handler for closing the overlay
+                $splitPanelOverlay.onclick = closePanelToDiamond.bind(null, $splitPanelOverlay);
+            }
+            offPrefixedEvent(nav.$content, 'transitionend', animatePanel);
+        }
+
     }
-    
+
     function openPanelBgFromDiamond($panel, $splitPanel, $diamond){
         const diamondDims = getElementDimensions($diamond),
             panelDims = getElementDimensions($panel);
-        
+
         const transformations = calculatePanelTransformations(
           diamondDims,
           panelDims
         );
-        
+
         Object.assign($panel.style, transformations);
 
         //Set up key down function and attach eventlistener
         keyDownFunction = (e) => handleKeydown(e, $splitPanel);
         document.addEventListener('keydown', keyDownFunction);
-        
+
         requestAnimationFrame(()=>{
             $splitPanel.classList.add(panelsAnimateClass);
             $panel.classList.add(panelAnimateClass);
@@ -81,7 +92,7 @@ function DiamondSplitPanel(bodyLocker) {
             $panel.classList.remove(panelPreAnimateClass);
             onPrefixedEvent($panel, 'transitionend', removeAnimateClass);
         });
-        
+
         function removeAnimateClass(){
             $panel.classList.remove(panelAnimateClass);
             offPrefixedEvent($panel, 'transitionend', removeAnimateClass);
@@ -101,25 +112,25 @@ function DiamondSplitPanel(bodyLocker) {
         });
 
         document.removeEventListener('keydown', keyDownFunction);
-    
+
         function hideSplitPanels(){
             $splitPanel.style.display = panelDisplayStyle.hide;
             offPrefixedEvent($splitPanel, 'transitionend', hideSplitPanels);
             bodyLocker.unlockMobile();
         }
     }
-    
+
     function calculatePanelTransformations(diamondDimensions, panelDimensions){
         const translateX = diamondDimensions.left - panelDimensions.left;
         const translateY = diamondDimensions.top - panelDimensions.top;
         const scaleX = diamondDimensions.width / panelDimensions.width;
         const scaleY = diamondDimensions.height / panelDimensions.height;
-        
+
         return {
             transform:`translate3d(${translateX}px, ${translateY}px, 0) rotate(-45deg) scale(${scaleX}, ${scaleY})`
         }
     }
-    
+
 }
 
 export default DiamondSplitPanel;
