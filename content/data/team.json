@@ -124,6 +124,13 @@
         "likes": "Motorcycles, cars, sports, great music and learning",
         "writesCodeFor": "Zwitserleven"
     },
+    "jacco": {
+        "name": "Jacco",
+        "monster": "/images/monsters/jaccomonster.svg",
+        "quote": "Ik kom oet Losser en weet van niks",
+        "likes": "My family, koi, tech stuff &amp; shoes",
+        "writesCodeFor": "Rabobank"
+    },
     "jij": {
         "name": "Jij?",
         "monster": "/images/monsters/anonymousmonster.svg",
