@@ -24,20 +24,22 @@
         "name": "Jelle",
         "monster": "/images/monsters/jellebmonster.svg",
         "quote": "Love to turn innovative ideas into unbelievable user experiences",
-        "likes": "Sports, travelling, food and creative entrepreneurship"
+        "likes": "Sports, travelling, food and creative entrepreneurship",
+        "writesCodeFor": "ANWB"
     },
     "arno": {
         "name": "Arno",
         "monster": "/images/monsters/arnomonster.svg",
         "quote": "I don't do quotes",
-        "likes": "Games, series & movies, cooking and coding"
+        "likes": "Games, series & movies, cooking and coding",
+        "writesCodeFor": "Rabobank"
     },
     "michel": {
         "name": "Michel",
         "monster": "/images/monsters/michelmonster.svg",
         "quote": "Too much Javascript. I'll fix it with css..",
         "likes": "Hardware and Software tweaking, watching movies, traveling and cars",
-        "writesCodeFor": "SNS Bank"
+        "writesCodeFor": "KLM"
     },
     "jelle": {
         "name": "Jelle",
@@ -51,14 +53,14 @@
         "monster": "/images/monsters/nicomonster.svg",
         "quote": "Simplicity is the ultimate sophistication",
         "likes": "Voetbal, fitness, muziek en awesome user experiences",
-        "writesCodeFor": "Bij de Rabobank werkt Nico mee in de SCRUM-teams aan Angular en React applicaties. Daarnaast fungeert hij ook als UX-designer."
+        "writesCodeFor": "KPN"
     },
     "remy": {
         "name": "Remy",
         "monster": "/images/monsters/remymonster.svg",
         "quote": "Listen carefully; I shall say this only once!",
         "likes": "Pencak Silat, Magic: The Gathering, Movies",
-        "writesCodeFor": "Nuon"
+        "writesCodeFor": "ONVZ"
     },
     "patrick": {
         "name": "Patrick",
@@ -79,7 +81,7 @@
         "monster": "/images/monsters/jeroenmonster.svg",
         "quote": "Life would be much easier if I had the source code",
         "likes": "Fast cars, gaming, snowboarding & Rollerderby",
-        "writesCodeFor": "SNS Bank"
+        "writesCodeFor": "De Volksbank"
     },
     "bas": {
         "name": "Bas",
