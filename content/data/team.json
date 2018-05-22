@@ -133,6 +133,13 @@
         "likes": "My family, koi, tech stuff &amp; shoes",
         "writesCodeFor": "Rabobank"
     },
+    "stefan": {
+        "name": "Stefan",
+        "monster": "/images/monsters/stefanmonster.svg",
+        "quote": "It never hurts to help :)",
+        "likes": "fire trucks, good food, good code and holidays",
+        "writesCodeFor": "Rabobank"
+    },
     "jij": {
         "name": "Jij?",
         "monster": "/images/monsters/anonymousmonster.svg",
