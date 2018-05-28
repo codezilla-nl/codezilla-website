@@ -10,7 +10,6 @@
 .cz-footer__block {
     flex: 1;
     position: relative; // Hack for weird color issue
-    pointer-events: none; // Pass click through to triangles
 
     @media screen and (min-width: $cz-breakpoint-desktop) {
         width: 50%;
