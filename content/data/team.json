@@ -140,6 +140,13 @@
         "likes": "fire trucks, good food, good code and holidays",
         "writesCodeFor": "Rabobank"
     },
+    "roque": {
+        "name": "Roque",
+        "monster": "/images/monsters/roquemonster.svg",
+        "quote": "Put aside logic, do what feels right",
+        "likes": "Music, food and beer",
+        "writesCodeFor": "Vivat"
+    },
     "jij": {
         "name": "Jij?",
         "monster": "/images/monsters/anonymousmonster.svg",
