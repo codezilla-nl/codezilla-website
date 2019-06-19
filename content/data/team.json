@@ -105,13 +105,6 @@
         "likes": "Coding, Gaming, Science fiction and Movies",
         "writesCodeFor": "KLM"
     },
-    "jimmy": {
-        "name": "Jimmy",
-        "monster": "/images/monsters/jimmymonster.svg",
-        "quote": "I code, therefore I am",
-        "likes": "Motorcycles, cars, sports, great music and learning",
-        "writesCodeFor": "Zwitserleven"
-    },
     "jacco": {
         "name": "Jacco",
         "monster": "/images/monsters/jaccomonster.svg",
