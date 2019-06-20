@@ -46,7 +46,7 @@
         "monster": "/images/monsters/remymonster.svg",
         "quote": "Listen carefully; I shall say this only once!",
         "likes": "Pencak Silat, Magic: The Gathering, Movies",
-        "writesCodeFor": "ONVZ"
+        "writesCodeFor": "Rabobank"
     },
     "patrick": {
         "name": "Patrick",
@@ -74,7 +74,7 @@
         "monster": "/images/monsters/basmonster.svg",
         "quote": "Hi!",
         "likes": "Scouting, Fitness, Movies&amp;Series",
-        "writesCodeFor": "Rabobank"
+        "writesCodeFor": "Alphabet"
     },
     "joran": {
         "name": "Joran",
