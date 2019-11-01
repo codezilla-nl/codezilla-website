@@ -41,7 +41,7 @@
     "karma-rollup-plugin": "^0.2.4",
     "metalsmith-canonical": "^1.1.0",
     "metalsmith-google-analytics": "0.0.1",
-    "metalsmith-imagemin": "^4.0.0",
+    "metalsmith-imagemin": "4.0.0",
     "metalsmith-models": "0.0.3",
     "metalsmith-register-helpers": "^0.2.0",
     "metalsmith-robots": "^1.0.1",
