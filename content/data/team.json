@@ -55,13 +55,6 @@
         "likes": "Shaolin Kempo, (Retro) Video Games, Open Source Software",
         "writesCodeFor": "KLM"
     },
-    "ming": {
-        "name": "Ming",
-        "monster": "/images/monsters/mingmonster.svg",
-        "quote": "What could possibly go wrong?",
-        "likes": "Auto's/motoren, snookeren/pool, lezen, IQ testen/puzzels, science, eten",
-        "writesCodeFor": "Rabobank"
-    },
     "jeroen": {
         "name": "Jeroen",
         "monster": "/images/monsters/jeroenmonster.svg",
