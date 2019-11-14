@@ -18,7 +18,7 @@
         "monster": "/images/monsters/rorymonster.svg",
         "quote": "Have you tried turning it off and on again?",
         "likes": "Games, cooking & eating, movies and music",
-        "writesCodeFor": "Ahold"
+        "writesCodeFor": "KLM"
     },
     "arno": {
         "name": "Arno",
@@ -55,19 +55,12 @@
         "likes": "Shaolin Kempo, (Retro) Video Games, Open Source Software",
         "writesCodeFor": "KLM"
     },
-    "ming": {
-        "name": "Ming",
-        "monster": "/images/monsters/mingmonster.svg",
-        "quote": "What could possibly go wrong?",
-        "likes": "Auto's/motoren, snookeren/pool, lezen, IQ testen/puzzels, science, eten",
-        "writesCodeFor": "Rabobank"
-    },
     "jeroen": {
         "name": "Jeroen",
         "monster": "/images/monsters/jeroenmonster.svg",
         "quote": "Life would be much easier if I had the source code",
         "likes": "Fast cars, gaming, snowboarding & Rollerderby",
-        "writesCodeFor": "De Volksbank"
+        "writesCodeFor": "Malmberg"
     },
     "bas": {
         "name": "Bas",
@@ -124,13 +117,20 @@
         "monster": "/images/monsters/roquemonster.svg",
         "quote": "Put aside logic, do what feels right",
         "likes": "Music, food and beer",
-        "writesCodeFor": "Vivat"
+        "writesCodeFor": "NS"
     },
     "dennis": {
         "name": "Dennis",
         "monster": "/images/monsters/dennismonster.svg",
         "quote": "The best thing about a boolean is even if you are wrong, you are only off by a bit",
         "likes": "Music, basketball, games and (brewing) beer",
+        "writesCodeFor": "BZK"
+    },
+    "lesley": {
+        "name": "Lesley",
+        "monster": "/images/monsters/jimmymonster.svg",
+        "quote": "",
+        "likes": "",
         "writesCodeFor": "BZK"
     },
     "jij": {
