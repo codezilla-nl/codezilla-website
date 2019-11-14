@@ -20,7 +20,7 @@ const asset = require('metalsmith-static');
 const helpers = require('metalsmith-register-helpers');
 const models = require("metalsmith-models");
 const imagemin = require('metalsmith-imagemin');
-const googleAnalytics = require('metalsmith-google-analytics').default;
+// const googleAnalytics = require('metalsmith-google-analytics').default;
 
 const ENV = process.env.ENV;
 
@@ -75,7 +75,7 @@ let run = module.exports = function (cb) {
             allow: ENV === 'PROD' ? ['*'] : [],
             disallow: ENV !== 'PROD' ? ['*'] : []
         }))
-        .use(googleAnalytics('UA-61200557-1'))
+        // .use(googleAnalytics('UA-61200557-1'))
         .use(beautify({
             "js": false,
             "html": true
