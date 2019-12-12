@@ -1,5 +1,20 @@
 [
     {
+        "name": "KLM",
+        "text": "Bij KLM werkt CODEZILLA aan de architectuur en de ontwikkeling van de gloednieuwe state-of-the-art B2C web applicatie.",
+        "logo": "/images/companies/klm-o.svg"
+    },
+    {
+        "name": "Rabobank",
+        "text": "Bij de Rabobank ontwikkelen we mee aan diverse interne en externe (klant) applicaties binnen de diverse door Rabobank gedefinieerde IT-domeinen.",
+        "logo": "/images/companies/rabobank.png"
+    },
+    {
+        "name": "KPN",
+        "text": "Bij KPN ontwikkelen we mee aan de ontwikkeling van de Mijn KPN Selfcare omgeving.",
+        "logo": "/images/companies/kpn-o.svg"
+    },
+    {
         "name": "Agrifirm",
         "text": "Agrifirm ontwikkelt innovatieve software applicaties (o.a. internet of things) voor de agrarische sector. CODEZILLA is betrokken bij deze projecten. We bouwen o.a. generieke componenten (library en templates) die voor nieuwe Angular2 applicaties gebruikt kunnen worden.",
         "logo": "/images/companies/agrifirm-o.svg"
@@ -25,18 +40,8 @@
         "logo": "/images/companies/vattenfall-o.svg"
     },
     {
-        "name": "Rabobank",
-        "text": "Bij de Rabobank ontwikkelen we mee aan diverse interne en externe (klant) applicaties binnen de diverse door Rabobank gedefinieerde IT-domeinen.",
-        "logo": "/images/companies/rabobank.png"
-    },
-    {
         "name": "SNS - De Volksbank",
         "text": "De Volksbank is bezig met het digitaliseren van het hypotheek aanvraag proces. CODEZILLA helpt mee aan de ontwikkeling van innovatieve webapplicaties ter ondersteuning van het hypotheek aanvraag proces.",
         "logo": "/images/companies/volksbank-o.svg"
-    },
-    {
-        "name": "KPN",
-        "text": "Bij KPN ontwikkelen we mee aan de ontwikkeling van de Mijn KPN Selfcare omgeving.",
-        "logo": "/images/companies/kpn-o.svg"
     }
 ]
