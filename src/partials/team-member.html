@@ -1,5 +1,5 @@
 <div cz-diamond="" class="cz-diamond {{#if clickable}}cz-diamond--clickable{{/if}}" cz-team-member="{{ name }}">
-    <div class="cz-diamond__shape" cz-diamond-shape=""></div>
+    <div class="cz-diamond__shape {{#if invert}}cz-diamond__shape--inverse{{/if}}" cz-diamond-shape=""></div>
     <div class="monster-img monster-img--has-shadow">
         <img class="monster-img__img" src="{{ svg }}" alt="{{ displayName }}" width="200px" height="200px" style="{{svgStyle}}" />
     </div>
