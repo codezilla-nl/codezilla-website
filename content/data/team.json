@@ -1,143 +1,161 @@
-{
-    "martin": {
-        "name": "Martin",
-        "monster": "/images/monsters/martinmonster.svg",
-        "quote": "Don’t wait for the perfect moment, take the moment and make it perfect",
-        "likes": "CODEZILLA, instruct spinning classes, dance music (mixing), travelling and Twente",
-        "writesCodeFor" : "boodschappenlijstjes, telefoonnummers, sloten"
+[
+    {
+        "martin": {
+            "name": "Martin",
+            "monster": "/images/monsters/martinmonster.svg",
+            "quote": "Don’t wait for the perfect moment, take the moment and make it perfect",
+            "likes": "CODEZILLA, instruct spinning classes, dance music (mixing), travelling and Twente",
+            "writesCodeFor" : "boodschappenlijstjes, telefoonnummers, sloten"
+        },
+        "huib": {
+            "name": "Huib",
+            "monster": "/images/monsters/huibmonster.svg",
+            "quote": "A computer program does what you tell it to do, not what you want it to do",
+            "likes": "Tinkering, Devouring websites and traveling",
+            "writesCodeFor": "bol.com"
+        },
+        "rory": {
+            "name": "Rory",
+            "monster": "/images/monsters/rorymonster.svg",
+            "quote": "Have you tried turning it off and on again?",
+            "likes": "Games, cooking & eating, movies and music",
+            "writesCodeFor": "KLM"
+        },
+        "arno": {
+            "name": "Arno",
+            "monster": "/images/monsters/arnomonster.svg",
+            "quote": "I don't do quotes",
+            "likes": "Games, series & movies, cooking and coding",
+            "writesCodeFor": "Rabobank"
+        },
+        "michel": {
+            "name": "Michel",
+            "monster": "/images/monsters/michelmonster.svg",
+            "quote": "Too much Javascript. I'll fix it with css..",
+            "likes": "Hardware and Software tweaking, watching movies, traveling and cars",
+            "writesCodeFor": "KLM"
+        },
+        "jelle": {
+            "name": "Jelle",
+            "monster": "/images/monsters/jellemonster.svg",
+            "quote": "If you think good architecture is expensive, try bad architecture.",
+            "likes": "Open Source Software, Retro Games, Tennis, Speed Skating, Snowboarding",
+            "writesCodeFor": "KLM"
+        },
+        "remy": {
+            "name": "Remy",
+            "monster": "/images/monsters/remymonster.svg",
+            "quote": "Listen carefully; I shall say this only once!",
+            "likes": "Pencak Silat, Magic: The Gathering, Movies",
+            "writesCodeFor": "Rabobank"
+        },
+        "patrick": {
+            "name": "Patrick",
+            "monster": "/images/monsters/patrickmonster.svg",
+            "quote": "Always code as if the guy who ends up maintaining your code will be a violent psychopath who knows where you live",
+            "likes": "Shaolin Kempo, (Retro) Video Games, Open Source Software",
+            "writesCodeFor": "KLM"
+        },
+        "jeroen": {
+            "name": "Jeroen",
+            "monster": "/images/monsters/jeroenmonster.svg",
+            "quote": "Life would be much easier if I had the source code",
+            "likes": "Fast cars, gaming, snowboarding & Rollerderby",
+            "writesCodeFor": "Malmberg"
+        },
+        "bas": {
+            "name": "Bas",
+            "monster": "/images/monsters/basmonster.svg",
+            "quote": "Hi!",
+            "likes": "Scouting, Fitness, Movies&amp;Series",
+            "writesCodeFor": "Alphabet"
+        },
+        "joran": {
+            "name": "Joran",
+            "monster": "/images/monsters/joranmonster.svg",
+            "monsterStyle": "transform: scale(0.7) translateY(-80px)",
+            "quote": "Hi!",
+            "likes": "",
+            "writesCodeFor": "Rabobank"
+        },
+        "sander": {
+            "name": "Sander",
+            "monster": "/images/monsters/sandermonster.svg",
+            "quote": "Time flies, even if turkeys don't",
+            "likes": "My love, my daughter and sons, Netflix and Cycling",
+            "writesCodeFor": "Agrifirm"
+        },
+        "martijn": {
+            "name": "Martijn",
+            "monster": "/images/monsters/martijnmonster.svg",
+            "quote": "If it ain't broke, don't fix it",
+            "likes": "Cars, Gaming, Netflix, Snowboarding and Traveling",
+            "writesCodeFor": "KPN"
+        },
+        "ferdi": {
+            "name": "Ferdi",
+            "monster": "/images/monsters/ferdimonster.svg",
+            "quote": "¿uᴉɐƃɐ uo puɐ ɟɟo ʇᴉ ƃuᴉuɹnʇ pǝᴉɹʇ noʎ ǝʌɐH",
+            "likes": "Coding, Gaming, Science fiction and Movies",
+            "writesCodeFor": "KLM"
+        },
+        "jacco": {
+            "name": "Jacco",
+            "monster": "/images/monsters/jaccomonster.svg",
+            "quote": "Ik kom oet Losser en weet van niks",
+            "likes": "My family, koi, tech stuff &amp; shoes",
+            "writesCodeFor": "Rabobank"
+        },
+        "stefan": {
+            "name": "Stefan",
+            "monster": "/images/monsters/stefanmonster.svg",
+            "quote": "It never hurts to help :)",
+            "likes": "fire trucks, good food, good code and holidays",
+            "writesCodeFor": "Rabobank"
+        },
+        "roque": {
+            "name": "Roque",
+            "monster": "/images/monsters/roquemonster.svg",
+            "quote": "Put aside logic, do what feels right",
+            "likes": "Music, food and beer",
+            "writesCodeFor": "NS"
+        },
+        "dennis": {
+            "name": "Dennis",
+            "monster": "/images/monsters/dennismonster.svg",
+            "quote": "The best thing about a boolean is even if you are wrong, you are only off by a bit",
+            "likes": "Music, basketball, games and (brewing) beer",
+            "writesCodeFor": "BZK"
+        },
+        "lesley": {
+            "name": "Lesley",
+            "monster": "/images/monsters/jimmymonster.svg",
+            "quote": "",
+            "likes": "",
+            "writesCodeFor": "BZK"
+        },
+        "jij": {
+            "name": "Jij?",
+            "monster": "/images/monsters/anonymousmonster.svg",
+            "quote": "This could be you. Ge&iuml;nteresseerd? Bel dan 020 - 3120 458 of stuur een email naar martin@codezilla.nl",
+            "likes": "Front End Development",
+            "writesCodeFor": ""
+        }
     },
-    "huib": {
-        "name": "Huib",
-        "monster": "/images/monsters/huibmonster.svg",
-        "quote": "A computer program does what you tell it to do, not what you want it to do",
-        "likes": "Tinkering, Devouring websites and traveling",
-        "writesCodeFor": "bol.com"
-    },
-    "rory": {
-        "name": "Rory",
-        "monster": "/images/monsters/rorymonster.svg",
-        "quote": "Have you tried turning it off and on again?",
-        "likes": "Games, cooking & eating, movies and music",
-        "writesCodeFor": "KLM"
-    },
-    "arno": {
-        "name": "Arno",
-        "monster": "/images/monsters/arnomonster.svg",
-        "quote": "I don't do quotes",
-        "likes": "Games, series & movies, cooking and coding",
-        "writesCodeFor": "Rabobank"
-    },
-    "michel": {
-        "name": "Michel",
-        "monster": "/images/monsters/michelmonster.svg",
-        "quote": "Too much Javascript. I'll fix it with css..",
-        "likes": "Hardware and Software tweaking, watching movies, traveling and cars",
-        "writesCodeFor": "KLM"
-    },
-    "jelle": {
-        "name": "Jelle",
-        "monster": "/images/monsters/jellemonster.svg",
-        "quote": "If you think good architecture is expensive, try bad architecture.",
-        "likes": "Open Source Software, Retro Games, Tennis, Speed Skating, Snowboarding",
-        "writesCodeFor": "KLM"
-    },
-    "remy": {
-        "name": "Remy",
-        "monster": "/images/monsters/remymonster.svg",
-        "quote": "Listen carefully; I shall say this only once!",
-        "likes": "Pencak Silat, Magic: The Gathering, Movies",
-        "writesCodeFor": "Rabobank"
-    },
-    "patrick": {
-        "name": "Patrick",
-        "monster": "/images/monsters/patrickmonster.svg",
-        "quote": "Always code as if the guy who ends up maintaining your code will be a violent psychopath who knows where you live",
-        "likes": "Shaolin Kempo, (Retro) Video Games, Open Source Software",
-        "writesCodeFor": "KLM"
-    },
-    "jeroen": {
-        "name": "Jeroen",
-        "monster": "/images/monsters/jeroenmonster.svg",
-        "quote": "Life would be much easier if I had the source code",
-        "likes": "Fast cars, gaming, snowboarding & Rollerderby",
-        "writesCodeFor": "Malmberg"
-    },
-    "bas": {
-        "name": "Bas",
-        "monster": "/images/monsters/basmonster.svg",
-        "quote": "Hi!",
-        "likes": "Scouting, Fitness, Movies&amp;Series",
-        "writesCodeFor": "Alphabet"
-    },
-    "joran": {
-        "name": "Joran",
-        "monster": "/images/monsters/joranmonster.svg",
-        "monsterStyle": "transform: scale(0.7) translateY(-80px)",
-        "quote": "Hi!",
-        "likes": "",
-        "writesCodeFor": "Rabobank"
-    },
-    "sander": {
-        "name": "Sander",
-        "monster": "/images/monsters/sandermonster.svg",
-        "quote": "Time flies, even if turkeys don't",
-        "likes": "My love, my daughter and sons, Netflix and Cycling",
-        "writesCodeFor": "Agrifirm"
-    },
-    "martijn": {
-        "name": "Martijn",
-        "monster": "/images/monsters/martijnmonster.svg",
-        "quote": "If it ain't broke, don't fix it",
-        "likes": "Cars, Gaming, Netflix, Snowboarding and Traveling",
-        "writesCodeFor": "KPN"
-    },
-    "ferdi": {
-        "name": "Ferdi",
-        "monster": "/images/monsters/ferdimonster.svg",
-        "quote": "¿uᴉɐƃɐ uo puɐ ɟɟo ʇᴉ ƃuᴉuɹnʇ pǝᴉɹʇ noʎ ǝʌɐH",
-        "likes": "Coding, Gaming, Science fiction and Movies",
-        "writesCodeFor": "KLM"
-    },
-    "jacco": {
-        "name": "Jacco",
-        "monster": "/images/monsters/jaccomonster.svg",
-        "quote": "Ik kom oet Losser en weet van niks",
-        "likes": "My family, koi, tech stuff &amp; shoes",
-        "writesCodeFor": "Rabobank"
-    },
-    "stefan": {
-        "name": "Stefan",
-        "monster": "/images/monsters/stefanmonster.svg",
-        "quote": "It never hurts to help :)",
-        "likes": "fire trucks, good food, good code and holidays",
-        "writesCodeFor": "Rabobank"
-    },
-    "roque": {
-        "name": "Roque",
-        "monster": "/images/monsters/roquemonster.svg",
-        "quote": "Put aside logic, do what feels right",
-        "likes": "Music, food and beer",
-        "writesCodeFor": "NS"
-    },
-    "dennis": {
-        "name": "Dennis",
-        "monster": "/images/monsters/dennismonster.svg",
-        "quote": "The best thing about a boolean is even if you are wrong, you are only off by a bit",
-        "likes": "Music, basketball, games and (brewing) beer",
-        "writesCodeFor": "BZK"
-    },
-    "lesley": {
-        "name": "Lesley",
-        "monster": "/images/monsters/jimmymonster.svg",
-        "quote": "",
-        "likes": "",
-        "writesCodeFor": "BZK"
-    },
-    "jij": {
-        "name": "Jij?",
-        "monster": "/images/monsters/anonymousmonster.svg",
-        "quote": "This could be you. Ge&iuml;nteresseerd? Bel dan 020 - 3120 458 of stuur een email naar martin@codezilla.nl",
-        "likes": "Front End Development",
-        "writesCodeFor": ""
+    {
+        "theo": {
+            "name": "Theo",
+            "monster": "/images/monsters/theomonster.svg",
+            "quote": "Failure is success in progress",
+            "likes": "CODEZILLA, soccer coaching and talent scouting, live poker tournaments, travelling and Cambuur",
+            "writesCodeFor" : "Fun, talent development"
+        },
+        "jij2": {
+            "name": "Jij?",
+            "monster": "/images/monsters/anonymousmonster.svg",
+            "quote": "This could be you. Ge&iuml;nteresseerd? Bel dan 020 - 3120 458 of stuur een email naar theo@codezilla.nl",
+            "likes": "Front End Development",
+            "writesCodeFor": ""
+        }
     }
-}
+]

@@ -17,20 +17,26 @@ nextPage:
 <div class="tortured-border tortured-border--top"></div>
 <main>
 <div class="cz-split-panels">
-    <div class="cz-section">
-        <div class="cz-diamond-grid">
-            <div class="cz-diamond-grid__inner">
-                {{#each model.team}}
-                <div class="cz-diamond-grid__block">
-                    {{> team-member name=@key clickable=true displayName=name svg=monster svgStyle=monsterStyle }}
+    {{#each model.team}}
+        <div class="cz-section {{#if @index}}cz-section--inverse{{/if}}">
+            <div class="cz-diamond-grid">
+                <div class="cz-diamond-grid__inner">
+                    {{#each this}}
+                        <div class="cz-diamond-grid__block">
+                            {{> team-member name=@key clickable=true invert=@../index displayName=name svg=monster svgStyle=monsterStyle }}
+                        </div>
+                    {{/each}}    
                 </div>
-                {{/each}}
             </div>
         </div>
-    </div>
-    {{#each model.team}}
-        {{> team-member-overlay name=@key displayName=name quote=quote svg=monster likes=likes writesCodeFor=writesCodeFor }}
+        {{#unless @index}}
+            <div class="tortured-border tortured-border--bottom"></div>  
+        {{/unless}}
+
+        {{#each this}}
+            {{> team-member-overlay name=@key displayName=name quote=quote svg=monster likes=likes writesCodeFor=writesCodeFor }}
+        {{/each}}
     {{/each}}
 </div>
 </main>
-<div class="tortured-border tortured-border--bottom"></div>
+<div class="tortured-border tortured-border--bottom-green"></div>

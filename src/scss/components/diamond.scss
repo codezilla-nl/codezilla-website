@@ -24,6 +24,10 @@ $diamond-dimensions: 100px;
     background: $cz-color-primary;
     transform: rotate(45deg);
     border-radius: 15px;
+
+    &--inverse {
+        background: #fff;
+    }
 }
 
 .cz-diamond__title {
