@@ -3,7 +3,6 @@ const Metalsmith = require('metalsmith');
 const filter = require('metalsmith-filter');
 const htmlMinifier = require('metalsmith-html-minifier');
 const beautify = require('metalsmith-beautify');
-const markdown = require('metalsmith-markdown');
 const layouts = require('metalsmith-layouts');
 const permalinks = require('metalsmith-permalinks');
 const collections = require('metalsmith-collections');
@@ -18,7 +17,7 @@ const sass = require('metalsmith-sass');
 const inPlace = require('metalsmith-in-place');
 const asset = require('metalsmith-static');
 const helpers = require('metalsmith-register-helpers');
-const models = require("metalsmith-models");
+const models = require('metalsmith-models');
 const imagemin = require('metalsmith-imagemin');
 // const googleAnalytics = require('metalsmith-google-analytics').default;
 
@@ -48,21 +47,21 @@ let run = module.exports = function (cb) {
             }
         }))
         .use(models({
-            directory: "content/data"
+            directory: 'content/data'
         }))
         .use(inPlace({
             engine: 'handlebars',
             partials: './src/partials/'
         }))
         .use(helpers({
-            directory: "./src/helpers"
+            directory: './src/helpers'
         }))
         .use(layouts({
             engine: 'handlebars',
             directory: './src/layouts/',
             partials: './src/partials/'
         }))
-        .use(htmlMinifier("*.html", {
+        .use(htmlMinifier('*.html', {
             collapseWhitespace: false,
             removeComments: true,
             removeAttributeQuotes: false
@@ -77,8 +76,8 @@ let run = module.exports = function (cb) {
         }))
         // .use(googleAnalytics('UA-61200557-1'))
         .use(beautify({
-            "js": false,
-            "html": true
+            'js': false,
+            'html': true
         }))
         .use(asset({
             src: './public',
@@ -123,7 +122,21 @@ let run = module.exports = function (cb) {
         .destination('./build')
         .use(filter(['**/*.gif', '**/*.png', '**/*.jpg', '**/*.svg']))
         .use(imagemin({
-            optimizationLevel: 3
+            optimizationLevel: 3,
+            svgo: {
+                plugins: [
+                    { cleanupAttrs: false },
+                    { inlineStyles: false },
+                    { removeHiddenElems: false },
+                    { minifyStyles: false },
+                    { convertStyleToAttrs: false },
+                    { collapseGroups: false },
+                    { mergePaths: false },
+                    { convertShapeToPath: false },
+                    { convertEllipseToCircle: false },
+                    { reusePaths: false }
+                ]   
+            }
         }))
         .build(function (err, files) {
             if (err) {
