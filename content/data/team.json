@@ -150,6 +150,13 @@
             "likes": "CODEZILLA, soccer coaching and talent scouting, live poker tournaments, travelling and Cambuur",
             "writesCodeFor" : "Fun, talent development"
         },
+        "ferhat": {
+            "name": "Ferhat",
+            "monster": "/images/monsters/ferhatmonster.svg",
+            "quote": "You're the semicolon to my statements",
+            "likes": "Coding, good music with good party, travelling and sport",
+            "writesCodeFor" : "Everyone"
+        },
         "jij2": {
             "name": "Jij?",
             "monster": "/images/monsters/anonymousmonster.svg",
