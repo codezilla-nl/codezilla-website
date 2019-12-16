@@ -28,6 +28,10 @@ $media-block-gutter: 20px;
 .media-block__image {
     width: 100px;
     height: auto;
+    
+    &--large {
+        width: 150px;
+    }
 }
 
 .media-block__image-wrapper:not(.media-block__image-wrapper--persist-mobile) {
