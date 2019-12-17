@@ -40,6 +40,9 @@ $diamong-grid-width-md: 80vw;
         &:nth-child(5n+4){
             right: -1/2vw;
         }
+        &:nth-child(5n+4):nth-last-child(1){
+            margin-right: calc( 33% + 1vw);
+        }
         &:nth-child(5n+5) {
             left: -1/2vw;
         }
