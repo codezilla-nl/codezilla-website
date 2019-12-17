@@ -164,6 +164,13 @@
             "likes": "DJing, travelling, gaming en sport",
             "writesCodeFor" : "Rabobank"
         },
+        "wouters": {
+            "name": "Wouter S",
+            "monster": "/images/monsters/woutersmonster.svg",
+            "quote": "Watteeeeeeee?",
+            "likes": "Music, Games, Photography and beer",
+            "writesCodeFor" : "X86 and ARM based systems, Throw in a microcontroller once in a while"
+        },
         "jij2": {
             "name": "Jij?",
             "monster": "/images/monsters/anonymousmonster.svg",
