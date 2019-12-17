@@ -157,6 +157,13 @@
             "likes": "Coding, good music with good party, travelling and sport",
             "writesCodeFor" : "Everyone"
         },
+        "tim": {
+            "name": "Tim",
+            "monster": "/images/monsters/timmonster.svg",
+            "quote": "A good way to stay flexible is to write less code",
+            "likes": "DJing, travelling, gaming en sport",
+            "writesCodeFor" : "Rabobank"
+        },
         "jij2": {
             "name": "Jij?",
             "monster": "/images/monsters/anonymousmonster.svg",
