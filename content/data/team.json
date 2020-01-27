@@ -70,14 +70,6 @@
             "likes": "Scouting, Fitness, Movies&amp;Series",
             "writesCodeFor": "Alphabet"
         },
-        "joran": {
-            "name": "Joran",
-            "monster": "/images/monsters/joranmonster.svg",
-            "monsterStyle": "transform: scale(0.7) translateY(-80px)",
-            "quote": "Hi!",
-            "likes": "",
-            "writesCodeFor": "Rabobank"
-        },
         "sander": {
             "name": "Sander",
             "monster": "/images/monsters/sandermonster.svg",
