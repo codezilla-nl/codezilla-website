@@ -7,13 +7,6 @@
             "likes": "CODEZILLA, instruct spinning classes, dance music (mixing), travelling and Twente",
             "writesCodeFor" : "boodschappenlijstjes, telefoonnummers, sloten"
         },
-        "huib": {
-            "name": "Huib",
-            "monster": "/images/monsters/huibmonster.svg",
-            "quote": "A computer program does what you tell it to do, not what you want it to do",
-            "likes": "Tinkering, Devouring websites and traveling",
-            "writesCodeFor": "bol.com"
-        },
         "rory": {
             "name": "Rory",
             "monster": "/images/monsters/rorymonster.svg",
