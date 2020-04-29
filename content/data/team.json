@@ -135,6 +135,13 @@
             "likes": "CODEZILLA, soccer coaching and talent scouting, live poker tournaments, travelling and Cambuur",
             "writesCodeFor" : "Fun, talent development"
         },
+        "ralph": {
+            "name": "Ralph",
+            "monster": "/images/monsters/ralphmonster.svg",
+            "quote": "I know a great UDP joke but you will probably not get it.",
+            "likes": "Running, cycling and tweaking code",
+            "writesCodeFor": "DSW"
+        },
         "ferhat": {
             "name": "Ferhat",
             "monster": "/images/monsters/ferhatmonster.svg",
