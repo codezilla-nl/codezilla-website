@@ -5,7 +5,7 @@
             "monster": "/images/monsters/martinmonster.svg",
             "quote": "Don’t wait for the perfect moment, take the moment and make it perfect",
             "likes": "CODEZILLA, instruct spinning classes, dance music (mixing), travelling and Twente",
-            "writesCodeFor" : "boodschappenlijstjes, telefoonnummers, sloten"
+            "writesCodeFor": "boodschappenlijstjes, telefoonnummers, sloten"
         },
         "rory": {
             "name": "Rory",
@@ -133,7 +133,7 @@
             "monster": "/images/monsters/theomonster.svg",
             "quote": "Failure is success in progress",
             "likes": "CODEZILLA, soccer coaching and talent scouting, live poker tournaments, travelling and Cambuur",
-            "writesCodeFor" : "Fun, talent development"
+            "writesCodeFor": "Fun, talent development"
         },
         "ralph": {
             "name": "Ralph",
@@ -147,21 +147,28 @@
             "monster": "/images/monsters/ferhatmonster.svg",
             "quote": "You're the semicolon to my statements",
             "likes": "Coding, good music with good party, travelling and sport",
-            "writesCodeFor" : "Everyone"
+            "writesCodeFor": "Everyone"
         },
         "tim": {
             "name": "Tim",
             "monster": "/images/monsters/timmonster.svg",
             "quote": "A good way to stay flexible is to write less code",
             "likes": "DJing, travelling, gaming en sport",
-            "writesCodeFor" : "Rabobank"
+            "writesCodeFor": "Rabobank"
         },
         "wouters": {
             "name": "Wouter S",
             "monster": "/images/monsters/woutersmonster.svg",
             "quote": "Watteeeeeeee?",
             "likes": "Music, Games, Photography and beer",
-            "writesCodeFor" : "X86 and ARM based systems, Throw in a microcontroller once in a while"
+            "writesCodeFor": "X86 and ARM based systems, Throw in a microcontroller once in a while"
+        },
+        "roos": {
+            "name": "Roos",
+            "monster": "/images/monsters/roosmonster.svg",
+            "quote": "Can I eat it?",
+            "likes": "Cooking and baking (and eating), puzzles, reading and sports",
+            "writesCodeFor": ""
         },
         "jij2": {
             "name": "Jij?",
