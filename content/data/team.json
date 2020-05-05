@@ -170,6 +170,13 @@
             "likes": "Cooking and baking (and eating), puzzles, reading and sports",
             "writesCodeFor": ""
         },
+        "valeria": {
+            "name": "Valeria",
+            "monster": "/images/monsters/valeriamonster.svg",
+            "quote": "Sudo make me a sandwich",
+            "likes": "Dancing, sci-fi(books + movies), games, hackernews",
+            "writesCodeFor": "KLM"
+        },
         "jij2": {
             "name": "Jij?",
             "monster": "/images/monsters/anonymousmonster.svg",
