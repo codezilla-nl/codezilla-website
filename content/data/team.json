@@ -177,6 +177,13 @@
             "likes": "Dancing, sci-fi(books + movies), games, hackernews",
             "writesCodeFor": "KLM"
         },
+        "michael": {
+            "name": "Michaël",
+            "monster": "/images/monsters/michaelmonster.svg",
+            "quote": "Robert'); DROP TABLE Students;--",
+            "likes": "Climbing, slacklining, snowboarding, alpinism, paragliding, beer, meta jokes, collecting quotes",
+            "writesCodeFor": "Carepay"
+        },
         "jij2": {
             "name": "Jij?",
             "monster": "/images/monsters/anonymousmonster.svg",
