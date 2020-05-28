@@ -184,6 +184,13 @@
             "likes": "Climbing, slacklining, snowboarding, alpinism, paragliding, beer, meta jokes, collecting quotes",
             "writesCodeFor": "Carepay"
         },
+        "wouterh": {
+            "name": "Wouter H",
+            "monster": "/images/monsters/wouterhmonster.svg",
+            "quote": "There is no place like 127.0.0.1",
+            "likes": "Exploring new things",
+            "writesCodeFor": "PharmAccess"
+        },
         "jij2": {
             "name": "Jij?",
             "monster": "/images/monsters/anonymousmonster.svg",
