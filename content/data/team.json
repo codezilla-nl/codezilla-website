@@ -12,7 +12,7 @@
             "monster": "/images/monsters/rorymonster.svg",
             "quote": "Have you tried turning it off and on again?",
             "likes": "Games, cooking & eating, movies and music",
-            "writesCodeFor": "KLM"
+            "writesCodeFor": "KPN"
         },
         "arno": {
             "name": "Arno",
@@ -26,14 +26,14 @@
             "monster": "/images/monsters/michelmonster.svg",
             "quote": "Too much Javascript. I'll fix it with css..",
             "likes": "Hardware and Software tweaking, watching movies, traveling and cars",
-            "writesCodeFor": "KLM"
+            "writesCodeFor": "DSW"
         },
         "jelle": {
             "name": "Jelle",
             "monster": "/images/monsters/jellemonster.svg",
             "quote": "If you think good architecture is expensive, try bad architecture.",
             "likes": "Open Source Software, Retro Games, Tennis, Speed Skating, Snowboarding",
-            "writesCodeFor": "KLM"
+            "writesCodeFor": "Rabobank"
         },
         "remy": {
             "name": "Remy",
@@ -47,14 +47,14 @@
             "monster": "/images/monsters/patrickmonster.svg",
             "quote": "Always code as if the guy who ends up maintaining your code will be a violent psychopath who knows where you live",
             "likes": "Shaolin Kempo, (Retro) Video Games, Open Source Software",
-            "writesCodeFor": "KLM"
+            "writesCodeFor": "Univ&eacute;"
         },
         "jeroen": {
             "name": "Jeroen",
             "monster": "/images/monsters/jeroenmonster.svg",
             "quote": "Life would be much easier if I had the source code",
             "likes": "Fast cars, gaming, snowboarding & Rollerderby",
-            "writesCodeFor": "Malmberg"
+            "writesCodeFor": ""
         },
         "bas": {
             "name": "Bas",
@@ -68,7 +68,7 @@
             "monster": "/images/monsters/sandermonster.svg",
             "quote": "Time flies, even if turkeys don't",
             "likes": "My love, my daughter and sons, Netflix and Cycling",
-            "writesCodeFor": "Agrifirm"
+            "writesCodeFor": "Kadaster"
         },
         "martijn": {
             "name": "Martijn",
@@ -82,7 +82,7 @@
             "monster": "/images/monsters/ferdimonster.svg",
             "quote": "¿uᴉɐƃɐ uo puɐ ɟɟo ʇᴉ ƃuᴉuɹnʇ pǝᴉɹʇ noʎ ǝʌɐH",
             "likes": "Coding, Gaming, Science fiction and Movies",
-            "writesCodeFor": "KLM"
+            "writesCodeFor": "Rabobank"
         },
         "jacco": {
             "name": "Jacco",
