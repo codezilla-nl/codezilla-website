@@ -40,6 +40,16 @@
     @media screen and (min-width: $cz-breakpoint-desktop) {
         padding: 64px 10vw;
     }
+
+    @media screen and (min-width: $cz-breakpoint-desktop-xl) {
+        &--left {
+            padding: 64px 3vw 64px 10vw;
+        }
+    
+        &--right {
+            padding: 64px 5vw 64px 5vw;
+        }
+    }
 }
 
 .cz-footer__cta {
