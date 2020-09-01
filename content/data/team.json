@@ -54,13 +54,6 @@
             "monster": "/images/monsters/jeroenmonster.svg",
             "quote": "Life would be much easier if I had the source code",
             "likes": "Fast cars, gaming, snowboarding & Rollerderby",
-            "writesCodeFor": ""
-        },
-        "bas": {
-            "name": "Bas",
-            "monster": "/images/monsters/basmonster.svg",
-            "quote": "Hi!",
-            "likes": "Scouting, Fitness, Movies&amp;Series",
             "writesCodeFor": "Alphabet"
         },
         "sander": {
@@ -82,7 +75,7 @@
             "monster": "/images/monsters/ferdimonster.svg",
             "quote": "¿uᴉɐƃɐ uo puɐ ɟɟo ʇᴉ ƃuᴉuɹnʇ pǝᴉɹʇ noʎ ǝʌɐH",
             "likes": "Coding, Gaming, Science fiction and Movies",
-            "writesCodeFor": "Rabobank"
+            "writesCodeFor": "KLM"
         },
         "jacco": {
             "name": "Jacco",
@@ -128,13 +121,6 @@
         }
     },
     {
-        "theo": {
-            "name": "Theo",
-            "monster": "/images/monsters/theomonster.svg",
-            "quote": "Failure is success in progress",
-            "likes": "CODEZILLA, soccer coaching and talent scouting, live poker tournaments, travelling and Cambuur",
-            "writesCodeFor": "Fun, talent development"
-        },
         "ralph": {
             "name": "Ralph",
             "monster": "/images/monsters/ralphmonster.svg",
@@ -147,7 +133,7 @@
             "monster": "/images/monsters/ferhatmonster.svg",
             "quote": "You're the semicolon to my statements",
             "likes": "Coding, good music with good party, travelling and sport",
-            "writesCodeFor": "Everyone"
+            "writesCodeFor": "BZK"
         },
         "tim": {
             "name": "Tim",
@@ -161,14 +147,14 @@
             "monster": "/images/monsters/woutersmonster.svg",
             "quote": "Watteeeeeeee?",
             "likes": "Music, Games, Photography and beer",
-            "writesCodeFor": "X86 and ARM based systems, Throw in a microcontroller once in a while"
+            "writesCodeFor": "ANWB"
         },
         "roos": {
             "name": "Roos",
             "monster": "/images/monsters/roosmonster.svg",
             "quote": "Can I eat it?",
             "likes": "Cooking and baking (and eating), puzzles, reading and sports",
-            "writesCodeFor": ""
+            "writesCodeFor": "KPN"
         },
         "valeria": {
             "name": "Valeria",
