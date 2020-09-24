@@ -177,6 +177,13 @@
             "likes": "Exploring new things",
             "writesCodeFor": "PharmAccess"
         },
+        "jarno": {
+            "name": "Jarno",
+            "monster": "/images/monsters/jarnomonster.svg",
+            "quote": "'error' is defined but never used",
+            "likes": "Long walks on the beach",
+            "writesCodeFor": "KLM"
+        },
         "jij2": {
             "name": "Jij?",
             "monster": "/images/monsters/anonymousmonster.svg",
