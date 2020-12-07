@@ -47,14 +47,7 @@
             "monster": "/images/monsters/patrickmonster.svg",
             "quote": "Always code as if the guy who ends up maintaining your code will be a violent psychopath who knows where you live",
             "likes": "Shaolin Kempo, (Retro) Video Games, Open Source Software",
-            "writesCodeFor": "Univ&eacute;"
-        },
-        "jeroen": {
-            "name": "Jeroen",
-            "monster": "/images/monsters/jeroenmonster.svg",
-            "quote": "Life would be much easier if I had the source code",
-            "likes": "Fast cars, gaming, snowboarding & Rollerderby",
-            "writesCodeFor": "Alphabet"
+            "writesCodeFor": "KLM"
         },
         "sander": {
             "name": "Sander",
