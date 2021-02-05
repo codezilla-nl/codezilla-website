@@ -1,0 +1,36 @@
+name: Prod Deployment
+
+on:
+  push:
+    branches: [ master ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    strategy:
+      matrix:
+        node-version: [12.x]
+    steps:
+    - uses: actions/checkout@v2
+    - name: Use Node.js ${{ matrix.node-version }}
+      uses: actions/setup-node@v1
+      with:
+        node-version: ${{ matrix.node-version }}
+    - run: npm install
+    - run: npm run build
+    - name: Write CNAME file
+      uses: DamianReeves/write-file-action@master
+      with:
+        path: build/CNAME
+        contents: www.codezilla.nl
+        write-mode: overwrite
+    - name: Deploy to GitHub Pages
+      if: success()
+      uses: crazy-max/ghaction-github-pages@v2
+      with:
+        repo: codezilla-nl/codezilla-nl.github.io
+        target_branch: master
+        build_dir: build
+      env:
+        GH_PAT: ${{ secrets.GH_PAT }}
