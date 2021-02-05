@@ -23,7 +23,7 @@ jobs:
       if: success()
       uses: crazy-max/ghaction-github-pages@v2
       with:
-        repo: codezilla-nl.github.io
+        repo: codezilla-nl/codezilla-nl.github.io
         target_branch: trialrun
         build_dir: public
       env:
