@@ -23,6 +23,12 @@ jobs:
         node-version: ${{ matrix.node-version }}
     - run: npm install
     - run: npm run build
+    - name: Write CNAME file
+      uses: DamianReeves/write-file-action@v1
+      with:
+        path: build/CNAME
+        contents: test.codezilla.nl
+        write-mode: overwrite
     - name: Deploy to GitHub Pages
       if: success()
       uses: crazy-max/ghaction-github-pages@v2
