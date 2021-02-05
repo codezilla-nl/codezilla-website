@@ -25,6 +25,6 @@ jobs:
       with:
         repo: codezilla-nl/codezilla-nl.github.io
         target_branch: trialrun
-        build_dir: public
+        build_dir: build
       env:
         GH_PAT: ${{ secrets.GH_PAT }}
