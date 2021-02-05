@@ -23,11 +23,17 @@ jobs:
         node-version: ${{ matrix.node-version }}
     - run: npm install
     - run: npm run build
+    - name: Write CNAME file
+      uses: DamianReeves/write-file-action@master
+      with:
+        path: build/CNAME
+        contents: test.codezilla.nl
+        write-mode: overwrite
     - name: Deploy to GitHub Pages
       if: success()
       uses: crazy-max/ghaction-github-pages@v2
       with:
         target_branch: gh-pages
-        build_dir: public
+        build_dir: build
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
