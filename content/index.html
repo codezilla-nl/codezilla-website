@@ -98,7 +98,13 @@ nextPage:
                             <p class="cz-text">{{ text }}</p>
                         </div>
                         <div class="media-block__image-wrapper media-block__image-wrapper--persist-mobile">
+                            {{#if link}}
+                                <a href="{{ link }}" target="_blank" rel="noopener noreferrer nofollow">
+                            {{/if}}
                             <img class="media-block__image" src="{{ logo }}" alt="{{ name }}" width="200px" height="200px" />
+                            {{#if link}}
+                                </a>
+                            {{/if}}
                         </div>
                     </li>
                     {{/each}}
