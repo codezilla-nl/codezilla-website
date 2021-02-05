@@ -24,7 +24,7 @@ jobs:
     - run: npm install
     - run: npm run build
     - name: Write CNAME file
-      uses: DamianReeves/write-file-action
+      uses: DamianReeves/write-file-action@master
       with:
         path: build/CNAME
         contents: test.codezilla.nl
