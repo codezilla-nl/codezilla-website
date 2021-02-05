@@ -1,8 +1,8 @@
 name: Prod Deployment
 
 on:
-  push:
-    branches: [ master ]
+  release:
+    types: [created]
 
 jobs:
   build:
