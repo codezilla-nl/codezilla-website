@@ -24,7 +24,7 @@ jobs:
       uses: crazy-max/ghaction-github-pages@v2
       with:
         repo: codezilla-nl/codezilla-nl.github.io
-        target_branch: trialrun
+        target_branch: master
         build_dir: public
       env:
         GH_PAT: ${{ secrets.GH_PAT }}
