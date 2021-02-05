@@ -2,17 +2,20 @@
     {
         "name": "KLM",
         "text": "Bij KLM werkt CODEZILLA aan de architectuur en de ontwikkeling van de gloednieuwe state-of-the-art B2C web applicatie.",
-        "logo": "/images/companies/klm-o.svg"
+        "logo": "/images/companies/klm-o.svg",
+        "link": "https://www.klm.nl"
     },
     {
         "name": "Rabobank",
-        "text": "Bij de Rabobank ontwikkelen we mee aan diverse interne en externe (klant) applicaties binnen de diverse door Rabobank gedefinieerde IT-domeinen.",
-        "logo": "/images/companies/rabobank.png"
+        "text": "Bij de Rabobank werken we mee aan de ontwikkeling en architectuur van diverse interne en externe (klant) applicaties binnen de diverse door Rabobank gedefinieerde IT-domeinen.",
+        "logo": "/images/companies/rabobank.png",
+        "link": "https://www.rabobank.nl"
     },
     {
         "name": "KPN",
         "text": "Bij KPN ontwikkelen we mee aan de ontwikkeling van de Mijn KPN Selfcare omgeving.",
-        "logo": "/images/companies/kpn-o.svg"
+        "logo": "/images/companies/kpn-o.svg",
+        "link": "https://www.kpn.nl"
     },
     {
         "name": "Agrifirm",
@@ -37,7 +40,8 @@
     {
         "name": "Vattenfall",
         "text": "Binnen de Self Service omgeving werken we aan de architectuur en de bouw van de Self Service omgeving voor (groot)zakelijke klanten.",
-        "logo": "/images/companies/vattenfall-o.svg"
+        "logo": "/images/companies/vattenfall-o.svg",
+        "link": "https://www.vattenfall.nl"
     },
     {
         "name": "SNS - De Volksbank",

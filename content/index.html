@@ -22,7 +22,9 @@ nextPage:
                     <h2 class="cz-no-m-b">Onze visie</h2>
                     <hr class="cz-divider" />
                     <p class="cz-text">
-                        De richting van software-ontwikkeling verlegt zich meer naar front end development van geavanceerde, interactieve, en gebruiksvriendelijke (web)applicaties. Back end blijft belangrijk.
+                        Bij CODEZILLA staat ontwikkeling op nummer één. Dat geldt niet alleen voor de techniek, maar ook voor persoonlijke ontwikkeling. 
+                        Deze focus zorgt voor een groep front end developers die niet alleen experts zijn in hun vakgebied, maar ook op persoonlijk vlak een perfecte uitbreiding zijn voor een team.
+                        Kortom, met onze kennis, kunde, en persoonlijke touch maken wij het verschil.
                         <br/>
                         <a href="/visie">Lees meer over onze visie</a>
                     </p>
@@ -38,7 +40,7 @@ nextPage:
                     <h2 class="cz-no-m-b">Met onze klanten</h2>
                     <hr class="cz-divider"></hr>
                     <p class="cz-text">
-                        Wij bouwen samen met onze klanten complexe (mobiele) webapplicaties op maat met optimale gebruikersvriendelijkheid. We helpen processen van onze klanten te verbeteren, interactie met haar stakeholders eenvoudig en intuïtief te laten verlopen en/of informatie adequaat te verwerken.
+                        Wij bouwen samen met onze klanten complexe (mobiele) webapplicaties op maat met optimale gebruikersvriendelijkheid. Dit doen wij met beste technologiën van dit moment, die het beste bij een product passen. Wij leveren niet alleen kwalitatieve code, maar helpen ook met processen van onze klanten te verbeteren, interactie met haar stakeholders eenvoudig en intuïtief te laten verlopen.
                         <br/>
                         <a href="/werken-bij">Lees meer over werken bij</a>
                     </p>
@@ -60,7 +62,7 @@ nextPage:
                     <h2 class="cz-no-m-b">Als professionals</h2>
                     <hr class="cz-divider" />
                     <p class="cz-text">
-                        De professionals van CODEZILLA zorgen voor gestructureerd geschreven (front end) software, opdat in de toekomst andere professionals snel en adequaat kunnen verder ontwikkelen van deze software.
+                        De professionals van CODEZILLA zorgen voor gestructureerd geschreven (front end) software. Kwaliteit, herbruikbruikbaarheid, toegankelijkheid, en de "right tool for the job" staan hierbij hoog in het vaandel.
                         <br/>
                         <a href="/team">Lees meer over ons</a>
                     </p>
@@ -96,7 +98,13 @@ nextPage:
                             <p class="cz-text">{{ text }}</p>
                         </div>
                         <div class="media-block__image-wrapper media-block__image-wrapper--persist-mobile">
+                            {{#if link}}
+                                <a href="{{ link }}" target="_blank" rel="noopener noreferrer nofollow">
+                            {{/if}}
                             <img class="media-block__image" src="{{ logo }}" alt="{{ name }}" width="200px" height="200px" />
+                            {{#if link}}
+                                </a>
+                            {{/if}}
                         </div>
                     </li>
                     {{/each}}
