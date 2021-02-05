@@ -27,4 +27,4 @@ jobs:
         target_branch: trialrun
         build_dir: public
       env:
-        GITHUB_TOKEN: ${{ secrets.GH_PAT }}
+        GH_PAT: ${{ secrets.GH_PAT }}
