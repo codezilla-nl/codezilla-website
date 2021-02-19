@@ -11,6 +11,8 @@ jobs:
     strategy:
       matrix:
         node-version: [12.x]
+    env:
+      ENV: PROD
     steps:
     - uses: actions/checkout@v2
     - name: Use Node.js ${{ matrix.node-version }}
@@ -34,4 +36,3 @@ jobs:
         build_dir: build
       env:
         GH_PAT: ${{ secrets.GH_PAT }}
-        ENV: PROD
