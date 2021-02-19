@@ -34,3 +34,4 @@ jobs:
         build_dir: build
       env:
         GH_PAT: ${{ secrets.GH_PAT }}
+        ENV: PROD
