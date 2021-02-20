@@ -18,6 +18,7 @@ $cz-font-roboto: '/font/roboto';
     url('#{$cz-font-roboto}/roboto-light.woff2') format('woff2'),
     url('#{$cz-font-roboto}/roboto-light.woff') format('woff');
     unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215, U+E0FF, U+EFFD, U+F000;
+    font-display: swap
 }
 
 @font-face {
@@ -29,6 +30,7 @@ $cz-font-roboto: '/font/roboto';
     url('#{$cz-font-roboto}/roboto-light-italic.woff2') format('woff2'),
     url('#{$cz-font-roboto}/roboto-light-italic.woff') format('woff');
     unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215, U+E0FF, U+EFFD, U+F000;
+    font-display: swap
 }
 
 // /* Roboto Bold */
@@ -41,6 +43,7 @@ $cz-font-roboto: '/font/roboto';
     url('#{$cz-font-roboto}/roboto-bold.woff2') format('woff2'),
     url('#{$cz-font-roboto}/roboto-bold.woff') format('woff');
     unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215, U+E0FF, U+EFFD, U+F000;
+    font-display: swap
 }
 
 @font-face {
@@ -52,6 +55,7 @@ $cz-font-roboto: '/font/roboto';
     url('#{$cz-font-roboto}/roboto-bold-italic.woff2') format('woff2'),
     url('#{$cz-font-roboto}/roboto-bold-italic.woff') format('woff');
     unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215, U+E0FF, U+EFFD, U+F000;
+    font-display: swap
 }
 
 /* Radikal UltraThin
@@ -133,6 +137,7 @@ $cz-font-roboto: '/font/roboto';
     url('#{$cz-font-radikal}/324CAE_9_0.woff2') format('woff2'),
     url('#{$cz-font-radikal}/324CAE_9_0.woff') format('woff'),
     url('#{$cz-font-radikal}/324CAE_9_0.ttf') format('truetype');
+    font-display: swap
 }
 
 @font-face {
@@ -144,6 +149,7 @@ $cz-font-roboto: '/font/roboto';
     url('#{$cz-font-radikal}/324CAE_A_0.woff2') format('woff2'),
     url('#{$cz-font-radikal}/324CAE_A_0.woff') format('woff'),
     url('#{$cz-font-radikal}/324CAE_A_0.ttf') format('truetype');
+    font-display: swap
 }
 
 /* Radikal Medium
@@ -180,6 +186,7 @@ $cz-font-roboto: '/font/roboto';
     url('#{$cz-font-radikal}/324CAE_3_0.woff2') format('woff2'),
     url('#{$cz-font-radikal}/324CAE_3_0.woff') format('woff'),
     url('#{$cz-font-radikal}/324CAE_3_0.ttf') format('truetype');
+    font-display: swap
 }
 
 @font-face {
@@ -191,6 +198,7 @@ $cz-font-roboto: '/font/roboto';
     url('#{$cz-font-radikal}/324CAE_5_0.woff2') format('woff2'),
     url('#{$cz-font-radikal}/324CAE_5_0.woff') format('woff'),
     url('#{$cz-font-radikal}/324CAE_5_0.ttf') format('truetype');
+    font-display: swap
 }
 
 /* Radikal Black
