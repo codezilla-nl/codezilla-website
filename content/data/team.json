@@ -91,13 +91,6 @@
             "likes": "Music, food and beer",
             "writesCodeFor": "NS"
         },
-        "dennis": {
-            "name": "Dennis",
-            "monster": "/images/monsters/dennismonster.svg",
-            "quote": "The best thing about a boolean is even if you are wrong, you are only off by a bit",
-            "likes": "Music, basketball, games and (brewing) beer",
-            "writesCodeFor": "BZK"
-        },
         "lesley": {
             "name": "Lesley",
             "monster": "/images/monsters/jimmymonster.svg",
