@@ -9,7 +9,8 @@
     "test-e2e": "./node_modules/.bin/browser-sync start --config 'test/bs-config.e2e.js' & node_modules/.bin/nightwatch --config test/nightwatch.conf.js",
     "lint-js": "eslint 'src/**/*.js'",
     "lint-css": "stylelint 'src/scss/**/*.scss' --syntax scss",
-    "prepublish": "npm run build"
+    "prepublish": "npm run build",
+    "preinstall": "npx npm-force-resolutions"
   },
   "dependencies": {
     "handlebars": "^4.5.3",
@@ -53,5 +54,8 @@
     "rollup-plugin-uglify": "^2.0.1",
     "selenium-download": "^2.0.6",
     "stylelint": "^7.6.0"
+  },
+  "resolutions": {
+    "jpegoptim-bin": "^6.0.0"
   }
 }
