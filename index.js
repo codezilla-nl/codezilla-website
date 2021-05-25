@@ -18,7 +18,7 @@ const inPlace = require('metalsmith-in-place');
 const asset = require('metalsmith-static');
 const helpers = require('metalsmith-register-helpers');
 const models = require('metalsmith-models');
-const imagemin = require('metalsmith-imagemin');
+// const imagemin = require('metalsmith-imagemin');
 // const googleAnalytics = require('metalsmith-google-analytics').default;
 
 const ENV = process.env.ENV;
@@ -121,23 +121,6 @@ let run = module.exports = function (cb) {
         .source('./public/')
         .destination('./build')
         .use(filter(['**/*.gif', '**/*.png', '**/*.jpg', '**/*.svg']))
-        .use(imagemin({
-            optimizationLevel: 3,
-            svgo: {
-                plugins: [
-                    { cleanupAttrs: false },
-                    { inlineStyles: false },
-                    { removeHiddenElems: false },
-                    { minifyStyles: false },
-                    { convertStyleToAttrs: false },
-                    { collapseGroups: false },
-                    { mergePaths: false },
-                    { convertShapeToPath: false },
-                    { convertEllipseToCircle: false },
-                    { reusePaths: false }
-                ]   
-            }
-        }))
         .build(function (err, files) {
             if (err) {
                 console.error(err);
