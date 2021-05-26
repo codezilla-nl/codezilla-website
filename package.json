@@ -1,5 +1,5 @@
 {
-  "name": "static-site-example",
+  "name": "codezilla-website",
   "private": true,
   "scripts": {
     "start": "npm run serve",
