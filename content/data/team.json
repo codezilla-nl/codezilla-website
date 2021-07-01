@@ -91,13 +91,6 @@
             "likes": "",
             "writesCodeFor": "BZK"
         },
-        "jij": {
-            "name": "Jij?",
-            "monster": "/images/monsters/anonymousmonster.svg",
-            "quote": "This could be you. Ge&iuml;nteresseerd? Bel dan 020 - 3120 458 of stuur een email naar martin@codezilla.nl",
-            "likes": "Front End Development",
-            "writesCodeFor": ""
-        },
         "ralph": {
             "name": "Ralph",
             "monster": "/images/monsters/ralphmonster.svg",
@@ -168,10 +161,10 @@
             "likes": "American Football, traveling, gaming, movies, books",
             "writesCodeFor": "CODEZILLA"
         },
-        "jij2": {
+        "jij": {
             "name": "Jij?",
             "monster": "/images/monsters/anonymousmonster.svg",
-            "quote": "This could be you. Ge&iuml;nteresseerd? Bel dan 020 - 3120 458 of stuur een email naar theo@codezilla.nl",
+            "quote": "This could be you. Ge&iuml;nteresseerd? Bel dan 020 - 3120 458 of stuur een email naar martin@codezilla.nl",
             "likes": "Front End Development",
             "writesCodeFor": ""
         }
