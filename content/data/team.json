@@ -161,6 +161,13 @@
             "likes": "Long walks on the beach",
             "writesCodeFor": "KLM"
         },
+        "joey": {
+            "name": "Joey",
+            "monster": "/images/monsters/joeymonster.svg",
+            "quote": "It runs on my machine",
+            "likes": "American Football, traveling, gaming, movies, books",
+            "writesCodeFor": "CODEZILLA"
+        },
         "jij2": {
             "name": "Jij?",
             "monster": "/images/monsters/anonymousmonster.svg",
