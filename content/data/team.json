@@ -91,13 +91,6 @@
             "likes": "",
             "writesCodeFor": "BZK"
         },
-        "jij": {
-            "name": "Jij?",
-            "monster": "/images/monsters/anonymousmonster.svg",
-            "quote": "This could be you. Ge&iuml;nteresseerd? Bel dan 020 - 3120 458 of stuur een email naar martin@codezilla.nl",
-            "likes": "Front End Development",
-            "writesCodeFor": ""
-        },
         "ralph": {
             "name": "Ralph",
             "monster": "/images/monsters/ralphmonster.svg",
@@ -161,10 +154,17 @@
             "likes": "Long walks on the beach",
             "writesCodeFor": "KLM"
         },
-        "jij2": {
+        "joey": {
+            "name": "Joey",
+            "monster": "/images/monsters/joeymonster.svg",
+            "quote": "It runs on my machine",
+            "likes": "American Football, traveling, gaming, movies, books",
+            "writesCodeFor": "CODEZILLA"
+        },
+        "jij": {
             "name": "Jij?",
             "monster": "/images/monsters/anonymousmonster.svg",
-            "quote": "This could be you. Ge&iuml;nteresseerd? Bel dan 020 - 3120 458 of stuur een email naar theo@codezilla.nl",
+            "quote": "This could be you. Ge&iuml;nteresseerd? Bel dan 020 - 3120 458 of stuur een email naar martin@codezilla.nl",
             "likes": "Front End Development",
             "writesCodeFor": ""
         }
