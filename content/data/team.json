@@ -98,26 +98,12 @@
             "likes": "Running, cycling and tweaking code",
             "writesCodeFor": "DSW"
         },
-        "ferhat": {
-            "name": "Ferhat",
-            "monster": "/images/monsters/ferhatmonster.svg",
-            "quote": "You're the semicolon to my statements",
-            "likes": "Coding, good music with good party, travelling and sport",
-            "writesCodeFor": "BZK"
-        },
         "tim": {
             "name": "Tim",
             "monster": "/images/monsters/timmonster.svg",
             "quote": "A good way to stay flexible is to write less code",
             "likes": "DJing, travelling, gaming en sport",
             "writesCodeFor": "Rabobank"
-        },
-        "wouters": {
-            "name": "Wouter S",
-            "monster": "/images/monsters/woutersmonster.svg",
-            "quote": "Watteeeeeeee?",
-            "likes": "Music, Games, Photography and beer",
-            "writesCodeFor": "ANWB"
         },
         "roos": {
             "name": "Roos",
