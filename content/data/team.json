@@ -26,7 +26,7 @@
             "monster": "/images/monsters/michelmonster.svg",
             "quote": "Too much Javascript. I'll fix it with css..",
             "likes": "Hardware and Software tweaking, watching movies, traveling and cars",
-            "writesCodeFor": "DSW"
+            "writesCodeFor": "R&amp;R WFM"
         },
         "jelle": {
             "name": "Jelle",
@@ -47,7 +47,7 @@
             "monster": "/images/monsters/patrickmonster.svg",
             "quote": "Always code as if the guy who ends up maintaining your code will be a violent psychopath who knows where you live",
             "likes": "Shaolin Kempo, (Retro) Video Games, Open Source Software",
-            "writesCodeFor": "KLM"
+            "writesCodeFor": "KPN"
         },
         "sander": {
             "name": "Sander",
@@ -96,7 +96,7 @@
             "monster": "/images/monsters/ralphmonster.svg",
             "quote": "I know a great UDP joke but you will probably not get it.",
             "likes": "Running, cycling and tweaking code",
-            "writesCodeFor": "DSW"
+            "writesCodeFor": "Rabobank"
         },
         "tim": {
             "name": "Tim",
@@ -119,15 +119,8 @@
             "likes": "Dancing, sci-fi(books + movies), games, hackernews",
             "writesCodeFor": "KLM"
         },
-        "michael": {
-            "name": "Michaël",
-            "monster": "/images/monsters/michaelmonster.svg",
-            "quote": "Robert'); DROP TABLE Students;--",
-            "likes": "Climbing, slacklining, snowboarding, alpinism, paragliding, beer, meta jokes, collecting quotes",
-            "writesCodeFor": "Carepay"
-        },
-        "wouterh": {
-            "name": "Wouter H",
+        "wouter": {
+            "name": "Wouter",
             "monster": "/images/monsters/wouterhmonster.svg",
             "quote": "There is no place like 127.0.0.1",
             "likes": "Exploring new things",
@@ -145,7 +138,7 @@
             "monster": "/images/monsters/joeymonster.svg",
             "quote": "It runs on my machine",
             "likes": "American Football, traveling, gaming, movies, books",
-            "writesCodeFor": "CODEZILLA"
+            "writesCodeFor": "Rabobank"
         },
         "jij": {
             "name": "Jij?",
