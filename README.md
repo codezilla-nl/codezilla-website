@@ -15,11 +15,10 @@
 * Run unit tests: `npm test`
 * Run E2E tests: `npm run test-e2e`
 
-## CI / Hosting
-All the PR's and merges to master are run through [Travis](https://travis-ci.org/codezilla-nl/codezilla-website).
+## CI / Deployment / Hosting
+* CI and deployment is done through Github Actions, run on AWS Amplify Preview
+* Hosting is done on AWS Amplify
 
-### Deployment
-The deployment setup is based on: https://gist.github.com/domenic/ec8b0fc8ab45f39403dd. 
 
 ### URLs
 DEV: https://codezilla-nl.github.io/codezilla-website/
