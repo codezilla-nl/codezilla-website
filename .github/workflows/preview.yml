@@ -1,9 +1,7 @@
 name: 'Amplify PR Preview'
 on:
-  pull_request_target:
-    branches:
-      - master
-    types: [review_requested]
+  pull_request:
+    branches: [ master ]
 
 jobs:
   deploy:
