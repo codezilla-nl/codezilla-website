@@ -19,10 +19,6 @@
 * CI and deployment is done through Github Actions, run on AWS Amplify Preview
 * Hosting is done on AWS Amplify
 
-
-### URLs
-DEV: https://codezilla-nl.github.io/codezilla-website/
-
 ## Folder structure
 ```text
     |-- content > Markdown content that is used to generate the HTML files
