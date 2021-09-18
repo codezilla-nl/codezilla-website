@@ -10,7 +10,7 @@ jobs:
     - uses: actions/checkout@master
 
     - name: set branchname env
-      id: setenvname
+      id: master
       run: |
         # use GITHUB_HEAD_REF that is set to PR source branch
         echo "##[set-output name=setbranchname;]$(echo ${GITHUB_HEAD_REF})"
