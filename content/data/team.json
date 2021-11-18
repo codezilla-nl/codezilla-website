@@ -119,6 +119,13 @@
             "likes": "Long walks on the beach",
             "writesCodeFor": "KLM"
         },
+        "desiree": {
+            "name": "Desiree",
+            "monster": "/images/monsters/desireemonster.svg",
+            "quote": "",
+            "likes": "",
+            "writesCodeFor": "Nationale Nederlanden"
+        },
         "joey": {
             "name": "Joey",
             "monster": "/images/monsters/joeymonster.svg",
