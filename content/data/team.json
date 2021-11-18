@@ -98,20 +98,6 @@
             "likes": "Running, cycling and tweaking code",
             "writesCodeFor": "Rabobank"
         },
-        "tim": {
-            "name": "Tim",
-            "monster": "/images/monsters/timmonster.svg",
-            "quote": "A good way to stay flexible is to write less code",
-            "likes": "DJing, travelling, gaming en sport",
-            "writesCodeFor": "Rabobank"
-        },
-        "roos": {
-            "name": "Roos",
-            "monster": "/images/monsters/roosmonster.svg",
-            "quote": "Can I eat it?",
-            "likes": "Cooking and baking (and eating), puzzles, reading and sports",
-            "writesCodeFor": "KPN"
-        },
         "valeria": {
             "name": "Valeria",
             "monster": "/images/monsters/valeriamonster.svg",
