@@ -133,6 +133,13 @@
             "likes": "American Football, traveling, gaming, movies, books",
             "writesCodeFor": "Rabobank"
         },
+        "kevin": {
+            "name": "Kevin",
+            "monster": "/images/monsters/kevinmonster.svg",
+            "quote": "Hello World!",
+            "likes": "coding, photography, filmmaking, traveling, gaming",
+            "writesCodeFor": "Politie"
+        },
         "jij": {
             "name": "Jij?",
             "monster": "/images/monsters/anonymousmonster.svg",
