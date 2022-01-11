@@ -140,6 +140,13 @@
             "likes": "coding, photography, filmmaking, traveling, gaming",
             "writesCodeFor": "Politie"
         },
+        "matthijs": {
+            "name": "Matthijs",
+            "monster": "/images/monsters/matthijsmonster.svg",
+            "quote": "++?????++ Out of Cheese Error. Redo From Start.",
+            "likes": "Running, gaming, food, music, penguins",
+            "writesCodeFor": ""
+        },
         "jij": {
             "name": "Jij?",
             "monster": "/images/monsters/anonymousmonster.svg",
