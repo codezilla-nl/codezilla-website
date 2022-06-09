@@ -147,6 +147,13 @@
             "likes": "Running, gaming, food, music, penguins",
             "writesCodeFor": ""
         },
+        "mart": {
+            "name": "Mart",
+            "monster": "/images/monsters/martmonster.svg",
+            "quote": "console.log('does this work?')",
+            "likes": "football, tennis, gaming, fotography, home automation",
+            "writesCodeFor": "ValkDigital"
+        },
         "jij": {
             "name": "Jij?",
             "monster": "/images/monsters/anonymousmonster.svg",
