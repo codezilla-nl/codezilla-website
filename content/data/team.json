@@ -154,6 +154,13 @@
             "likes": "football, tennis, gaming, fotography, home automation",
             "writesCodeFor": "ValkDigital"
         },
+        "jeffrey": {
+            "name": "Jeffrey",
+            "monster": "/images/monsters/jeffreymonster.svg",
+            "quote": "It's not all #000000 and #FFFFFF",
+            "likes": "Cooking, boardgames, family & personal development",
+            "writesCodeFor": ""
+        },
         "jij": {
             "name": "Jij?",
             "monster": "/images/monsters/anonymousmonster.svg",
