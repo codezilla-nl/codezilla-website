@@ -26,7 +26,7 @@
             "monster": "/images/monsters/michelmonster.svg",
             "quote": "Too much Javascript. I'll fix it with css..",
             "likes": "Hardware and Software tweaking, watching movies, traveling and cars",
-            "writesCodeFor": "R&amp;R WFM"
+            "writesCodeFor": "KLM"
         },
         "jelle": {
             "name": "Jelle",
@@ -82,14 +82,14 @@
             "monster": "/images/monsters/roquemonster.svg",
             "quote": "Put aside logic, do what feels right",
             "likes": "Music, food and beer",
-            "writesCodeFor": "NS"
+            "writesCodeFor": "KLM"
         },
         "lesley": {
             "name": "Lesley",
             "monster": "/images/monsters/jimmymonster.svg",
             "quote": "",
             "likes": "",
-            "writesCodeFor": "BZK"
+            "writesCodeFor": "KLM"
         },
         "ralph": {
             "name": "Ralph",
@@ -110,21 +110,21 @@
             "monster": "/images/monsters/wouterhmonster.svg",
             "quote": "There is no place like 127.0.0.1",
             "likes": "Exploring new things",
-            "writesCodeFor": "PharmAccess"
+            "writesCodeFor": "Rabobank"
         },
         "jarno": {
             "name": "Jarno",
             "monster": "/images/monsters/jarnomonster.svg",
             "quote": "'error' is defined but never used",
             "likes": "Long walks on the beach",
-            "writesCodeFor": "KLM"
+            "writesCodeFor": "ABN AMRO"
         },
         "desiree": {
             "name": "Desiree",
             "monster": "/images/monsters/desireemonster.svg",
             "quote": "",
             "likes": "",
-            "writesCodeFor": "Nationale Nederlanden"
+            "writesCodeFor": "ABN AMRO"
         },
         "joey": {
             "name": "Joey",
@@ -138,14 +138,14 @@
             "monster": "/images/monsters/kevinmonster.svg",
             "quote": "Hello World!",
             "likes": "coding, photography, filmmaking, traveling, gaming",
-            "writesCodeFor": "Politie"
+            "writesCodeFor": "Rabobank"
         },
         "matthijs": {
             "name": "Matthijs",
             "monster": "/images/monsters/matthijsmonster.svg",
             "quote": "++?????++ Out of Cheese Error. Redo From Start.",
             "likes": "Running, gaming, food, music, penguins",
-            "writesCodeFor": ""
+            "writesCodeFor": "SDB Groep"
         },
         "mart": {
             "name": "Mart",
@@ -159,7 +159,7 @@
             "monster": "/images/monsters/jeffreymonster.svg",
             "quote": "It's not all #000000 and #FFFFFF",
             "likes": "Cooking, boardgames, family & personal development",
-            "writesCodeFor": ""
+            "writesCodeFor": "KLM"
         },
         "jij": {
             "name": "Jij?",
