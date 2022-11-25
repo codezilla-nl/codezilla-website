@@ -1,4 +1,7 @@
-# CODEZILLA Website [![Build Status](https://travis-ci.org/codezilla-nl/codezilla-website.svg?branch=master)](https://travis-ci.org/codezilla-nl/codezilla-website) [![License GPLv3](https://img.shields.io/badge/license-GPLv3-blue.svg)](https://github.com/codezilla-nl/codezilla-website/blob/master/LICENSE)
+# CODEZILLA Website
+
+| :heavy_exclamation_mark:  The CODEZILLA website is no longer live. You can consider this repo as a piece of history :)   |
+|-----------------------------------------|
 
 ## Tools / Libs
 * [Metalsmith](http://www.metalsmith.io/) > Static site generator
